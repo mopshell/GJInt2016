@@ -1,0 +1,178 @@
+%\documentclass[paper]{geophysics}
+\documentclass[manuscript,revised]{geophysics}
+
+% An example of defining macros
+\newcommand{\rs}[1]{\mathstrut\mbox{\scriptsize\rm #1}}
+\newcommand{\rr}[1]{\mbox{\rm #1}}
+
+\begin{document}
+
+\title{tmp title: MUSC source}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} 
+
+\ms{GEO-Example} % manuscript number
+
+\address{
+\footnotemark[1]LUNAM-IFSTTAR, \\
+\footnotemark[2]OSUNA \\
+\footnotemark[1]LPGN, \\}
+\author{Damien Pageot\footnotemark[1]\footnotemark[2], Donatienne Leparoux\footnotemark[1], Mathieu Le Feuvre\footnotemark[1], Olivier Durand\footnotemark[1] and Yann Capdeville\footnotemark[3]}
+
+\footer{Example}
+\lefthead{Dellinger \& Fomel}
+\righthead{\emph{Geophysics} example}
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+% ## INTRODUCTION
+\section{Introduction}
+
+% #### Nature and scope of the problem
+\noindent Since decades, geophysicists develop numerical imaging methods for seismic measurements to determine the structures and the physical properties of the Earth at several scales as subsurface (civil engineering), crustal, regional or global. These methods, like Full Waveform inversion (FWI), are still in development and are mostly validated using synthetic data which are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions (for example acoustic approximation or two-dimensional) which are the same in the inverse problem. Although, this \textit{inverse crime} \citep{Wirgin_TIC_2004} is particulary useful to validate an algorithm in its early development stage, it does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one known precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.      
+
+\noindent The best way to satisfy this need is to use Small Scale Modeling Methods (SSMM). SSMM were used since several years to study the propagation of waves in various media with several stage of complexity, from acoustic wave propagation in homogeneous media to elastic wave propagation in three-dimensional heterogeneous media, and allow to generate experimental seismic data under well-controlled conditions. Some methods exist to produce this kind of data for different purpose and the MUSC Laboratory (\textit{Mesure Ultrasonore Sans Contact} in French) in one of them. MUSC is designed to allow (1) wide-angle on-shore acquisitions modeling both body waves and surface waves, (2) automatic multisource-multireceiver measurements with a high-productivity, (3) high-precision source-receiver positioning and (4) high-precision recording of absolute surface displacement without coupling effects. 
+
+% #### State the objectives
+\noindent Our objective here is to increase the potential of the MUSC system as a reliable tool for generating experimental data which will be distributed in the scientific community. 
+\noindent Thus we present two studies of experimental data in order to : 1) refine the comparison between numerical and experimental data by taking into account the 2D/3D effects through an alternative way and 2) identify the reproducibility of the source impact. These approaches complete the knowledge of the system and facilitate the achievement of massive multi-source and multi-receiver data simulating subsurface seismic experimental campaigns.
+
+% #### Describe the method of investigation
+\noindent To achieve these objectives, we used a seismic wave modeling code based on the spectral element method (SEM) \citep{Komatitsch_SEM_1998}. This method has several advantages compared to finite differences and finite elements, such as: (1) a weak formulation which can naturally take into account the free surface, (2) an explicit scheme in time facilitating parallelization and reducing the computational cost, (3) a spatial discretization (mesh) convenient for the representation of complex environments and (4) high precision results and low numerical dispersion.
+
+% #### Describe the principal results of the investigation
+
+\noindent \textit{Describe the principal results of the investigation...}
+
+
+% ## METHODS
+\section{Methods}
+
+% #### MUSC bench
+\subsection{MUSC Bench}
+
+\noindent The MUSC bench \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013} is built to experimentally reproduce field seismic data with a great accuracy on small scale model \ref{panel_musc_bench}.The bench is composed of a honeycomb tab and two arms which control the source and the receiver position with a precision of 10 $\mathrm{\mu m}$.
+
+\noindent The receiving system of MUSC Laboratory is composed of a laser interferometer. The principle of this laser is based on a phase shift of the reflected laser signal due to the wave propagation in the material. A real-timecalibration value enables a continuous conversion to a nanometric displacement. The focal diameter of the laser on the model surface is about several micrometers and allows a detection limit of $\mathrm{2.5\ nm}$ in the frequency range from 30 kHz to 20 MHz.
+
+\noindent The seismic source is simulated by a piezoelectric transducer that allows to modify the waveform as required, \textit{i.e.}, Gauss source, Ricker source, etc. The source is generated by a waveform generator and is then amplified before transducing to the small-scale-model.
+
+\noindent For the purpose of small scale modeling, the change of scale must keep the relationship between observables. For most of seismic imaging methods, the significant physical parameters are the compressional and shear waves velocities, $V_{P}$ and $V_{S}$ respectively, the density $\rho$ and the quality factor $Q$. When scaling the model, many parameters can be modified: the distances, the time scale, the amplitudes of the signals, the visco-elastic properties, etc. Hence, the predominant factor is the wavelength $\lambda = V / f$, where $V$ is the wave velocity and $f$ the frequency. Thus, physical and mechanical parameters are modified to preserve the ratio $\lambda_{real} = \xi \lambda_{scale}$ where $\xi$ is the scale ratio. It is therefore necessary to act directly on the time-frequency scales. Assuming the materials used to build the small scale model have the same mechanical properties ($V_{P}$, $V_{S}$, $\rho$) than the natural media, it is straightfoward to obtain the scale ratios for parameters involved in seismic experiment.
+
+\noindent For near surface experiments, the scale ratio $\xi$ is about $1000$ which means that the central frequency $f_{0}$ of the source is few $kHz$ (generally 100 kHz but can be more or less), distances are in $mm$ (acquisiton length around 50 mm typically) and time unit is $ms$.
+
+\noindent Small-scale models are generally made of metal, thermoplastic or melted epoxy resin-based materials \citep{Bretaudeau_FWI_2013,Bretaudeau_SSM_2011,Bretaudeau_SSA_2008b}. These materials allow to reproduct complex geometries and have a large panel of physical and mechanical properties. These materials have the advantages to have physical properties closed to natural soil materials. The models are generally oversized to easily separate reflected waves on boudaries from the rest of the signal. 
+
+% #### Spectral Element Method
+\subsection{Spectral Element Method}
+
+
+
+
+% ## Results
+\section{Results}
+
+% #### From point-source to line-source acquisition
+\subsection{From point-source to line-source acquisition}
+
+\noindent In the framework of wave propagation modeling and waveform inversion, most of available algorithms are limited to the two-dimensional approximation especially for computational cost causes. Thus, line-source seismograms are required as observed data to be compared to synthetic seismograms or for inversion processes.
+
+\noindent However, MUSC is designed to produce three-dimensional experimental seismograms from a piezo-electric source selected to be as closed as possible to a point source. Generally, the correction of the geometrical spreading is done by convolving each trace by $\mathrm{\sqrt{t^{-1}}}$, where $t$ is the traveltime, with or without offset conditioning. The correct phase can then be obtained using a source wavelet estimation method.
+
+\noindent Recently, \citet{Schafer_LSS_2014} have developed, and succesfully applied to synthetic seismogram, an hybrid method to convert the three-dimensional geometrical spreading in two-dimensional spreading using both convolution tapering and offset dependent scaling of the waveform. However, these pre-processing methods are not perfect and can not ne easily automated and the results are strongly conditionned by user's experience and attempts.
+
+\noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC. Contrary to field experiments, it is possible to generate a pseudo-line-source finely sampled by multiple point-sources, perpendicular to the acquisition line. The line-source, along the y-axis, is sampled by \textcolor{red}{481 point-sources spaced of 0.5 mm}. Four source-receiver offsets are considered: 90, 95, 100 and 105 mm. Each reciver is perpendicular to and centered on the line-source. For each receiver position, the complete signal is stack along source position to obtain an equivalent two-dimensional line-source response.
+ 
+\noindent Figures \ref{panel_amplitude}(a,b,c,d) show the comparison between experimental traces obtained using a point-source and a line-source for 90, 95, 100 and 105 mm offset respectively. Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a two-dimensional FWI process as shown by \citet{Schafer_LSS_2014}.
+
+\noindent Figures \ref{panel_amplitude}(e,f,g,h) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections.  
+
+\noindent These results show that the line-source emulation on the MUSC laboratory is efficient and can produce data suitable for imaging methods such as 2D FWI.
+
+
+% #### Experimental source reproducibility
+\subsection{Experimental source reproducibility}
+
+\noindent To assess the ability of MUSC to provide reproducible data, \textit{i.e.} to evaluate the reproducibility of the source impact, several physical modeling were performed on a homogeneous epoxy-resin block for which the seismic waves velocities and the intrinsic attenuation are known : $\mathrm{V_{P}=2300\ m.s^{-1}}$, $\mathrm{V_{S}=1030\ m.s^{-1}}$, $\mathrm{\rho=1300\ kg.m^{-3}}$ and $\mathrm{Q=30}$. 
+
+\noindent Six realizations have been acquired on this model with a similar geometry setup, i.e. 121 receivers positions with an increment equal to 1 mm and a minimum offset of 10 mm. The numerical wavelet sent to the piezzo-electric transducer source is a Ricker signal with a central frequency of 100 kHz. However, the source waveform is modified by the physical coupling effect of the transducer. 
+
+\noindent First, source wavelet were estimated for each experiment (Figure \ref{panel_srcest_2d}(a)). The effective sources show different oscillations after the main pulse, due to internal echoes in the transducer. These secondary oscillations have a very similar shape from an experiment to another, as well as the global signal shape even if some small differences of amplitudes appear for the main pulse. Figure \ref{panel_srcest_2d}(b,c,d,e,f,g) show numerically propagated signals after convolution with estimated source wavelets for the offset of 60 mm. The corrected numerical seismograms are in good agreement with the experimental seismograms. The value of the correlation coefficient ($> 0.98$, also presented in the figure) confirms the great efficiency of the wavelet source assessment process.
+
+\noindent In a second step, a unique source wavelet is estimated by taking into account the 6 experiments together (figure \ref{panel_srcest_2d_mean}(a)). The resulting source parameters were applied to the synthetic signals (figure \ref{panel_srcest_2d_mean}(b,c,d,e,f,g)) for the same receiver position as previously. As in the previous case, the corrected seismograms are in good agreement with the experimental seismograms (correlation coefficients $\mathrm{>}$ 0.96).  
+
+\noindent These last results, based on an average estimated source wavelet show that the effective impulse source emitted by the transducer in the MUSC measurement bench is stable enough to ensure a robust reproducibility of the source. Therefore, concerning the key issue of the source knowledge, experimental data acquired in the MUSC laboratory can be efficiently processed by imaging methods like Full Waveform Inversion (FWI) with only one estimation step for all the multi-source and multi-receivers data.
+
+% ## CONCLUSIONS
+
+\section{Conclusions}
+
+\noindent These two studies allow to refine the capacity of the physical modeling designed for seismic experiments simulation by 1) completing the validation of the measurement through comparison of numerical and experimental data generated by a realistic 2D source line and 2) assessing the reproductivity of the effective source emitted in a model. These improvements allow to provide and distribute experimental reduced scale data to the scientific community as benchmark datasets.
+
+% ## PLOTS
+\section{Plots}
+
+\subsection*{Equations}
+
+\subsection*{Figures}
+
+% #### Fig:: panel_musc_bench
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/panel_musc_bench.eps}
+	\caption{Photograph of the MUSC ultrasonic laboratory (from \citet{Bretaudeau_FWI_2013} )with its four components: (1) a small-scale model of the underground, (2) an optical table with two automated arms moving above the model, (3) a laser interferometer recording ultrasonic wave propagation	at the model surface, and (4) a piezoelectric ultrasonic source generating ultrasonic waves in the model.}
+	\label{panel_musc_bench}
+\end{figure}
+
+% #### Fig:: panl_multisrcrec
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/panel_multisrcrec.eps}
+	\caption{Example of multi-source multi-receiver record on the MUSC bench for a two-layer model (bialt).}
+	\label{panel_multisrcrec}
+\end{figure}
+
+% #### Fig:: panel_bialt_2d3d
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/panel_bialt_2d3d.eps}
+	\caption{(a,b,c,d) Comparison between an experimental seismogram for a point-source (red), an experimental seismogram for a line-source (blue) for 90, 95, 100 and 105 mm offset respectively. (e,f,g,h) Comparison between an experimental seismogram for a line-source (blue), and for a point-source corrected from geometrical spreading (green) for 90, 95, 100 and 105 mm offset respectively \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
+	\label{panel_amplitude}
+\end{figure}
+
+% #### Fig:: panel_srcest_2d
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/panel_srcest_2d.eps}
+	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
+	\label{panel_srcest_2d}
+\end{figure}
+
+% #### Fig:: panel_srcest_2d_mean
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/panel_srcest_2d_mean.eps}
+	\caption{(a) Estimated source wavelet (\textit{ESW}) calculated for all experiments. (b,c,d,e,f,g,h) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
+	\label{panel_srcest_2d_mean}
+\end{figure}
+
+\clearpage
+\newpage
+
+\subsection*{Tables}
+
+\clearpage
+\newpage 
+
+\section{ACKNOWLEDGMENTS}
+
+\clearpage
+\newpage
+
+\bibliographystyle{seg}  % style file is seg.bst
+\bibliography{bibvibris}
+
+\end{document}
