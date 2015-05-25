@@ -71,9 +71,19 @@
 
 \noindent Various numerical methods exist to resolve the equation of motion in arbitrary elastic media. The most widely used is the Finite-Differences (FD) method \citep{Virieux_PSV_1986,Levander_PSV_1988,Robertsson_FDM_1994,Pratt_EWM_1990,Stekl_VEM_1998,Saenger_FDM_2004} which estimates each derivative on a regular cartesian grid using a Taylor development \citep{Moczo_FDM_2004} of order \textit{n}. FD is simple to implement but quickly shows some limitations: the cartesian grid is defined by the minimum propagated wavelenght ($\lambda_{min}$) in the full media and is unable to reproduce properly complex topography and interfaces. Moreover, \citet{Saenger_FDM_2000} show that 60 points by wavelenght ($\lambda$) are are needed to modelise Rayleigh wave in order $n=2$ where only 15 points by $\lambda$ are required for body waves which increases drastically the numerical cost in case of near-surface modeling experiment. The Finite-Elements Method (FEM) is another popular method used for wave propagation modeling. FEM is based on a variationnal formulation of the equation of motion and gives a continuous approximate solution in space using polynomial basis functions defined on each node of each cell of the mesh. The natural boundary conditions of FEM is the free surface and the triangular (in 2D) or tetraedric (in 3D) unstructured meshes are well adapted to complex media and topography. However, low polynomial basis are inadequate with fine spatial discretisation and the required discretisation to obtain precise and non-dispersive solution in numerically costly. 
 
-\noindent Recently, the Spectral Element Method (SEM), used in fluid dynamics, was adapted to seismic wave propagation. SEM proposes to resolve the partial derivative system of the local equation of motion using a variationnal formulation of the problem. FEM allows structured and unstructured meshes using quadrangular cells in 2D and hexaerdral cells in 3D. Basically, SEM is a FEM developed on Legendre polynomial basis. The solution is constructed on Gauss-Lobatto-Legendre (gll) quadratic rules which allows a spectral convergence ratio with the increase of interpolation order. The spectral convergence ratio allows a weak numerical dispersion and the quadrangular (in 2D) and hexaedral (in 3D) meshes are well adapted to most configuration and topography.
+\noindent Recently, the Spectral Element Method (SEM), used in fluid dynamics, was adapted to seismic wave propagation. 
 
-\noindent As in FEM, all boundary of the domain are reflecting and the free surface is the natural condition.  In order to simmulate infinite or semi-infinite domain, SEM uses PML conditions \citep{Berenger_PML_1994,Festa_PML_2005}. 
+\noindent The SEM is based upon a high-order piecewise polynomial approximation of the weak formulation of the wave equation. It combines the accuracy of the pseudo-spectral method with the flexibility of the finite-element method \citep{Tromp_SEM_2008}. 
+
+\noindent In this method, the wavefield is represented in terms of high-degree Lagrange interpolants, and integrals are computed based upon Gauss–Lobatto–Legendre (gll) quadrature. This combination leading to a perfectly diagonal mass matrix leads in turn to a fully explicit time scheme which lends itself very well to numerical simulations on parallel computers. It is particularly well suited to handling complex geometries and interface matching conditions \citep{Cristini_SEM_2012}. 
+
+\noindent The typical element size that is required to generate an accurate mesh is of the order of $\lambda$, $\lambda$ being the smallest wavelength of waves traveling in the model.
+
+\noindent Models are meshed in 2D with quadrangles using the open-source software package GMSH \citep{Geuzaine_MSH_2009}. 
+
+%SEM proposes to resolve the partial derivative system of the local equation of motion using a variationnal formulation of the problem. FEM allows structured and unstructured meshes using quadrangular cells in 2D and hexaerdral cells in 3D. Basically, SEM is a FEM developed on Legendre polynomial basis. The solution is constructed on Gauss-Lobatto-Legendre (gll) quadratic rules which allows a spectral convergence ratio with the increase of interpolation order. The spectral convergence ratio allows a weak numerical dispersion and the quadrangular (in 2D) and hexaedral (in 3D) meshes are well adapted to most configuration and topography.
+
+%\noindent As in FEM, all boundary of the domain are reflecting and the free surface is the natural condition.  In order to simmulate infinite or semi-infinite domain, SEM uses PML conditions \citep{Berenger_PML_1994,Festa_PML_2005}. 
 
 % ## Results
 \section{Results}
@@ -87,11 +97,16 @@
 
 \noindent Recently, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have developed, and succesfully applied to synthetic seismogram, an hybrid method to convert the three-dimensional geometrical spreading in two-dimensional spreading using both convolution tapering and offset dependent scaling of the waveform. However, these pre-processing methods are not perfect and can not ne easily automated and the results are strongly conditionned by user's experience and attempts.
 
-\noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC. Contrary to field experiments, it is possible to generate a pseudo-line-source finely sampled by multiple point-sources, perpendicular to the acquisition line. The line-source, along the y-axis, is sampled by \textcolor{red}{481 point-sources spaced of 0.5 mm}. Four source-receiver offsets are considered: 90, 95, 100 and 105 mm. Each reciver is perpendicular to and centered on the line-source. For each receiver position, the complete signal is stack along source position to obtain an equivalent two-dimensional line-source response.
- 
-\noindent Figures \ref{panel_amplitude}(a,b,c,d) show the comparison between experimental traces obtained using a point-source and a line-source for 90, 95, 100 and 105 mm offset respectively. Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a two-dimensional FWI process as shown by \citet{Schafer_LSS_2014}.
+\noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC. Contrary to field experiments, it is possible to generate a pseudo-line-source finely sampled by multiple point-sources, perpendicular to the acquisition line. 
 
-\noindent Figures \ref{panel_amplitude}(e,f,g,h) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections.  
+\noindent Each point-source must be enough close each other so the resulting source being a line-source in the sense of Huygens principle. To do that, we consider that the length of the line must be equal, at least, $L \geq 4\lambda_{max}$ and the sampling interval $ds \leq 10 / \lambda_{min}$. Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. The line of point-source is located at ?? mm distance. Four receiver positions have been selected: 90, 95, 100 and 105 mm offset from the source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$.Each reciver is perpendicular to and centered on the line-source. For each receiver position, the complete signal is stack along source position to obtain an equivalent two-dimensional line-source response.
+ 
+\noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
+
+\noindent Figures \ref{panel_amplitude}(a,b,c,d) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 90, 95, 100 and 105 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.2) and amplitude (\textbf{rms}$>$1.2). Even after dephasing point-source response to the line-response in term of phase (\textbf{cc}$>$0.6), amplitudes do not match (\textbf{rms}$>$0.6). These results confirm that using raw point-source responses in a two-dimensional inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
+%Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a two-dimensional FWI process as shown by \citet{Schafer_LSS_2014}.
+
+\noindent Figures \ref{panel_amplitude}(e,f,g,h) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) for the same previous source-receiver offsets. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.69 but with \textbf{rms} greater than 0.66 and between 0.48 and 0.54 after phase fitting (\textbf{cc}$>$0.85). These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are still great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrisation to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
 
 \noindent These results show that the line-source emulation on the MUSC laboratory is efficient and can produce data suitable for imaging methods such as 2D FWI.
 
@@ -149,7 +164,7 @@
 % #### Fig:: panel_srcest_2d
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.4]{fig/panel_srcest_2d.eps}
+	\includegraphics[scale=0.4]{fig/panel_lswe_once.eps}
 	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
 	\label{panel_srcest_2d}
 \end{figure}
@@ -157,7 +172,7 @@
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.4]{fig/panel_srcest_2d_mean.eps}
+	\includegraphics[scale=0.4]{fig/panel_lswe_all.eps}
 	\caption{(a) Estimated source wavelet (\textit{ESW}) calculated for all experiments. (b,c,d,e,f,g,h) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
 	\label{panel_srcest_2d_mean}
 \end{figure}
@@ -166,6 +181,30 @@
 \newpage
 
 \subsection*{Tables}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{ccccc}
+		\hline
+		\qquad & 90 mm & 95 mm & 100 mm & 105 mm \\
+		\hline
+		cc1 init.  & 0.156 & 0.127 & 0.080 & 0.209 \\
+		rms1 init. & 1.336 & 1.349 & 1.351 & 1.243 \\
+		\hline
+		cc1 final  & 0.764 & 0.795 & 0.812 & 0.789 \\
+		rms1 final & 0.708 & 0.650 & 0.610 & 0.642 \\
+		\hline
+		\hline
+		cc2 init.  & 0.719 & 0.720 & 0.693 & 0.765 \\
+		rms2 init. & 0.752 & 0.740 & 0.753 & 0.659 \\
+		\hline
+		cc2 final  & 0.855 & 0.882 & 0.887 & 0.881 \\
+		rms2 final & 0.540 & 0.480 & 0.466 & 0.473 \\
+		\hline
+	\end{tabular}
+	\caption{.}
+	\label{cc-rms}
+\end{table}
 
 \clearpage
 \newpage 
@@ -176,6 +215,7 @@
 \newpage
 
 \bibliographystyle{seg}  % style file is seg.bst
-\bibliography{/media/pageotd/1581-58C8/Work/git-repository//TR-VIBRIS/tail/bibvibris}
+%\bibliography{/media/pageotd/1581-58C8/Work/git-repository//TR-VIBRIS/tail/bibvibris}
+\bibliography{../TR-VIBRIS/tail/bibvibris}
 
 \end{document}
