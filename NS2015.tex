@@ -156,6 +156,20 @@
 % #### Fig:: panel_bialt_2d3d
 \begin{figure}[!h]
 	\centering
+	\includegraphics[scale=0.4]{fig/amplitude_acqui_principle.eps}
+	\caption{.}
+	\label{amplitude_acqui_principle}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/amplitude_stack_principle.eps}
+	\caption{.}
+	\label{amplitude_stack_principle}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
 	\includegraphics[scale=0.4]{fig/panel_bialt_2d3d.eps}
 	\caption{(a,b,c,d) Comparison between an experimental seismogram for a point-source (red), an experimental seismogram for a line-source (blue) for 90, 95, 100 and 105 mm offset respectively. (e,f,g,h) Comparison between an experimental seismogram for a line-source (blue), and for a point-source corrected from geometrical spreading (green) for 90, 95, 100 and 105 mm offset respectively \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
 	\label{panel_amplitude}
@@ -169,12 +183,26 @@
 	\label{panel_srcest_2d}
 \end{figure}
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4,angle=90]{fig/panel_lswe_once_comp.eps}
+	\caption{.}
+	\label{panel_srcest_2d_comp}
+\end{figure}
+
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.4]{fig/panel_lswe_all.eps}
 	\caption{(a) Estimated source wavelet (\textit{ESW}) calculated for all experiments. (b,c,d,e,f,g,h) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
 	\label{panel_srcest_2d_mean}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4,angle=90]{fig/panel_lswe_all_comp.eps}
+	\caption{.}
+	\label{panel_srcest_2d_mean_comp}
 \end{figure}
 
 \clearpage
@@ -184,22 +212,22 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{ccccc}
+	\begin{tabular}{lcccc}
 		\hline
 		\qquad & 90 mm & 95 mm & 100 mm & 105 mm \\
 		\hline
-		cc1 init.  & 0.156 & 0.127 & 0.080 & 0.209 \\
-		rms1 init. & 1.336 & 1.349 & 1.351 & 1.243 \\
+		$cc1_{init}$  & 0.702 & 0.725 & 0.728 & 0.728 \\
+		$rms1_{init}$ & 0.794 & 0.760 & 0.762 & 0.774 \\
 		\hline
-		cc1 final  & 0.764 & 0.795 & 0.812 & 0.789 \\
-		rms1 final & 0.708 & 0.650 & 0.610 & 0.642 \\
+		$cc1_{final}$  & 0.940 & 0.953 & 0.951 & 0.949 \\
+		$rms1_{final}$ & 0.358 & 0.317 & 0.325 & 0.343 \\
 		\hline
 		\hline
-		cc2 init.  & 0.719 & 0.720 & 0.693 & 0.765 \\
-		rms2 init. & 0.752 & 0.740 & 0.753 & 0.659 \\
+		$cc2_{init}$  & 0.954 & 0.987 & 0.988 & 0.988 \\
+		$rms2_{init}$ & 0.304 & 0.162 & 0.155 & 0.154 \\
 		\hline
-		cc2 final  & 0.855 & 0.882 & 0.887 & 0.881 \\
-		rms2 final & 0.540 & 0.480 & 0.466 & 0.473 \\
+		$cc2_{final}$  & --   & --    & --    & --    \\
+		$rms2_{final}$ & --   & --    & --    & --    \\
 		\hline
 	\end{tabular}
 	\caption{.}
