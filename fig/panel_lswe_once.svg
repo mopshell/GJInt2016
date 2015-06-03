@@ -18,7 +18,7 @@
    sodipodi:docname="panel_lswe_once.svg"><metadata
      id="metadata3667"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs3665"><clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath3677"><path
@@ -62,13 +62,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="721"
+     inkscape:window-width="1920"
+     inkscape:window-height="1145"
      id="namedview3663"
      showgrid="true"
      inkscape:zoom="0.95353535"
      inkscape:cx="382.5"
-     inkscape:cy="-427.88136"
+     inkscape:cy="-260.08475"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
@@ -80,7 +80,7 @@
      inkscape:label="ink_ext_XXXXXX"
      transform="matrix(1.25,0,0,-1.25,0,990)"><g
        id="g3671"
-       transform="matrix(0.1,0,0,0.1,-6.4,11.2)"><g
+       transform="matrix(0.1,0,0,0.1,-264.00614,-529.23228)"><g
          id="g3673"><g
            id="g3675"
            clip-path="url(#clipPath3677)"><path
@@ -1566,15 +1566,15 @@
          id="path3659" /></g><text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Helvetica"
-       x="46.400002"
-       y="-440.00018"
+       x="-211.20618"
+       y="100.4321"
        id="text4907"
        sodipodi:linespacing="125%"
        transform="scale(1,-1)"><tspan
          sodipodi:role="line"
          id="tspan4909"
-         x="46.400002"
-         y="-440.00018">(a)</tspan></text>
+         x="-211.20618"
+         y="100.4321">(a)</tspan></text>
 <text
        transform="scale(1,-1)"
        sodipodi:linespacing="125%"
