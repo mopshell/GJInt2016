@@ -105,10 +105,10 @@
  
 \noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
 
-\noindent Figures \ref{panel_amplitude}(a,b,c,d) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 90, 95, 100 and 105 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.2) and amplitude (\textbf{rms}$>$1.2). Even after dephasing point-source response to the line-response in term of phase (\textbf{cc}$>$0.6), amplitudes do not match (\textbf{rms}$>$0.6). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
+\noindent Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 90, 95, 100 and 105 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
 %Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a \twod FWI process as shown by \citet{Schafer_LSS_2014}.
 
-\noindent Figures \ref{panel_amplitude}(e,f,g,h) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) for the same previous source-receiver offsets. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.69 but with \textbf{rms} greater than 0.66 and between 0.48 and 0.54 after phase fitting (\textbf{cc}$>$0.85). These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are still great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
+\noindent Figures \ref{panel_amplitude}(b) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) for the same previous source-receiver offsets. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.95 and rms$<$0.25. These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are quite great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
 
 \noindent These results show that the line-source emulation on the MUSC laboratory is efficient and can produce data suitable for imaging methods such as 2D FWI.
 
@@ -118,13 +118,19 @@
 
 \noindent To assess the ability of MUSC to provide reproducible data, \textit{i.e.} to evaluate the reproducibility of the source impact, several physical modeling were performed on a homogeneous epoxy-resin block for which the seismic waves velocities and the intrinsic attenuation are known : $\mathrm{V_{P}=2300\ m.s^{-1}}$, $\mathrm{V_{S}=1030\ m.s^{-1}}$, $\mathrm{\rho=1300\ kg.m^{-3}}$ and $\mathrm{Q=30}$. 
 
-\noindent Six realizations have been acquired on this model with a similar geometry setup, i.e. 121 receivers positions with an increment equal to 1 mm and a minimum offset of 10 mm. The numerical wavelet sent to the piezoelectric transducer source is a Ricker signal with a central frequency of 100 kHz. However, the source waveform is modified by the physical coupling effect of the transducer. 
+\noindent Ten realizations have been acquired on this model with a similar geometry setup, i.e. 120 receivers positions with an increment equal to 1 mm and a minimum offset of 10 mm. The numerical wavelet sent to the piezoelectric transducer source is a Ricker signal with a central frequency of 100 kHz. However, the source waveform is modified by the physical coupling effect of the transducer. 
 
-\noindent First, source wavelet were estimated for each experiment (Figure \ref{panel_srcest_2d}(a)) using a linear source wavelet estimation method based on a stabilized deconvolution \citep{Pratt_FWI_1999}. The effective sources show different oscillations after the main pulse, due to internal echoes in the transducer. These secondary oscillations have a very similar shape from an experiment to another, as well as the global signal shape even if some small differences of amplitudes appear for the main pulse. Figure \ref{panel_srcest_2d}(b,c,d,e,f,g) show numerically propagated signals after convolution with estimated source wavelets for the offset of 60 mm. The corrected numerical seismograms are in good agreement with the experimental seismograms. The value of the correlation coefficient ($> 0.98$, also presented in the figure) confirms the great efficiency of the wavelet source assessment process.
+\noindent First, a mean receiver-gather was calculted from the ten realizations and each trace of each realization was compared to equivalent one from mean receiver-gather. Figure \ref{panel_central_traces_cc} shows the central traces of each realization and textbf{cc} gives the correlation coefficient between each central trace with the central trace of the mean receiver-gather. The \textbf{cc} are always greater than 0.98 which demonstrate the high reproducibility of MUSC experiments. However, traces are not exactly the same which denotes a variability of the source from an experiment to another.
+ 
+%\noindent First, source wavelet were estimated for each experiment (Figure \ref{panel_srcest_2d}(a)) using a linear source wavelet estimation method based on a stabilized deconvolution \citep{Pratt_FWI_1999}. The effective sources show different oscillations after the main pulse, due to internal echoes in the transducer. These secondary oscillations have a very similar shape from an experiment to another, as well as the global signal shape even if some small differences of amplitudes appear for the main pulse. Figure \ref{panel_srcest_2d}(b,c,d,e,f,g) show numerically propagated signals after convolution with estimated source wavelets for the offset of 60 mm. The corrected numerical seismograms are in good agreement with the experimental seismograms. The value of the correlation coefficient ($> 0.98$, also presented in the figure) confirms the great efficiency of the wavelet source assessment process.
 
-\noindent In a second step, a unique source wavelet is estimated by taking into account the 6 experiments together (figure \ref{panel_srcest_2d_mean}(a)). The resulting source parameters were applied to the synthetic signals (figure \ref{panel_srcest_2d_mean}(b,c,d,e,f,g)) for the same receiver position as previously. As in the previous case, the corrected seismograms are in good agreement with the experimental seismograms (correlation coefficients $\mathrm{>}$ 0.96).  
+\noindent In a second step, a unique source wavelet is estimated using a linear source wavelet estimation method based on a stabilized deconvolution \citep{Pratt_FWI_1999}. The source wavelet estimation takes into account the ten experiments together and allows to obtain a mean effective source suitable for each experiment. The resulting source wavelet is applied to the synthetic signals (figure \ref{panel_srcest_2d_mean_comp}). The corrected seismograms are in good agreement with the experimental seismograms (correlation coefficients $\mathrm{>}$ 0.96) confirms the great efficiency of the wavelet source assessment process.  
 
 \noindent These last results, based on an average estimated source wavelet show that the effective impulse source emitted by the transducer in the MUSC measurement bench is stable enough to ensure a robust reproducibility of the source. Therefore, concerning the key issue of the source knowledge, experimental data acquired in the MUSC laboratory can be efficiently processed by imaging methods like Full Waveform Inversion (FWI) with only one estimation step for all the multi-source and multi-receivers data.
+
+\noindent To go further, we can imagine that the source correspond to the transducer-model coupling. So, an other model containing F50 pure epoxy-resin at the source position should have the same transmitted source wavelet....
+
+\noindent Figure \ref{blind-test} shows the comparison between experiment data (black) and numerical data using the previously estimated source (red)...
 
 % ## CONCLUSIONS
 
@@ -194,26 +200,26 @@
 \end{figure}
 
 % #### Fig:: panel_srcest_2d
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=1.0]{fig/F50_once_srcest_wig.eps}
-	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
-	\label{panel_srcest_2d}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=1.0]{fig/F50_CT_once.eps}
-	\caption{.}
-	\label{panel_srcest_2d_comp}
-\end{figure}
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=1.0]{fig/F50_once_srcest_wig.eps}
+%	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
+%	\label{panel_srcest_2d}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=1.0]{fig/F50_CT_once.eps}
+%	\caption{.}
+%	\label{panel_srcest_2d_comp}
+%\end{figure}
 
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=1.0]{fig/musc_F50_CT.eps}
 	\caption{Central trace for each of the ten analogic experiment. \textbf{cc} gives the correlation factor of each central trace with respect to a mean trace.}
-	\label{panel_srcest_2d_mean}
+	\label{panel_central_traces_cc}
 \end{figure}
 
 \begin{figure}[!h]
@@ -221,6 +227,13 @@
 	\includegraphics[scale=1.0]{fig/spec_F50_CT_COMP.eps}
 	\caption{Comparison between analogic central traces (grey) and numerical traces corrected from the estimated effective source (black) for each experiment. \textbf{cc} gives the correlation coefficient.}
 	\label{panel_srcest_2d_mean_comp}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=1.0]{fig/blind-test.eps}
+	\caption{.}
+	\label{blind-test}
 \end{figure}
 
 \clearpage
