@@ -10,6 +10,8 @@
 \newcommand{\twod}{two-dimensional }
 \newcommand{\thrd}{three-dimensional }
 
+\usepackage{lineno}
+
 \begin{document}
 
 \title{tmp title: MUSC source}
@@ -32,6 +34,9 @@
 
 \begin{abstract}
 \end{abstract}
+
+\modulolinenumbers[5]
+\linenumbers
 
 % ## INTRODUCTION
 \section{Introduction}
@@ -105,10 +110,10 @@
 \noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC. Contrary to field experiments, it is possible to generate a pseudo-line-source finely sampled by multiple point-sources, perpendicular to the acquisition line. 
 
 \noindent Each point-source must be enough close each other so the resulting source being a line-source in the sense of Huygens principle. To do that, we consider that the length of the line must be equal, at least, $L \geq 4\lambda_{max}$ and the sampling interval $ds \leq 10 / \lambda_{min}$. Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. The line of point-source is located at ?? mm distance. Four receiver positions have been selected: 90, 95, 100 and 105 mm offset from the source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$.Each receiver is perpendicular to and centered on the line-source. For each receiver position, the complete signal is stack along source position to obtain an equivalent \twod line-source response.
- 
+
 \noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
 
-\noindent Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 90, 95, 100 and 105 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
+\noindent Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 50, 55, 60 and 65 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
 %Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a \twod FWI process as shown by \citet{Schafer_LSS_2014}.
 
 \noindent Figures \ref{panel_amplitude}(b) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) for the same previous source-receiver offsets. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.95 and rms$<$0.25. These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are quite great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
@@ -197,8 +202,8 @@
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/bialt_2d3d_merge.eps}
-	\caption{(a) Comparison between an experimental seismogram for a point-source (black), an experimental seismogram for a line-source (grey) for 90, 95, 100 and 105 mm offset respectively. (b) Comparison between an experimental seismogram for a line-source (grey), and for a point-source corrected from geometrical spreading (black) for 90, 95, 100 and 105 mm offset respectively \textbf{cc} gives the correlation factor between line-source and point-source responses.}
+	\includegraphics[scale=0.5]{fig/panel_amp3d2d.eps}
+	\caption{(a) Comparison between an experimental seismogram for a point-source (red) and for a line source (black), for 50, 55, 60 and 65 mm source-receiver offsets respectively. (b) Comparison between an experimental seismogram for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a). \textbf{cc} gives the correlation factor between line-source and point-source responses.}
 	\label{panel_amplitude}
 \end{figure}
 
