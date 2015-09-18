@@ -1,0 +1,530 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.27)  17 SEP 2015 15:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**NS2015_Dona.tex
+(./NS2015_Dona.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./geophysics.cls
+Document Class: geophysics 2007/02/14 v3.0 Geophysics paper
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./seg.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/moreverb/moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count88
+\tab@size=\count89
+\listing@line=\count90
+))
+\c@@plots=\count91
+
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen105
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen106
+\subfiglabelskip=\skip46
+\c@subfigure=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@lotdepth=\count95
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+\c@sub@fig=\count96
+\c@@tabls=\count97
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box26
+\UL@hyphenbox=\box27
+\UL@skip=\skip49
+\UL@hook=\toks17
+\UL@height=\dimen107
+\UL@pe=\count98
+\UL@pixel=\dimen108
+\ULC@box=\box28
+Package: ulem 2012/05/18
+\ULdepth=\dimen109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count99
+)
+LaTeX Info: Redefining \refname on input line 274.
+\c@@append=\count100
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count101
+\output=\toks18
+\linenoprevgraf=\count102
+\linenumbersep=\dimen110
+\linenumberwidth=\dimen111
+\c@linenumber=\count103
+\c@pagewiselinenumber=\count104
+\c@LN@truepage=\count105
+\c@internallinenumber=\count106
+\c@internallinenumbers=\count107
+\quotelinenumbersep=\dimen112
+\bframerule=\dimen113
+\bframesep=\dimen114
+\bframebox=\box29
+LaTeX Info: Redefining \\ on input line 3056.
+) (./NS2015_Dona.aux)
+\openout1 = `NS2015_Dona.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen115
+\scratchbox=\box30
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen116
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 35.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
+[7] [8] [9] [10] [11]
+Package epstopdf Info: Source file: <fig/panel_musc_bench.eps>
+(epstopdf)                    date: 2015-09-17 15:27:23
+(epstopdf)                    size: 2700190 bytes
+(epstopdf)             Output file: <fig/panel_musc_bench-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-09-17 15:34:15
+(epstopdf)                    size: 454139 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/panel_musc_bench-eps-c
+onverted-to.pdf fig/panel_musc_bench.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/panel_musc_bench-eps-converted-to.pdf, id=48, 578.16pt x 477.785pt>
+File: fig/panel_musc_bench-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/panel_musc_bench-eps-converted-to.pdf>
+Package pdftex.def Info: fig/panel_musc_bench-eps-converted-to.pdf used on inpu
+t line 159.
+(pdftex.def)             Requested size: 231.2599pt x 191.11061pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/panel_multisrcrec.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 54870443 bytes
+(epstopdf)             Output file: <fig/panel_multisrcrec-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-09-17 15:34:27
+(epstopdf)                    size: 1445785 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/panel_multisrcrec-eps-
+converted-to.pdf fig/panel_multisrcrec.eps>
+(epstopdf)             \includegraphics on input line 167.
+Package epstopdf Info: Output file is already uptodate.
+<fig/panel_multisrcrec-eps-converted-to.pdf, id=49, 952.55875pt x 413.545pt>
+File: fig/panel_multisrcrec-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/panel_multisrcrec-eps-converted-to.pdf>
+Package pdftex.def Info: fig/panel_multisrcrec-eps-converted-to.pdf used on inp
+ut line 167.
+(pdftex.def)             Requested size: 381.01675pt x 165.41505pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/piezo-source-validation.eps>
+(epstopdf)                    date: 2015-09-17 15:27:23
+(epstopdf)                    size: 678534 bytes
+(epstopdf)             Output file: <fig/piezo-source-validation-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:27
+(epstopdf)                    size: 266848 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/piezo-source-validatio
+n-eps-converted-to.pdf fig/piezo-source-validation.eps>
+(epstopdf)             \includegraphics on input line 175.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/piezo-source-validation-eps-converted-to.pdf, id=50, 362.35374pt x 743.778
+75pt>
+File: fig/piezo-source-validation-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/piezo-source-validation-eps-converted-to.pdf>
+Package pdftex.def Info: fig/piezo-source-validation-eps-converted-to.pdf used 
+on input line 175.
+(pdftex.def)             Requested size: 144.93892pt x 297.50623pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 176.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ” in font cmr10!
+Package epstopdf Info: Source file: <fig/panel_bialt_model.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 98621 bytes
+(epstopdf)             Output file: <fig/panel_bialt_model-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-09-17 15:34:28
+(epstopdf)                    size: 18732 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/panel_bialt_model-eps-
+converted-to.pdf fig/panel_bialt_model.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/panel_bialt_model-eps-converted-to.pdf, id=51, 774.895pt x 257.96375pt>
+File: fig/panel_bialt_model-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/panel_bialt_model-eps-converted-to.pdf>
+Package pdftex.def Info: fig/panel_bialt_model-eps-converted-to.pdf used on inp
+ut line 183.
+(pdftex.def)             Requested size: 309.95251pt x 103.18365pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/amplitude_acqui_principle.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 241581 bytes
+(epstopdf)             Output file: <fig/amplitude_acqui_principle-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:28
+(epstopdf)                    size: 82226 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/amplitude_acqui_princi
+ple-eps-converted-to.pdf fig/amplitude_acqui_principle.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/amplitude_acqui_principle-eps-converted-to.pdf, id=52, 624.3325pt x 623.32
+875pt>
+File: fig/amplitude_acqui_principle-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/amplitude_acqui_principle-eps-converted-to.pdf>
+Package pdftex.def Info: fig/amplitude_acqui_principle-eps-converted-to.pdf use
+d on input line 191.
+(pdftex.def)             Requested size: 249.72858pt x 249.32707pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/amplitude_stack_principle.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 737316 bytes
+(epstopdf)             Output file: <fig/amplitude_stack_principle-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:28
+(epstopdf)                    size: 285047 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/amplitude_stack_princi
+ple-eps-converted-to.pdf fig/amplitude_stack_principle.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/amplitude_stack_principle-eps-converted-to.pdf, id=53, 616.3025pt x 353.32
+pt>
+File: fig/amplitude_stack_principle-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/amplitude_stack_principle-eps-converted-to.pdf>
+Package pdftex.def Info: fig/amplitude_stack_principle-eps-converted-to.pdf use
+d on input line 198.
+(pdftex.def)             Requested size: 246.51663pt x 141.32549pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/panel_amp3d2d.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 442520 bytes
+(epstopdf)             Output file: <fig/panel_amp3d2d-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:29
+(epstopdf)                    size: 130316 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/panel_amp3d2d-eps-conv
+erted-to.pdf fig/panel_amp3d2d.eps>
+(epstopdf)             \includegraphics on input line 205.
+Package epstopdf Info: Output file is already uptodate.
+<fig/panel_amp3d2d-eps-converted-to.pdf, id=54, 746.79pt x 358.33875pt>
+File: fig/panel_amp3d2d-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/panel_amp3d2d-eps-converted-to.pdf>
+Package pdftex.def Info: fig/panel_amp3d2d-eps-converted-to.pdf used on input l
+ine 205.
+(pdftex.def)             Requested size: 373.39407pt x 179.16893pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/musc_F50_CT.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 274024 bytes
+(epstopdf)             Output file: <fig/musc_F50_CT-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:29
+(epstopdf)                    size: 82074 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/musc_F50_CT-eps-conver
+ted-to.pdf fig/musc_F50_CT.eps>
+(epstopdf)             \includegraphics on input line 228.
+Package epstopdf Info: Output file is already uptodate.
+<fig/musc_F50_CT-eps-converted-to.pdf, id=55, 369.38pt x 413.545pt>
+File: fig/musc_F50_CT-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/musc_F50_CT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/musc_F50_CT-eps-converted-to.pdf used on input lin
+e 228.
+(pdftex.def)             Requested size: 369.37909pt x 413.54398pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/spec_F50_CT_COMP.eps>
+(epstopdf)                    date: 2015-09-17 15:27:23
+(epstopdf)                    size: 559421 bytes
+(epstopdf)             Output file: <fig/spec_F50_CT_COMP-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-09-17 15:34:30
+(epstopdf)                    size: 159843 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/spec_F50_CT_COMP-eps-c
+onverted-to.pdf fig/spec_F50_CT_COMP.eps>
+(epstopdf)             \includegraphics on input line 235.
+Package epstopdf Info: Output file is already uptodate.
+<fig/spec_F50_CT_COMP-eps-converted-to.pdf, id=56, 382.42876pt x 411.5375pt>
+File: fig/spec_F50_CT_COMP-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/spec_F50_CT_COMP-eps-converted-to.pdf>
+Package pdftex.def Info: fig/spec_F50_CT_COMP-eps-converted-to.pdf used on inpu
+t line 235.
+(pdftex.def)             Requested size: 382.42781pt x 411.5365pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/blind-test.eps>
+(epstopdf)                    date: 2015-09-17 15:27:22
+(epstopdf)                    size: 339129 bytes
+(epstopdf)             Output file: <fig/blind-test-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-17 15:34:30
+(epstopdf)                    size: 120762 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/blind-test-eps-convert
+ed-to.pdf fig/blind-test.eps>
+(epstopdf)             \includegraphics on input line 242.
+Package epstopdf Info: Output file is already uptodate.
+<fig/blind-test-eps-converted-to.pdf, id=57, 463.7325pt x 439.6425pt>
+File: fig/blind-test-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/blind-test-eps-converted-to.pdf>
+Package pdftex.def Info: fig/blind-test-eps-converted-to.pdf used on input line
+ 242.
+(pdftex.def)             Requested size: 463.73135pt x 439.64142pt.
+
+Overfull \hbox (30.11136pt too wide) in paragraph at lines 242--243
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12] [13 <./fig/panel_musc_bench-eps-converted-to.pdf>] [14 <./fig/panel_multis
+rcrec-eps-converted-to.pdf>] [15 <./fig/piezo-source-validation-eps-converted-t
+o.pdf>] [16 <./fig/panel_bialt_model-eps-converted-to.pdf> <./fig/amplitude_acq
+ui_principle-eps-converted-to.pdf>] [17 <./fig/amplitude_stack_principle-eps-co
+nverted-to.pdf> <./fig/panel_amp3d2d-eps-converted-to.pdf>] [18 <./fig/musc_F50
+_CT-eps-converted-to.pdf>] [19 <./fig/spec_F50_CT_COMP-eps-converted-to.pdf>]
+[20 <./fig/blind-test-eps-converted-to.pdf>] [21
+
+] [22
+
+] [23
+
+] (./NS2015_Dona.bbl
+[24
+
+]
+Underfull \hbox (badness 1406) in paragraph at lines 67--69
+[]\OT1/cmr/m/n/10.95 French, W. S., 1974, Two-dimensional and three-dimensional
+ mi-gra-tion of model-
+ []
+
+[25] [26] [27]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+) [28] (./NS2015_Dona.aux) ) 
+Here is how much of TeX's memory you used:
+ 2777 strings out of 493304
+ 40809 string characters out of 6139871
+ 100482 words of memory out of 5000000
+ 6191 multiletter control sequences out of 15000+600000
+ 8710 words of font info for 31 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 41i,11n,29p,2257b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on NS2015_Dona.pdf (28 pages, 3194804 bytes).
+PDF statistics:
+ 214 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
