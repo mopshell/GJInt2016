@@ -12,6 +12,11 @@
 
 \usepackage{lineno}
 
+% printing options
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+
 \begin{document}
 
 \title{tmp title: MUSC source}
@@ -103,18 +108,17 @@
 
 \noindent In the framework of wave propagation modeling and imaging methods, most of available algorithms are limited to the \twod approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditionned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency imaging methods to recover parameter models.
 
-\noindent Generally, 3D data are corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. To correct some biases of this method, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts.   
+\noindent 3D data can corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. To correct some biases of this method, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts.   
+
+\noindent In other cases, 3D data are corrected or process \textit{on the fly}, or used as is in algorithm using a 2.5D approximation. \textcolor{red}{Add few lines: Wapenaar, Borisov etc...}
 
 \noindent Thus, the missing step between purely numerical validation and real data applications can be the use of experimental line-source seismograms recorded under controlled conditions.
 
-\noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC system. Contrary to field experiments, it is possible to generate a pseudo-line-source finely sampled by multiple point-sources, perpendicular to the acquisition line. 
+\noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC system. Figure \ref{amplitude_acqui_principle} presents a schematic representation of the principle for this kind of experiment. Theoretically, the stack of all receiver with the same offset will results in a pseudo line-source response. Yet, to simplify the experiment, an other way is to consider only one receiver per offset, on a line perpendicular  and centered to the defined line-source. All traces of each common receiver gather are then stacked together to obtain the line-source response. In order to apply this protocol, we have to choose a line-source's length $L$ sufficiently great to be assimilated to a cylindrical source and above all a suitable sampling interval $\Delta s$ between each point-source constituting the pseudo line-source to ensure applicability of the \textit{Huygen's principle}. 
 
-\noindent Each point-source must be enough close to each other so the resulting source being a line-source in the sense of Huygens principle. To do that, we consider that the length of the line must be equal, at least, $L \geq 4\lambda_{max}$ and the sampling interval $ds \leq 10 / \lambda_{min}$. For this experiment, we choose an homogeneous block of \textit{F50 pure} epoxy-resin (see table \ref{epoxy-resin} for physical parameters) with dimensions $500 \times 504 \times 115$ mm ($x \times y \times z$). Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. Four receiver positions have been selected: 45, 50, 55 and 60 mm offset perpendicular to the line-source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$.Each receiver is perpendicular to and centered on the line-source. For each receiver position, all recorded traces are stacked together to obtain an equivalent two-dimensional line-source response.
+\noindent For this experiment, we choose an homogeneous block of \textit{F50 pure} epoxy-resin (see table \ref{epoxy-resin} for physical parameters) with dimensions $500 \times 504 \times 115$ mm ($x \times y \times z$). Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. Four receiver positions have been selected: 45, 50, 55 and 60 mm offset perpendicular to the line-source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$.Each receiver is perpendicular to and centered on the line-source. For each receiver position, all recorded traces are stacked together to obtain an equivalent two-dimensional line-source response.
 
-%For each receiver position, the complete signal is stack along source position to obtain an equivalent \twod line-source response.
-
-
-\noindent We first apply this method using 2D and 3D numerical modeling for 3D point-source, 3D line-source and 2D cylindrical source with a complete acquisition of 120 receivers spaced of 1 mm and a minimum offset of 45 mm. For these experiments, we did not take into account the quality factor $\mathcal{Q}$. Figure (?) shows the comparison between point-source response (3D) and line-source response (2D). As expected, both amplitude and phase are differents. Then, we applied the \textit{hybrid method} \citep{Forbriger_LSS_2014;Schafer_LSS_2014} on the point-source response to obtain the equivalent line-source response. Figure (?) shows that the \textit{hybird method} is able to produce equivalent line-source response with a good agreement.
+\noindent We first apply this method using 2D and 3D numerical modeling for 3D point-source, 3D line-source and 2D cylindrical source with a complete acquisition of 120 receivers spaced of 1 mm and a minimum offset of 45 mm. For these experiments, we did not take into account the quality factor $\mathcal{Q}$. Figure \ref{panel_amplitude_sem}a shows the comparison between point-source response (3D) and line-source response (2D). As expected, both amplitude and phase are differents. Then, we applied the \textit{hybrid method} \citep{Forbriger_LSS_2014;Schafer_LSS_2014} on the point-source response to obtain the equivalent line-source response. Figure \ref{panel_amplitude_sem}b shows that the \textit{hybird method} is able to produce equivalent line-source response with a good agreement.
 
 \noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
 
@@ -182,26 +186,18 @@
 	\label{piezo-source-validation}
 \end{figure}
 
-% #### Fig:: panel_bialt_model
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.4]{fig/panel_bialt_model.eps}
-	\caption{(a) Schematic representation of the so-called \textit{BiAlt} model. (b) Zoom in the two-dimensional mesh designed for the numerical version of the \textit{BiAlt} model.}
-	\label{panel_bialt_model}
-\end{figure}
-
 % #### Fig:: panel_bialt_2d3d
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.4]{fig/amplitude_acqui_principle.eps}
-	\caption{.}
+	\caption{Schematic representation of the acquisition geometry used to generate experimental line-source, \textit{i.e.} an equivalent of cylindrical source use in two-dimensional modeling. Black traingle and red circle represent receivers and sources, respectively.}
 	\label{amplitude_acqui_principle}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.4]{fig/amplitude_stack_principle.eps}
-	\caption{.}
+	\caption{(a) Resulting seismogram at one receiver position for the experimental line-source. (b) Comparison between point-source response in red (central trace of (a)) and line-source response in green (stack of (a)). Some wavefront are pointed: (1) P-wave, (2) surface wave, (3) reflected \textit{PP} and (4) reflected \textit{PSv} -wave on the bottom of the model.}
 	\label{amplitude_stack_principle}
 \end{figure}
 
@@ -209,7 +205,7 @@
 	\centering
 	\includegraphics[scale=0.5]{fig/trans2d3d.eps}
 	\caption{(a) Comparison between an experimental seismogram for a point-source (red) and for a line source (black), for 50, 55, 60 and 65 mm source-receiver offsets respectively. (b) Comparison between an experimental seismogram for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a). \textbf{cc} gives the correlation factor between line-source and point-source responses.}
-	\label{panel_amplitude}
+	\label{panel_amplitude_sem}
 \end{figure}
 
 \begin{figure}[!h]
@@ -239,8 +235,8 @@
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.4]{fig/reproducibility_acqui_principle.eps}
-	\caption{.}
-	\label{amplitude_acqui_principle}
+	\caption{Schematic representation of the acquisition geometry used to assess the data reproducibility using the MUSC system. Black traingle and red circle represent receivers and sources, respectively.}
+	\label{reproducibility_acqui_principle}
 \end{figure}
 
 \begin{figure}[!h]
@@ -255,6 +251,14 @@
 	\includegraphics[scale=1.0]{fig/spec_F50_CT_COMP.eps}
 	\caption{Comparison between analogic central traces (grey) and numerical traces corrected from the estimated effective source (black) for each experiment. \textbf{cc} gives the correlation coefficient.}
 	\label{panel_srcest_2d_mean_comp}
+\end{figure}
+
+% #### Fig:: panel_bialt_model
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{fig/bialt_model.eps}
+	\caption{Schematic representation of the so-called \textit{BiAlt} model.}
+	\label{panel_bialt_model}
 \end{figure}
 
 \begin{figure}[!h]
