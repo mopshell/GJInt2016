@@ -45,9 +45,6 @@
 
 % ## INTRODUCTION
 \section{Introduction}
-
-% #### Nature and scope of the problem
-%\noindent Since decades, geophysicists develop numerical inversion and imaging methods for seismic measurements (receiver function analysis  \citep{Ammon_1991_IRE}, ray-based methods \citep{Jones_PRM_2013}, finite-frequency tomography \citep{Montelli_FFT_2004}, inversion-based methods \citep{Virieux_FWI_2009}) to determine the structures and the physical properties of the Earth at several scales as subsurface (civil engineering), crustal, regional or global. These methods, like Full Waveform Inversion (FWI), are still in development and are mostly validated using synthetic data which are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions (for example acoustic approximation or \twod) which are the same in the inverse problem. Although, this \textit{inverse crime} \citep{Wirgin_TIC_2004} is particularly useful to validate an algorithm in its early development stage, it does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one known precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data which can lead sometimes to geological interpretation of numerical artifacts \citep{Morozov_ARF_2004}. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.
       
 \noindent Since the early developments of seismic imaging methods in the middle of 20th century, approaches and algorithms innovations are still proposed in current research projects. The improvements deal with both the qualitative imaging techniques like migration (e.g. \citet{Berkhout_MSS_2012,Guofeng_GPU_2013}), novel applications of quantitative imaging methods such as the first arrival tomography (e.g. \citet{Bohm_CWS_2015}), or even more recent approaches like the Full Waveform Inversion (e.g. \citet{Perez_AWI_2014}, see \citet{Virieux_FWI_2009} for a revue of this last decade). The refinements are proposed for different scales like near surface applications for civil engineering topics or more deeper investigation for example for oil prospection or crustal imaging at regional or global scales They are mostly validated by using synthetic data, for example with well known shared benchmark (like the Marmousi case). However, the synthetic data are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions which are the same in the inverse problem, for example the approximation of acoustic propagation, a 2D space medium, or a 2D line source. This aproach, called \textit{inverse crime} \citep{Wirgin_TIC_2004} is particularly useful for validating an algorithm in its early development stage but does not take into account the artefacts that can be due to the assumptions of the direct problem. Some authors tackle this issue by providing 3D data which are inverted with a 2D approach or other restrictive assumptions (e.g ). But also in this case, the approach does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one knows precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data which can lead sometimes to geological misinterpretation due to numerical artifacts \citep{Morozov_ARF_2004}. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.
 	
@@ -106,11 +103,11 @@
 % #### From point-source to line-source acquisition
 \subsection{From point-source to line-source response}
 
-\noindent In the framework of wave propagation modeling and imaging methods, most of available algorithms are limited to the \twod approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditionned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency imaging methods to recover parameter models.
+\noindent In the framework of wave propagation modeling and imaging methods, most of available algorithms are limited to the \twod approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditioned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency imaging methods to recover parameter models. Thus, it is critical for 2D inversion of field date to accurately correct the geometrical spreading.
 
-\noindent 3D data can corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. To correct some biases of this method, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts.   
+\noindent Point-source data can corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase shift of $\pi/4$ (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. Some variation exist, for examples, using a linear source wavelet estimation method to correct the phase \citep{Bretaudeau_FWI_2013} or applying an offset conditioning \citep{Tran_SWT_2013}. To correct some biases of these methods, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts. However, this kind of signal corrections are valid only for two-dimensional ($x,z$) medias invariant along the $y$-axis.    
 
-\noindent In other cases, 3D data are corrected or process \textit{on the fly}, or used as is in algorithm using a 2.5D approximation. \textcolor{red}{Add few lines: Wapenaar, Borisov etc...}
+\noindent In other cases, 3D data are corrected or process \textit{on the fly}, or used as is in algorithm using a 2.5D approximation.
 
 \noindent Thus, the missing step between purely numerical validation and real data applications can be the use of experimental line-source seismograms recorded under controlled conditions.
 
@@ -123,7 +120,6 @@
 \noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
 
 \noindent We now apply this method to experimental data on the equivalent real reduced-scale model. Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 50, 55, 60 and 65 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
-%Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a \twod FWI process as shown by \citet{Schafer_LSS_2014}.
 
 \noindent Figures \ref{panel_amplitude}(b) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) using the same parameters than for numerical experiment. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.95 and rms$<$0.25. These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are quite great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
 
@@ -214,22 +210,6 @@
 	\caption{(a) Comparison between an experimental seismogram for a point-source (red) and for a line source (black), for 50, 55, 60 and 65 mm source-receiver offsets respectively. (b) Comparison between an experimental seismogram for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a). \textbf{cc} gives the correlation factor between line-source and point-source responses.}
 	\label{panel_amplitude}
 \end{figure}
-
-
-% #### Fig:: panel_srcest_2d
-%\begin{figure}[!h]
-%	\centering
-%	\includegraphics[scale=1.0]{fig/F50_once_srcest_wig.eps}
-%	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
-%	\label{panel_srcest_2d}
-%\end{figure}
-%
-%\begin{figure}[!h]
-%	\centering
-%	\includegraphics[scale=1.0]{fig/F50_CT_once.eps}
-%	\caption{.}
-%	\label{panel_srcest_2d_comp}
-%\end{figure}
 
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
@@ -334,6 +314,6 @@
 
 \bibliographystyle{seg}  % style file is seg.bst
 %\bibliography{/media/pageotd/1581-58C8/Work/git-repository//TR-VIBRIS/tail/bibvibris}
-\bibliography{bibvibris,bibvibris_Dona,bibvibris-Dona}
+\bibliography{bibvibris,bibvibris_Dona,bibvibris-Dona,references}
 
 \end{document}
