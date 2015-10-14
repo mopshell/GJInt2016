@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.27)  28 SEP 2015 17:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.27)  14 OCT 2015 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,7 +148,11 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen114
 \bframebox=\box29
 LaTeX Info: Redefining \\ on input line 3056.
-) (./NS2015_Dona.aux)
+) (./NS2015_Dona.aux
+
+LaTeX Warning: Label `epoxy-resin' multiply defined.
+
+)
 \openout1 = `NS2015_Dona.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -163,7 +167,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
 \scratchdimen=\dimen115
@@ -231,85 +235,87 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
-[7] [8] [9]
+[7] [8] [9] [10]
 
 Package natbib Warning: Citation `Forbriger_LSS_2014;Schafer_LSS_2014' on page 
-10 undefined on input line 122.
+11 undefined on input line 133.
 
-[10] [11] [12] [13]
+[11] [12] [13] [14]
 Package epstopdf Info: Source file: <fig/panel_musc_bench.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 2700190 bytes
 (epstopdf)             Output file: <fig/panel_musc_bench-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2015-09-28 17:03:05
+(epstopdf)                    date: 2015-10-14 17:38:09
 (epstopdf)                    size: 454139 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/panel_musc_bench-eps-c
 onverted-to.pdf fig/panel_musc_bench.eps>
-(epstopdf)             \includegraphics on input line 169.
+(epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/panel_musc_bench-eps-converted-to.pdf, id=55, 578.16pt x 477.785pt>
+<fig/panel_musc_bench-eps-converted-to.pdf, id=58, 578.16pt x 477.785pt>
 File: fig/panel_musc_bench-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/panel_musc_bench-eps-converted-to.pdf>
 Package pdftex.def Info: fig/panel_musc_bench-eps-converted-to.pdf used on inpu
-t line 169.
+t line 180.
 (pdftex.def)             Requested size: 289.07928pt x 238.8919pt.
-Package epstopdf Info: Source file: <fig/panel_multisrcrec.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
-(epstopdf)                    size: 54870443 bytes
-(epstopdf)             Output file: <fig/panel_multisrcrec-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-09-28 17:03:17
-(epstopdf)                    size: 1445785 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/panel_multisrcrec-eps-
-converted-to.pdf fig/panel_multisrcrec.eps>
-(epstopdf)             \includegraphics on input line 177.
-Package epstopdf Info: Output file is already uptodate.
-
-<fig/panel_multisrcrec-eps-converted-to.pdf, id=56, 952.55875pt x 413.545pt>
-File: fig/panel_multisrcrec-eps-converted-to.pdf Graphic file (type pdf)
-
-<use fig/panel_multisrcrec-eps-converted-to.pdf>
-Package pdftex.def Info: fig/panel_multisrcrec-eps-converted-to.pdf used on inp
-ut line 177.
-(pdftex.def)             Requested size: 476.27821pt x 206.77199pt.
-
-Overfull \hbox (42.65822pt too wide) in paragraph at lines 177--178
- [][] 
- []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[15] [16 <./fig/panel_musc_bench-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/panel_multisrcrec.eps>
+(epstopdf)                    date: 2015-10-14 17:37:35
+(epstopdf)                    size: 54870443 bytes
+(epstopdf)             Output file: <fig/panel_multisrcrec-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-10-14 17:38:21
+(epstopdf)                    size: 1445785 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/panel_multisrcrec-eps-
+converted-to.pdf fig/panel_multisrcrec.eps>
+(epstopdf)             \includegraphics on input line 210.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/panel_multisrcrec-eps-converted-to.pdf, id=68, 952.55875pt x 413.545pt>
+File: fig/panel_multisrcrec-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/panel_multisrcrec-eps-converted-to.pdf>
+Package pdftex.def Info: fig/panel_multisrcrec-eps-converted-to.pdf used on inp
+ut line 210.
+(pdftex.def)             Requested size: 476.27821pt x 206.77199pt.
+
+Overfull \hbox (42.65822pt too wide) in paragraph at lines 210--211
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <fig/piezo-source-validation.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 678534 bytes
 (epstopdf)             Output file: <fig/piezo-source-validation-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:17
+(epstopdf)                    date: 2015-10-14 17:38:21
 (epstopdf)                    size: 266848 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/piezo-source-validatio
 n-eps-converted-to.pdf fig/piezo-source-validation.eps>
-(epstopdf)             \includegraphics on input line 185.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/piezo-source-validation-eps-converted-to.pdf, id=57, 362.35374pt x 743.778
+<fig/piezo-source-validation-eps-converted-to.pdf, id=69, 362.35374pt x 743.778
 75pt>
 File: fig/piezo-source-validation-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/piezo-source-validation-eps-converted-to.pdf>
 Package pdftex.def Info: fig/piezo-source-validation-eps-converted-to.pdf used 
-on input line 185.
+on input line 218.
 (pdftex.def)             Requested size: 181.17642pt x 371.88846pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 219.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 219.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
@@ -323,72 +329,72 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
 Package epstopdf Info: Source file: <fig/amplitude_acqui_principle.eps>
-(epstopdf)                    date: 2015-09-28 17:00:21
+(epstopdf)                    date: 2015-10-14 17:37:34
 (epstopdf)                    size: 37160 bytes
 (epstopdf)             Output file: <fig/amplitude_acqui_principle-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:18
+(epstopdf)                    date: 2015-10-14 17:38:21
 (epstopdf)                    size: 12667 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/amplitude_acqui_princi
 ple-eps-converted-to.pdf fig/amplitude_acqui_principle.eps>
-(epstopdf)             \includegraphics on input line 193.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/amplitude_acqui_principle-eps-converted-to.pdf, id=58, 493.845pt x 459.717
+<fig/amplitude_acqui_principle-eps-converted-to.pdf, id=70, 493.845pt x 459.717
 5pt>
 File: fig/amplitude_acqui_principle-eps-converted-to.pdf Graphic file (type pdf
 )
  <use fig/amplitude_acqui_principle-eps-converted-to.pdf>
 Package pdftex.def Info: fig/amplitude_acqui_principle-eps-converted-to.pdf use
-d on input line 193.
+d on input line 226.
 (pdftex.def)             Requested size: 246.92189pt x 229.85818pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/amplitude_stack_principle.eps>
-(epstopdf)                    date: 2015-09-28 17:00:21
+(epstopdf)                    date: 2015-10-14 17:37:34
 (epstopdf)                    size: 542208 bytes
 (epstopdf)             Output file: <fig/amplitude_stack_principle-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:18
+(epstopdf)                    date: 2015-10-14 17:38:22
 (epstopdf)                    size: 144112 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/amplitude_stack_princi
 ple-eps-converted-to.pdf fig/amplitude_stack_principle.eps>
-(epstopdf)             \includegraphics on input line 200.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/amplitude_stack_principle-eps-converted-to.pdf, id=59, 702.625pt x 418.563
+<fig/amplitude_stack_principle-eps-converted-to.pdf, id=71, 702.625pt x 418.563
 75pt>
 File: fig/amplitude_stack_principle-eps-converted-to.pdf Graphic file (type pdf
 )
  <use fig/amplitude_stack_principle-eps-converted-to.pdf>
 Package pdftex.def Info: fig/amplitude_stack_principle-eps-converted-to.pdf use
-d on input line 200.
+d on input line 233.
 (pdftex.def)             Requested size: 351.31163pt x 209.28136pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/trans2d3d.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
-(epstopdf)                    size: 364933 bytes
+(epstopdf)                    date: 2015-10-14 17:37:35
+(epstopdf)                    size: 164798 bytes
 (epstopdf)             Output file: <fig/trans2d3d-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:19
-(epstopdf)                    size: 103714 bytes
+(epstopdf)                    date: 2015-10-14 17:38:22
+(epstopdf)                    size: 50360 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/trans2d3d-eps-converte
 d-to.pdf fig/trans2d3d.eps>
-(epstopdf)             \includegraphics on input line 207.
+(epstopdf)             \includegraphics on input line 240.
 Package epstopdf Info: Output file is already uptodate.
-<fig/trans2d3d-eps-converted-to.pdf, id=60, 911.405pt x 413.545pt>
+<fig/trans2d3d-eps-converted-to.pdf, id=72, 906.38625pt x 430.60875pt>
 File: fig/trans2d3d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/trans2d3d-eps-converted-to.pdf>
 Package pdftex.def Info: fig/trans2d3d-eps-converted-to.pdf used on input line 
-207.
-(pdftex.def)             Requested size: 455.70139pt x 206.77199pt.
+240.
+(pdftex.def)             Requested size: 453.19202pt x 215.30383pt.
 
-Overfull \hbox (22.08139pt too wide) in paragraph at lines 207--208
+Overfull \hbox (19.57202pt too wide) in paragraph at lines 240--241
  [][] 
  []
 
@@ -396,24 +402,24 @@ Overfull \hbox (22.08139pt too wide) in paragraph at lines 207--208
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/trans2d3d-musc.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 355645 bytes
 (epstopdf)             Output file: <fig/trans2d3d-musc-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:19
+(epstopdf)                    date: 2015-10-14 17:38:22
 (epstopdf)                    size: 106729 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/trans2d3d-musc-eps-con
 verted-to.pdf fig/trans2d3d-musc.eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 247.
 Package epstopdf Info: Output file is already uptodate.
-<fig/trans2d3d-musc-eps-converted-to.pdf, id=61, 875.27pt x 413.545pt>
+<fig/trans2d3d-musc-eps-converted-to.pdf, id=73, 875.27pt x 413.545pt>
 File: fig/trans2d3d-musc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/trans2d3d-musc-eps-converted-to.pdf>
 Package pdftex.def Info: fig/trans2d3d-musc-eps-converted-to.pdf used on input 
-line 214.
+line 247.
 (pdftex.def)             Requested size: 437.63393pt x 206.77199pt.
 
-Overfull \hbox (4.01393pt too wide) in paragraph at lines 214--215
+Overfull \hbox (4.01393pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
@@ -421,150 +427,155 @@ Overfull \hbox (4.01393pt too wide) in paragraph at lines 214--215
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/reproducibility_acqui_principle.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 41008 bytes
 (epstopdf)             Output file: <fig/reproducibility_acqui_principle-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:19
+(epstopdf)                    date: 2015-10-14 17:38:23
 (epstopdf)                    size: 9198 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/reproducibility_acqui_
 principle-eps-converted-to.pdf fig/reproducibility_acqui_principle.eps>
-(epstopdf)             \includegraphics on input line 238.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/reproducibility_acqui_principle-eps-converted-to.pdf, id=62, 433.62pt x 43
+<fig/reproducibility_acqui_principle-eps-converted-to.pdf, id=74, 433.62pt x 43
 7.635pt>
 File: fig/reproducibility_acqui_principle-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use fig/reproducibility_acqui_principle-eps-converted-to.pdf>
 Package pdftex.def Info: fig/reproducibility_acqui_principle-eps-converted-to.p
-df used on input line 238.
+df used on input line 271.
 (pdftex.def)             Requested size: 216.80946pt x 218.81696pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/musc_F50_CT.eps>
-(epstopdf)                    date: 2015-09-28 17:00:21
+(epstopdf)                    date: 2015-10-14 17:37:34
 (epstopdf)                    size: 272966 bytes
 (epstopdf)             Output file: <fig/musc_F50_CT-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:20
+(epstopdf)                    date: 2015-10-14 17:38:23
 (epstopdf)                    size: 82110 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/musc_F50_CT-eps-conver
 ted-to.pdf fig/musc_F50_CT.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             \includegraphics on input line 278.
 Package epstopdf Info: Output file is already uptodate.
-<fig/musc_F50_CT-eps-converted-to.pdf, id=63, 441.65pt x 413.545pt>
+<fig/musc_F50_CT-eps-converted-to.pdf, id=75, 441.65pt x 413.545pt>
 File: fig/musc_F50_CT-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/musc_F50_CT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/musc_F50_CT-eps-converted-to.pdf used on input lin
-e 245.
+e 278.
 (pdftex.def)             Requested size: 220.82445pt x 206.77199pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/srccomp.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 48747 bytes
 (epstopdf)             Output file: <fig/srccomp-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:20
+(epstopdf)                    date: 2015-10-14 17:38:23
 (epstopdf)                    size: 16001 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/srccomp-eps-converted-
 to.pdf fig/srccomp.eps>
-(epstopdf)             \includegraphics on input line 252.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
-<fig/srccomp-eps-converted-to.pdf, id=64, 417.56pt x 145.54375pt>
+<fig/srccomp-eps-converted-to.pdf, id=76, 417.56pt x 145.54375pt>
 File: fig/srccomp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/srccomp-eps-converted-to.pdf>
-Package pdftex.def Info: fig/srccomp-eps-converted-to.pdf used on input line 25
-2.
+Package pdftex.def Info: fig/srccomp-eps-converted-to.pdf used on input line 28
+5.
 (pdftex.def)             Requested size: 208.77948pt x 72.77168pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/spec_F50_CT_COMP.eps>
-(epstopdf)                    date: 2015-09-28 17:00:22
+(epstopdf)                    date: 2015-10-14 17:37:35
 (epstopdf)                    size: 543517 bytes
 (epstopdf)             Output file: <fig/spec_F50_CT_COMP-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2015-09-28 17:03:20
+(epstopdf)                    date: 2015-10-14 17:38:24
 (epstopdf)                    size: 157962 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/spec_F50_CT_COMP-eps-c
 onverted-to.pdf fig/spec_F50_CT_COMP.eps>
-(epstopdf)             \includegraphics on input line 259.
+(epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
-<fig/spec_F50_CT_COMP-eps-converted-to.pdf, id=65, 441.65pt x 413.545pt>
+<fig/spec_F50_CT_COMP-eps-converted-to.pdf, id=77, 441.65pt x 413.545pt>
 File: fig/spec_F50_CT_COMP-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/spec_F50_CT_COMP-eps-converted-to.pdf>
 Package pdftex.def Info: fig/spec_F50_CT_COMP-eps-converted-to.pdf used on inpu
-t line 259.
+t line 292.
 (pdftex.def)             Requested size: 220.82445pt x 206.77199pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/bialt_model.eps>
-(epstopdf)                    date: 2015-09-28 17:00:21
+(epstopdf)                    date: 2015-10-14 17:37:34
 (epstopdf)                    size: 21480 bytes
 (epstopdf)             Output file: <fig/bialt_model-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:21
+(epstopdf)                    date: 2015-10-14 17:38:24
 (epstopdf)                    size: 9518 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/bialt_model-eps-conver
 ted-to.pdf fig/bialt_model.eps>
-(epstopdf)             \includegraphics on input line 267.
+(epstopdf)             \includegraphics on input line 300.
 Package epstopdf Info: Output file is already uptodate.
-<fig/bialt_model-eps-converted-to.pdf, id=66, 480.79625pt x 335.2525pt>
+<fig/bialt_model-eps-converted-to.pdf, id=78, 480.79625pt x 335.2525pt>
 File: fig/bialt_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/bialt_model-eps-converted-to.pdf>
 Package pdftex.def Info: fig/bialt_model-eps-converted-to.pdf used on input lin
-e 267.
+e 300.
 (pdftex.def)             Requested size: 240.39752pt x 167.62584pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <fig/blind-comp-cor.eps>
-(epstopdf)                    date: 2015-09-28 17:00:21
+(epstopdf)                    date: 2015-10-14 17:37:34
 (epstopdf)                    size: 318175 bytes
 (epstopdf)             Output file: <fig/blind-comp-cor-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-28 17:03:21
+(epstopdf)                    date: 2015-10-14 17:38:25
 (epstopdf)                    size: 119333 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/blind-comp-cor-eps-con
 verted-to.pdf fig/blind-comp-cor.eps>
-(epstopdf)             \includegraphics on input line 274.
+(epstopdf)             \includegraphics on input line 307.
 Package epstopdf Info: Output file is already uptodate.
-<fig/blind-comp-cor-eps-converted-to.pdf, id=67, 536.0025pt x 945.5325pt>
+<fig/blind-comp-cor-eps-converted-to.pdf, id=79, 536.0025pt x 945.5325pt>
 File: fig/blind-comp-cor-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/blind-comp-cor-eps-converted-to.pdf>
 Package pdftex.def Info: fig/blind-comp-cor-eps-converted-to.pdf used on input 
-line 274.
+line 307.
 (pdftex.def)             Requested size: 268.0006pt x 472.76509pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./fig/panel_musc_bench-eps-converted-to.pdf>] [15 <./fig/panel_multisrcrec
--eps-converted-to.pdf>] [16 <./fig/piezo-source-validation-eps-converted-to.pdf
->] [17 <./fig/amplitude_acqui_principle-eps-converted-to.pdf>] [18 <./fig/ampli
-tude_stack_principle-eps-converted-to.pdf>] [19 <./fig/trans2d3d-eps-converted-
-to.pdf>] [20 <./fig/trans2d3d-musc-eps-converted-to.pdf>] [21 <./fig/reproducib
-ility_acqui_principle-eps-converted-to.pdf>] [22 <./fig/musc_F50_CT-eps-convert
-ed-to.pdf> <./fig/srccomp-eps-converted-to.pdf>] [23 <./fig/spec_F50_CT_COMP-ep
-s-converted-to.pdf> <./fig/bialt_model-eps-converted-to.pdf>] [24 <./fig/blind-
-comp-cor-eps-converted-to.pdf>] [25
+[17
 
-] [26
+ <./fig/panel_multisrcrec-eps-converted-to.pdf>]
 
-] [27
+LaTeX Warning: Text page 18 contains only floats.
 
-] (./NS2015_Dona.bbl [28
+[18 <./fig/piezo-source-validation-eps-converted-to.pdf>] [19 <./fig/amplitude_
+acqui_principle-eps-converted-to.pdf>] [20 <./fig/amplitude_stack_principle-eps
+-converted-to.pdf>] [21 <./fig/trans2d3d-eps-converted-to.pdf>] [22 <./fig/tran
+s2d3d-musc-eps-converted-to.pdf>] [23 <./fig/reproducibility_acqui_principle-ep
+s-converted-to.pdf>] [24 <./fig/musc_F50_CT-eps-converted-to.pdf> <./fig/srccom
+p-eps-converted-to.pdf>] [25 <./fig/spec_F50_CT_COMP-eps-converted-to.pdf> <./f
+ig/bialt_model-eps-converted-to.pdf>] [26 <./fig/blind-comp-cor-eps-converted-t
+o.pdf>] [27
+
+] [28
+
+] [29
+
+] (./NS2015_Dona.bbl [30
 
 ]
 Underfull \hbox (badness 1406) in paragraph at lines 67--69
@@ -572,7 +583,7 @@ Underfull \hbox (badness 1406) in paragraph at lines 67--69
  mi-gra-tion of model-
  []
 
-[29] [30] [31]
+[31] [32] [33]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -580,30 +591,34 @@ Missing character: There is no “ in font cmr10!
 
 Package natbib Warning: There were undefined citations.
 
-[32] (./NS2015_Dona.aux) ) 
+[34] (./NS2015_Dona.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  2796 strings out of 493304
  41508 string characters out of 6139871
- 101512 words of memory out of 5000000
+ 99551 words of memory out of 5000000
  6207 multiletter control sequences out of 15000+600000
  8710 words of font info for 31 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,11n,29p,2258b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-xti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti10.pfb>
-Output written on NS2015_Dona.pdf (32 pages, 3074579 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on NS2015_Dona.pdf (34 pages, 3023162 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
