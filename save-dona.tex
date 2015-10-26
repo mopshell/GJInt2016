@@ -48,20 +48,20 @@
 
 % #### Nature and scope of the problem
 %\noindent Since decades, geophysicists develop numerical inversion and imaging methods for seismic measurements (receiver function analysis  \citep{Ammon_1991_IRE}, ray-based methods \citep{Jones_PRM_2013}, finite-frequency tomography \citep{Montelli_FFT_2004}, inversion-based methods \citep{Virieux_FWI_2009}) to determine the structures and the physical properties of the Earth at several scales as subsurface (civil engineering), crustal, regional or global. These methods, like Full Waveform Inversion (FWI), are still in development and are mostly validated using synthetic data which are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions (for example acoustic approximation or \twod) which are the same in the inverse problem. Although, this \textit{inverse crime} \citep{Wirgin_TIC_2004} is particularly useful to validate an algorithm in its early development stage, it does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one known precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data which can lead sometimes to geological interpretation of numerical artifacts \citep{Morozov_ARF_2004}. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.
-
+      
 \noindent Since the early developments of seismic imaging methods in the middle of 20th century, approaches and algorithms innovations are still proposed in current research projects. The improvements deal with both the qualitative imaging techniques like migration (e.g. \citet{Berkhout_MSS_2012,Guofeng_GPU_2013}), novel applications of quantitative imaging methods such as the first arrival tomography (e.g. \citet{Bohm_CWS_2015}), or even more recent approaches like the Full Waveform Inversion (e.g. \citet{Perez_AWI_2014}, see \citet{Virieux_FWI_2009} for a revue of this last decade). The refinements are proposed for different scales like near surface applications for civil engineering topics or more deeper investigation for example for oil prospection or crustal imaging at regional or global scales. They are mostly validated by using synthetic data, for example with well known shared benchmark (like the Marmousi case). However, the synthetic data are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions which are the same in the inverse problem, for example the approximation of acoustic propagation, a 2D space medium, or a 2D line source. This aproach, called \textit{inverse crime} \citep{Wirgin_TIC_2004} is particularly useful for validating an algorithm in its early development stage but does not take into account the artefacts that can be due to the assumptions of the direct problem. Some authors tackle this issue by providing 3D data which are inverted with a 2D approach or other restrictive assumptions (e.g ). But also in this case, the approach does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one knows precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data which can lead sometimes to geological misinterpretation due to numerical artifacts \citep{Morozov_ARF_2004}. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.
-
+	
 \noindent The best way to satisfy this need is to use Physical Small Scale Modeling Methods (noted \psm subsequently). \psm were used since several years to study the propagation of waves in various media with several stage of complexity, from acoustic wave propagation in homogeneous media to elastic wave propagation in \thrd heterogeneous anisotropic media \citep{Rieber_EWP_1936,Howes_SMS_1953,Hilterman_TDM_1970,French_MRP_1974,Bishop_LVM_1985,Pratt_FWI_1999,Favretto_NMT_2013,Sarkar_TPM_2003,Isaac_SMS_1999}, and allow to generate experimental seismic data under well-controlled conditions. In this way, recent studies have been conducted to simulate multi-sources and multi-receivers through piezzo-electric transducers \citep{Wong_SPM_2009}. An alternative approach consists in using the laser interferometry as the receiver system, as done in the MUSC Laboratory \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013}, \textit{Mesure Ultrasonore Sans Contact} in French, is one of them. This technology, by avoiding the contact of the receivers on the model, allows to by-pass the coupling issue of transducers that is difficult to model. In this way,the MUSC laboratory is designed to simulate (1) wide-angle on-shore acquisitions modeling both body waves and surface waves, (2) automatic multisource-multireceiver measurements with a high-productivity, (3) high-precision source-receiver positioning and (4) high-precision recording of absolute surface displacement without coupling effects. 
-
+	
 % #### State the objectives
 \noindent Our objective here is to increase the potential of the MUSC system as a reliable tool for generating experimental data which will be distributed in the scientific community. 
 \noindent Thus, we present two studies of experimental data in order to : 1) quuantitavely refine the comparison between numerical and experimental data by taking into account the 3D/2D geometrical spreading effects through an alternative way and 2) identify the reproducibility of the source impact and, consequently, data repeatability. These approaches will complete the knowledge of the system and facilitate the achievement of massive multi-source and multi-receiver data simulating subsurface seismic experimental campaigns. Moreover, they provide quantitative informations about the data quality for geophysicists who need to use them measurement based on reduced scale model. 
-
+	
 % #### Describe the method of investigation
 \noindent In order to achieve these objectives, we used a seismic wave modeling code based on the Spectral Element Method \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005} that allow to provide numerical signals as reference data for comparison. The Spectral Element Method (SEM) has several advantages compared to finite differences and finite elements, such as: (1) a weak formulation which can naturally take into account the free surface, (2) an explicit scheme in time domain facilitating parallelization and reducing the computational cost, (3) a spatial discretization (mesh) convenient for the representation of complex environments and (4) high precision results and low numerical dispersion.
-
+	
 % #### Describe the principal results of the investigation
-
+	
 \noindent The numerical characteristics of the code used are described in a first part below. Afterwards, the specificities of the MUSC system are explained, followed by the presentation of the models used. Finally The two coupled studies on experimental data are detailed, in the respective aims (1) of refining the comparison between numerical and experimental data by taking into account the geometrical spreading effects between \twod and \thrd data through an alternative way, and (2) of identifying the reproducibility of the source impact to validate the data reproducibility.
 
 
@@ -71,22 +71,19 @@
 % #### Spectral Element Method
 \subsection{Numerical modeling: Spectral Element Method}
 
-%La méthode des différence-finies (DF ) est la méthode de résolution des EDP la plus rependue et développée en sciences de la Terre de par sa simplicité (relative), sa robustesse et son cout numérique faible (Virieux, 1986; Levander, 1988; Bohlen & Saenger, 2006). La méthode des DF permet la discrétisation du domaine sur une grille cartésienne et, généralement, avec un pas de grille régulier et approxime les valeurs des dérivées partielles par un développement de Taylor à un ordre dépendant de la précision souhaitée de la solution. Cependant, la méthode des DF, malgré sa popularité, souffre de quelques inconvénients pouvant s'avérer handicapant dans certaines configurations. Tout d'abord, le maillage sous forme de grille cartésienne pose un problème dans des configurations où une représentation réaliste de la topographie serait nécessaire, amenant alors à sur-échantillonner le milieu avec un pas de grille plus petit afin de pouvoir reproduire correctement la topographie. Une autre difficulté est liée à l’ordre du développement de Taylor entraînant une extension du schéma numérique, en nombre de nœuds de grille, au fur et à mesure qu'il augmente (Levander, 1988). La méthode particulière mixed-grid pour la modélisation en domaine fréquentiel (Jo et al., 1996; Hustedt et al., 2004) sera présentée dans la section suivante.
+\noindent Various numerical methods exist to resolve the equation of motion in arbitrary elastic media. The most widely used for seismic applications is the Finite-Differences (FD) method \citep{Virieux_PSV_1986,Levander_PSV_1988,Robertsson_FDM_1994,Pratt_EWM_1990,Stekl_VEM_1998,Saenger_FDM_2004} which estimates each derivative on a regular Cartesian grid using a Taylor development \citep{Moczo_FDM_2004} of order \textit{n}. FD is simple to implement but quickly shows some limitations: first the Cartesian grid is defined by the minimum propagated wavelength ($\lambda_{min}$) in the full medium which conducts to a very small spatial step in case of low velocities zones it is usually the case for subsurface issues. Moreover, \citet{Saenger_FDM_2000} show that 60 points by wavelength ($\lambda$) are needed to model propagation of Rayleigh wave in order $n=2$ where only 15 points by $\lambda$ are required to model propagation of body waves which increases drastically the numerical cost in case of near-surface modeling experiment. second, the cartesian grid does not provide a suitable tool to reproduce properly complex topography and interfaces. To overcome this limit, one can use the Finite-Elements Method (FEM) which is another popular method used for wave propagation modeling \citep{Lysmer_FEM_1972,Seron_FEM_1990,Hulbert_FEM_1990}. FEM is based on a variational formulation of the equation of motion and gives a continuous approximate solution in space using polynomial basis functions defined on each node of each cell of the mesh. The natural boundary conditions of FEM is the free surface and the triangular (in 2D) or tetraedric (in 3D) unstructured meshes are well adapted to complex media and topography. However, low polynomial basis are inadequate with fine spatial discretization and the required discretization to obtain precise and non-dispersive solution is numerically costly. 
 
-%La méthode des éléments finis (EF) se propose de résoudre les systèmes d’EDP en se basant sur une forme variationnelle du problème à résoudre. Le domaine est généralement discrétisé, en 2D, par des éléments triangulaires pour lesquels chaque nœud est associé à une fonction de base polynomiale choisie de manière à obtenir la matrice inversible la plus creuse possible. Les EF permettent aussi bien des maillages réguliers qu'irréguliers les rendant ainsi tout à fait adaptés à la discrétisation de milieu présentant des interfaces complexes et de la topographie. Les EF peuvent être divisés en deux sous catégories : les EF continus, pour lesquels les échanges d’informations entre les cellules se font par les nœuds qui sont communs entre cellules voisines, et les EF discontinus, pour lesquels les nœuds sont propres à chaque cellules et où les échanges d’informations entre cellules voisines se font par des flux numériques aux interfaces. Le schéma des Galerkin discontinus (Cockburn, 2003), qui sera décrit par la suite, appartient à cette deuxième catégorie d’EF. 
+\noindent Paralelly, at the end of the 20th century, the Spectral Element Method (SEM), widely used in fluid dynamics \citep{Patera_SEM_1984,Korczak_SEM_1986,Karniadakis_FEM_1989}, has been adapted to seismic wave propagation \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}. 
 
-%La méthode des éléments spectraux (ES ) (Faccioli et al., 1997; Komatisch et al., 1998; Capdeville et al., 2003) est une méthode de résolution des EDP répandue notamment dans le domaine de la tomographie globale et régionale grâce à ses caractéristiques permettant la mise en place d’un maillage grossier du milieu. Le méthode des ES est une variante des EF utilisant des ordres d’interpolation polynomiaux élevés amenant à un taux de convergence spectrale à mesure que l’ordre d’interpolation augmente. Cette approche permet d’obtenir une matrice de masse diagonale qui ne nécessitera par conséquent aucune inversion. Cependant, le maillage, qui est une clé du succès des ES, est également sa principale limitation. Composé de quadrangle en 2D et de parallélépipèdes en 3D, le maillage n’est pas aussi adaptés que les EF aux milieux présentant des topographies et interfaces complexes. Des développements récents basés sur les principes d’homogénéisation visent actuellement à s'affranchir de cette limite liée au maillage (Capdeville et al., 2010).
+\noindent The SEM is based upon a high-order piecewise polynomial approximation of the weak formulation of the wave equation. It combines the accuracy of the pseudo-spectral method with the flexibility of the finite-element method \citep{Tromp_SEM_2008}. 
 
+\noindent In this method, the wave-field is represented in terms of high-degree Lagrange interpolants, and integrals are computed based upon Gauss-Lobatto-Legendre (gll) quadrature. This combination leading to a perfectly diagonal mass matrix leads in turn to a fully explicit time scheme which leads itself very well to numerical simulations on parallel computers. It is particularly well suited to handle complex geometries and interface matching conditions \citep{Cristini_SEM_2012}. 
 
-\noindent Various numerical methods exist to resolve the equation of motion in arbitrary elastic media. The most widely used for seismic applications is the Finite-Differences (FD) method \citep{Virieux_PSV_1986,Levander_PSV_1988,Robertsson_FDM_1994,Pratt_EWM_1990,Stekl_VEM_1998,Saenger_FDM_2004} which estimates each derivative on a regular Cartesian grid using a Taylor development \citep{Moczo_FDM_2004} of order \textit{n}. FD is simple to implement and robust but quickly shows some limitations. First the Cartesian grid is defined by the minimum propagated wavelength ($\lambda_{min}$) in the full medium which conducts to a very small spatial step in case of low velocities zones it is usually the case for subsurface issues. Moreover, \citet{Saenger_FDM_2000} show that 60 points by wavelength ($\lambda$) are needed to model propagation of Rayleigh wave in order $n=2$ where only 15 points by $\lambda$ are required to model propagation of body waves which increases drastically the numerical cost in case of near-surface modeling experiment. Second, the Cartesian grid does not provide a suitable tool to reproduce properly complex topography and interfaces. 
+\noindent As in FEM, all boundaries of the domain are reflecting and the free surface is the natural condition.  In order to simulate infinite or semi-infinite domain, SEM can use Perfect Match Layers boundary conditions \citep{Berenger_PML_1994,Festa_PML_2005} but are not used here.
+ 
+\noindent The typical element size that is required to generate an accurate mesh is of the order of $\lambda$, $\lambda$ being the smallest wavelength of waves traveling in the model.
 
-\noindent To overcome this limit, one can use the Finite-Elements Method (FEM) which is another popular method used for wave propagation modeling \citep{Lysmer_FEM_1972,Seron_FEM_1990,Hulbert_FEM_1990}. FEM is based on a variational formulation of the equation of motion and gives a continuous approximate solution in space using polynomial basis functions defined on each node of each cell of the mesh. The natural boundary conditions of FEM is the free surface and the triangular (in 2D) or tetraedric (in 3D) unstructured meshes are well adapted to complex media and topography. However, low polynomial basis are inadequate with fine spatial discretization and the required discretization to obtain precise and non-dispersive solution is numerically costly. 
-
-\noindent Paralelly, at the end of the 20th century, the Spectral Element Method (SEM), widely used in fluid dynamics \citep{Patera_SEM_1984,Korczak_SEM_1986,Karniadakis_FEM_1989}, has been adapted to seismic wave propagation \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}. The SEM is a variant of FEM based upon a high-order piecewise polynomial approximation of the weak formulation of the wave equation which leads to a spectral convergence ratio as the interpolation order increases. 
-
-\noindent In this method, the wave-field is represented in terms of high-degree Lagrange interpolants, and integrals are computed based upon Gauss-Lobatto-Legendre (gll) quadrature. This combination leading to a perfectly diagonal mass matrix leads in turn to a fully explicit time scheme which leads itself very well to numerical simulations on parallel computers.
-
-\noindent SEM inherits the flexibility and the natural free surface condition of the FEM \citep{Tromp_SEM_2008}. The typical element size that is required to generate an accurate mesh is of the order of $\lambda$, $\lambda$ being the smallest wavelength of waves traveling in the model.  Models are meshed with quadrangles (2D) and hexaedras (3D) using the open-source software package GMSH \citep{Geuzaine_MSH_2009}. It is particularly well suited to handle complex geometries and interface matching conditions \citep{Cristini_SEM_2012}. In order to simulate infinite or semi-infinite domain, SEM can use Perfect Match Layers boundary conditions \citep{Berenger_PML_1994,Festa_PML_2005} but are not used here.
+\noindent Models are meshed in 2D with quadrangles using the open-source software package GMSH \citep{Geuzaine_MSH_2009}. 
 
 
 % #### MUSC bench
@@ -100,33 +97,32 @@
 
 \noindent For the purpose of reduced scale modeling, the change of scale must keep the relationship between observables, i.e. amplitudes and time arrivals. Concerning the amplitude, the Quality factor $Q$ will be chosen to be in the same range as the materials of near surface. For the time arrivals, the key parameter is the rate between the propagated seismic wavelenght and the spatial dimensions of the experience that includes the model geometry, the spatial increment between the sources and the receivers positions, but also the dimensions of the source impact. In the framework of seismic physical modeling, this latter must be as close as possible to a point source in order to simulate the spatial energy repartition of a weight drop at the soil surface, i.e. with an isotropic directivity of the emitted P waves.
 
+
 \noindent In the MUSC system, the main frequency bands used for reduced scale data are [ 20 KHz ; 200 KHz] and [ 300 KHz; 800 KHz], respectively called here "low frequency band" and" high frequency band". For the lower spectral band, a commercial piezo-electric transducer is used without any coupling gel. For the higher band, the piezoelectric source is coupled through a conical adapter which is sticked to the transducer in order to obtain the expected impact surface. The resulting source pattern is isotropic enough in the spectral band of interest (see \citep{Bretaudeau_SSM_2011} for more details).
+
 
 \noindent The lower frequency band is well adapted to simulate seismic experiment applied to near surface through the scales ratios proposed in tables 1 and 2. In the first case (table 1), a central frequency of 100 KHz in the laboratory corresponds to a central frequency of 100 Hz on the field, whereas in the second one (table 2) a central frequency of 100 KHz in the laboratory corresponds to a central frequency of 50 HZ on the field. Note that with these propositions, the  quality factor $Q$ and the density $\rho$ are modeled with a ratio equal to 1, i.e. they remain the same at both of the scales. Actually small-scale models are generally made of thermoplastic or casting epoxy resin materials \citep{Bretaudeau_FWI_2013,Bretaudeau_SSM_2011,Bretaudeau_SSA_2008b}.The mechanical properties of these materials provide attenuation characteristics close to natural soil materials of subsurface media. Their seismic velocities are about 2 times of those in subsurface materials as proposed in table 2. The possibilities of combinations can generate the impedance contrasts encountered in the geophysical issues. 
 
 \noindent The MUSC bench presented above has een studied for simulating with a great reproducibility the typical field campaigns of subsurface seismic measurement. The validation was achieved by comparison between small scale measurement and numerical data (ref). Results have shown a great reproducibility of the converted and diffracted events recorded on the vertical component. The amplitudes analysis had been conducted through 2D-3D corrections and small discrepencies remained due to the difficulty of taking into account the S and P waves in the same way. For this reason, we propose here to refine the study by testing a more recent correction methodology (ref) as well as providing experimental and numerical, 2D and 3D data. This study will be achieved through data carried out on two models that are presented below.
 
-
+ 
 % ## Models
 \section{Models}
 
-% Model scale...
-
-% F50 pure...
-
-% BiAlt model...
-
 \noindent distances are in $mm$ (acquisition length around 50 mm typically) and time unit is $ms$.( $V_{P}$, $V_{S}$ etc...) The models are generally over-sized to easily separate reflected waves on boundaries from the rest of the signal. 
+ 
 
+% ## Results
+\section{Results}
 
 % #### From point-source to line-source acquisition
 \subsection{From point-source to line-source response}
 
-\noindent In the framework of wave propagation modeling and imaging methods, most of available algorithms are limited to the \twod approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditioned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency imaging methods to recover parameter models. Thus, it is critical for 2D inversion of field date to accurately correct the geometrical spreading.
+\noindent In the framework of wave propagation modeling and imaging methods, most of available algorithms are limited to the \twod approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditionned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency imaging methods to recover parameter models.
 
-\noindent Point-source data can corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase shift of $\pi/4$ (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. Some variation exist, for examples, using a linear source wavelet estimation method to correct the phase \citep{Bretaudeau_FWI_2013} or applying an offset conditioning \citep{Tran_SWT_2013}. To correct some biases of these methods, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts. However, this kind of signal corrections are valid only for two-dimensional ($x,z$) medias invariant along the $y$-axis.    
+\noindent 3D data can corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase (2) applying a taper $\sqrt{t}$ to all traces to correct amplitudes. To correct some biases of this method, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near to far offsets. The results are thus strongly dependent of user's \textit{a priori} and attempts.   
 
-\noindent In other cases, 3D data are corrected or process \textit{on the fly}, or used as is in algorithm using a 2.5D approximation.
+\noindent In other cases, 3D data are corrected or process \textit{on the fly}, or used as is in algorithm using a 2.5D approximation. \textcolor{red}{Add few lines: Wapenaar, Borisov etc...}
 
 \noindent Thus, the missing step between purely numerical validation and real data applications can be the use of experimental line-source seismograms recorded under controlled conditions.
 
@@ -139,6 +135,7 @@
 \noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
 
 \noindent We now apply this method to experimental data on the equivalent real reduced-scale model. Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 50, 55, 60 and 65 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
+%Even if waveforms seem quite similar, amplitude differences and phase shifts between point-source and line-source responses may be critical in a \twod FWI process as shown by \citet{Schafer_LSS_2014}.
 
 \noindent Figures \ref{panel_amplitude}(b) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) using the same parameters than for numerical experiment. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.95 and rms$<$0.25. These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are quite great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
 
@@ -185,6 +182,28 @@
 	\label{panel_musc_bench}
 \end{figure}
 
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cccccc}
+		\hline
+		material & Field experiment scale & MUSC experiment scale & scales ratio  \\
+		\hline
+		P waves velocity & $\mathrm{V_{p 0}}$ & $\mathrm{V_{p 0}}$  & 1  \\
+		S waves velocity & $\mathrm{V_{s 0}}$ &  $\mathrm{V_{s 0}}$ & 1   \\
+		Time & $\mathrm{T_{0}}$    & 0.001 $\mathrm{T_{0}}$ & 0.001  \\
+		frequency   & $\mathrm{F_{0}}$  & 1000 $\mathrm{F_{0}}$ & 1000  \\
+		Distance   & $\mathrm{D_{0}}$  & 0.001 $\mathrm{D_{0}}$ & 0.001   \\
+		Wavelengh   & $\mathrm{D_{0}}$ & 0.001 $\mathrm{D_{0}}$ & 0.001  \\
+		\hline
+	\end{tabular}
+	\caption{ Table 1 : example of possible scales ratio between field experiments and MUSC experiments when considering a ratio equal to 1 for the density and Quality factor.}
+	\label{epoxy-resin}
+\end{table}
+
+\clearpage
+\newpage
+
 % #### Fig:: panl_multisrcrec
 \begin{figure}[!h]
 	\centering
@@ -229,6 +248,22 @@
 	\caption{(a) Comparison between an experimental seismogram for a point-source (red) and for a line source (black), for 50, 55, 60 and 65 mm source-receiver offsets respectively. (b) Comparison between an experimental seismogram for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a). \textbf{cc} gives the correlation factor between line-source and point-source responses.}
 	\label{panel_amplitude}
 \end{figure}
+
+
+% #### Fig:: panel_srcest_2d
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=1.0]{fig/F50_once_srcest_wig.eps}
+%	\caption{(a) Comparison between six estimated source wavelets (\textit{ESW}) calculated for each experiment. (b,c,d,e,f,g) Comparison between experimental traces (black) and numerically simulated traces corrected with the corresponding estimated effective source (colored). \textbf{r} gives the correlation factor between numerical simulation from the estimated effective source and experimental traces.}
+%	\label{panel_srcest_2d}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=1.0]{fig/F50_CT_once.eps}
+%	\caption{.}
+%	\label{panel_srcest_2d_comp}
+%\end{figure}
 
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
@@ -333,6 +368,6 @@
 
 \bibliographystyle{seg}  % style file is seg.bst
 %\bibliography{/media/pageotd/1581-58C8/Work/git-repository//TR-VIBRIS/tail/bibvibris}
-\bibliography{bibvibris,bibvibris_Dona,bibvibris-Dona,references}
+\bibliography{bibvibris,bibvibris_Dona,bibvibris-Dona}
 
 \end{document}
