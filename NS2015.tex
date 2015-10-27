@@ -110,6 +110,14 @@
 % ## Models
 \subsection{Reduced-scale models}
 
+\noindent Reduced-scale models are generally made of melted epoxy-resins. These materials have several advantages: (1) they can be homogeneous and isotropic in the frequency bands of MUSC sources, (2) they have a large set of mechanical properties, close to those of natural soils, and can be modified by adding some charges, (3) they are insensitive to environmental conditions (ambient temperature, humidity) and (4) they allow to reproduce complex geometries. Table \ref{epoxy-resin} presents the mechanical properties of some epoxy-resins widely used to produce reduced-scale models for MUSC.
+
+\noindent A key issue in reduced-scale modeling is the preservation of the number of propagated wavelength ($N_{\lambda}$) through the acquisition area between the real model and the reduced-scale model. This leads to a scale ratio $k$, such as: $\lambda_{real}=k^{-1}\lambda_{reduc}$, where $\lambda_{real}$ and $\lambda_{reduc}$ denote the wavelength propagated in the real and reduced-scale models, respectively. Given the frequency bands of the MUSCs sources, the scale ratio $k$ for near-surface experiments is typically around 1000 which means that at reduced-scale meters become millimeters en seconds become milliseconds. Table \ref{scale-ratio}, from \citet{Bretaudeau_SSM_2011}, presents scale ratios for several parameters considering that wave-velocity in natural soil is equal to wave-velocity in reduced-scale model. Considering reduced-scale models have finite dimensions, they are generally oversized to easily separate reflected waves on boundaries from the rest of the recorded signal. 
+
+\noindent In this study, we consider two different reduced-scale models. The first one is an homogeneous model made of \textit{F50 pure} epoxy-resin with dimensions $500 \times 504 \times 115\ mm$. This model, like other homogeneous models, is useful to calibrate the components of MUSC and validate methods in a first approach. The second model, presented in figure \ref{panel_bialt_model} is a two-layered model, named \textit{BiAlt}. This model is made of F50 pure for the top layer and LAB1000 for the bottom layer and shows a central depression of few millimeters.
+
+% A scale ratio k is defined so as to reduce the spatial dimensions of the investigated soils and sub- soils, through dividing the dimensions by k and through decreasing propagation wavelength in the corresponding small-scale model as follows: λreduc 1⁄4 k−1λreal. The material properties and/or frequencies therefore need to be modified accordingly. Models have been built using thermoplastic or epoxy resin-based materials, with the P-wave velocities in these materials V reduc remaining close to the P-wave velocities in natural soils V real (i.e., between 1000 m/s to 6000 m/s): V real 1⁄4 αV reduc , 0.4 < α < 4, where V real and V reduc are the P-wave velocities in the natural soils and models, respectively. Let’s assume that α 1⁄4 1, then in the MUSC setup, k can be selected from the interval [1000–50,000] depending on the nature of the seismic study undertaken. To get models with a size suitable for laboratory investigations and use ultrasonic sources in the range of a few hundred kHz, the scale factor is typically around 1000 for near-surface investigations to depths of approximately 10 m and can equal 50,000 for the deepest seismic investigations, e.g., dedicated to oil prospection. Table 1 provides scale ratios for the various parameters involved in this experimental campaign.
+
 %Small-scale models: These underground models are produced by assembling thermoplastics or melted epoxy resin-based materials because using such components enable replicating complex geometries and easily varying the set of mechanical properties. The viscoelastic properties are systematically controlled on independent samples by means of ultrasonic techniques that incorporate both the time of flight and spectrum ratio methods. The models are oversized to easily distinguish parasitic reflections on their boundaries.
 
 % Pour des raisons logistiques, le banc de mesure a été dimensionné de manière à pouvoir recevoir au maximum des modèles n’excédant pas 1 m x 1 m de côté, 50 cm de profondeur, et 270 kg. Pour pouvoir réaliser des mesures sismiques sur des dispositifs de plusieurs fois la longueur d’onde pour de telles dimensions de modèles, il faut des longueurs d’onde de l’ordre de 1 mm < λP < 30 mm. De telles longueurs d’onde sont obtenues entre 20 kHz et 1 M Hz avec des vitesses de propagation de 1000 m.s−1 à 4000 m.s−1 . Afin de respecter les approximations généralement faites pour les phénomènes de propagation simples que nous allons étudier (propagation élastique linéaire en milieu homogène), les matériaux choisis doivent être isotropes et homogènes au niveau microscopique et macroscopique, c’est-à-dire que les matériaux poreux ou ayant une granulométrie comparable aux longueurs d’onde utilisées sont proscrits, de même que les matériaux pouvant présenter des variations de propriétés non maîtrisées (forte sensibilité à la température, hétérogénéités, fractures, anisotropie, etc). Cela exclut donc les matériaux naturels et impose l’utilisation de matériaux transformés.
@@ -126,7 +134,7 @@
 
 % BiAlt model...
 
-\noindent distances are in $mm$ (acquisition length around 50 mm typically) and time unit is $ms$.( $V_{P}$, $V_{S}$ etc...) The models are generally over-sized to easily separate reflected waves on boundaries from the rest of the signal. 
+%\noindent distances are in $mm$ (acquisition length around 50 mm typically) and time unit is $ms$.( $V_{P}$, $V_{S}$ etc...) The models are generally over-sized to easily separate reflected waves on boundaries from the rest of the signal. 
 
 \section{Results}
 
@@ -143,35 +151,25 @@
 
 \noindent Here, we take advantage of the experimental framework to explore an alternative approach specific to MUSC system. Figure \ref{amplitude_acqui_principle} presents a schematic representation of the principle for this kind of experiment. Theoretically, the stack of all receiver with the same offset will results in a pseudo line-source response. Yet, to simplify the experiment, an other way is to consider only one receiver per offset, on a line perpendicular  and centered to the defined line-source. All traces of each common receiver gather are then stacked together to obtain the line-source response. In order to apply this protocol, we have to choose a line-source's length $L$ sufficiently great to be assimilated to a cylindrical source and above all a suitable sampling interval $\Delta s$ between each point-source constituting the pseudo line-source to ensure applicability of the \textit{Huygen's principle}. 
 
-\noindent For this experiment, we choose an homogeneous block of \textit{F50 pure} epoxy-resin (see table \ref{epoxy-resin} for physical parameters) with dimensions $500 \times 504 \times 115$ mm ($x \times y \times z$). Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. Four receiver positions have been selected: 45, 50, 55 and 60 mm offset perpendicular to the line-source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$.Each receiver is perpendicular to and centered on the line-source. For each receiver position, all recorded traces are stacked together to obtain an equivalent two-dimensional line-source response.
+\noindent For this experiment, we choose the homogeneous block of \textit{F50 pure} epoxy-resin. Given the material's properties, we choose $L=240\ mm$ and $ds=0.5\ mm$ which leads to 481 point-source locations. Four receiver positions have been selected: 45, 50, 55 and 60 mm offset perpendicular to the line-source. The source wavelet is a Ricker with a central frequency $f_{0}=100\ kHz$. Figures \ref{amplitude_stack_principle}(a,c) show the signal recorded at one receiver for a line of point-sources and for both numerical (figure \ref{amplitude_stack_principle}(a)) and experimental (figure \ref{amplitude_stack_principle}(b)) modeling. Note that the quality factor is not took into account for the numerical modeling, and for the experimental result, the $PSv$-reflected wavefront is masked by the echo of the experimental source (which will be considered in the next section). Here, the point-source response corresponds to the central trace (distance $0\ mm$) and the equivalent line-source response is the weighted stack of all traces. Comparisons of the point-source and line-source responses are presented in figures \ref{amplitude_stack_principle}(b) and \ref{amplitude_stack_principle}(d), respectively for numerical and experimental modeling. Traces are here normalized to be comparable. These comparisons show clearly the attempted phase shift of $\pi/4$ between point-source and line-source responses, and some differences in terms of waveform, especially for the experimental results between $0.08$ and $0.10\ ms$. The same comparisons, for the four source-receiver offsets, are shown in figures \ref{panel_amplitude_sem}(a) and \ref{panel_amplitude_sem}(b) for numerical modeling and experimental modeling, respectively. To validate our approach to produce experimental line-source responses, we have applied and calibrated the \textit{hybrid method} \citep{Forbriger_LSS_2014,Schafer_LSS_2014} on the numerical point-source response to obtain the equivalent line-source response. Figure \ref{panel_amplitude_sem}(b) presents the comparison between numerical line-source response and equivalent line-source response and shows that the \textit{hybrid method} is able to produce the equivalent line-source response with a very good agreement in terms of both phase and amplitude. Finally, we have applied the same correction to the experimental signal (figure \ref{panel_amplitude_sem}(d)). This last result shows a good agreement between experimental line-source and equivalent line-source responses up to $0.12\ ms$. Then, the correction of the geometrical spreading seems unable to scale correctly amplitude where echo of the source and $PSv$-reflected wave are superimposed. For the signal at $55\ mm$ offset, the largest amplitude difference can be explain by a weaker \textit{signal-to-noise} ratio than for the the three other offsets in the experimental data.  
 
-\noindent We first apply this method using 2D and 3D numerical modeling for 3D point-source, 3D line-source and 2D cylindrical source with a complete acquisition of 120 receivers spaced of 1 mm and a minimum offset of 45 mm. For these experiments, we did not take into account the quality factor $\mathcal{Q}$. Figure \ref{panel_amplitude_sem}a shows the comparison between point-source response (3D) and line-source response (2D). As expected, both amplitude and phase are differents. Then, we applied the \textit{hybrid method} \citep{Forbriger_LSS_2014;Schafer_LSS_2014} on the point-source response to obtain the equivalent line-source response. Figure \ref{panel_amplitude_sem}b shows that the \textit{hybird method} is able to produce equivalent line-source response with a good agreement.
-
-\noindent To evaluate the efficiency of the method, experimental line-source responses will be compared to point-source and equivalent line-source responses using the cross-correlation coefficient (\textbf{cc}) and the root mean square (\textbf{rms}) ratio. These values are presented in table \ref{cc-rms}. \textbf{cc}$_init$ and \textbf{rms}$_init$ correspond to direct evaluation whereas \textbf{cc}$_final$ corresponds to the best \textbf{cc} obtained and \textbf{rms}$_final$ is the corresponding \textbf{rms}.
-
-\noindent We now apply this method to experimental data on the equivalent real reduced-scale model. Figures \ref{panel_amplitude}(a) show the comparison between experimental traces obtained using a point-source and a line-source for source-receiver offsets 50, 55, 60 and 65 mm respectively. It is straightforward that these waveforms are not similar in terms of both phases (\textbf{cc}$<$0.75) and amplitude (\textbf{rms}$>$0.4). Even after amplitude fitting, point-source response to the line-response in term of phase (\textbf{cc}$<$0.8), amplitudes do not match (\textbf{rms}$>$0.4). These results confirm that using raw point-source responses in a \twod inversion process or imaging method can be critical in terms of convergence and validity of the results since these methods are built over phase and/or amplitude similarity.
-
-\noindent Figures \ref{panel_amplitude}(b) show the comparison between experimental traces using a line-source and a point-source after geometrical spreading corrections (equivalent line-source response) using the same parameters than for numerical experiment. The cross-correlation coefficient \textbf{cc} for these waveforms are greater than 0.95 and rms$<$0.25. These results denote that the experimental line-source response is correct in terms of phase compared to an equivalent line-source response. However, \textbf{rms} are quite great even if they are smaller than previously. This can be explained by small differences in terms of waveforms and phases which are critical in the final \textbf{rms} results. Moreover, the \textit{hybrid} method to obtain the equivalent line-source response from a point-source response needs accurate parametrization to obtain the best result which is not necessarily in a good agreement with the attempt true line-source response.   
-
-\noindent These results show that the line-source emulation on the MUSC system is efficient and can produce data suitable for imaging methods such as 2D FWI.
+\noindent These results on our approach to generate experimental line-source responses show that the MUSC system is efficient and can produce reliable 2D experimental data suitable for migration-based methods such as FWI.
 
 
 % #### Experimental source reproducibility
 \subsection{Experimental source reproducibility}
 
-\noindent We have shown the MUSC system is able to generate high quality 2D experimental seismograms. However, experimental data, as other, must be reproducible to be used as a reference or in an inversion process. As shown by \citet{Bretaudeau_SSM_2011}, the source waveform injected in the reduced-scale model by the piezo-electric source is not similar to the selected theoritical one. Figure (?), of data recorded in an homogeneous model, shows clearly multiple wavefront following the main arrival. After \citet{Bretaudeau_SSM_2011}, these multiples are generated inside the conical adapter of the piezo-electric source.
+\noindent We have shown the MUSC system is able to generate high quality 2D experimental seismograms. However, experimental data, as other, must be reproducible to be used as a reference or in an inversion process. As shown by \citet{Bretaudeau_SSM_2011}, the source waveform injected in the reduced-scale model by the piezo-electric source is not similar to the selected theoretical one. Figure \ref{amplitude_stack_principle}(c), in previous section, shows clearly multiple wavefront following the main $P$-wave and, particulary, $S$-wave wavefronts. After \citet{Bretaudeau_SSM_2011}, these multiples are generated inside the conical adapter of the piezo-electric source before being injected in the model.
 
 \noindent To assess the ability of MUSC system to provide reproducible data, \textit{i.e.} to evaluate the reproducibility of the source impact, several physical modeling were performed on the same homogeneous epoxy-resin block as in previous section. 
 
-\noindent Ten realizations have been acquired on this model with a similar geometry setup, i.e. 120 receivers positions with an increment equal to 1 mm and a minimum offset of 10 mm. The numerical wavelet sent to the piezoelectric transducer source is a Ricker signal with a central frequency of 100 kHz. However, the source waveform is modified by the physical coupling effect of the transducer. 
+\noindent In a first step, ten realizations have been acquired on this model with a similar geometry setup, i.e. 120 receivers positions with an increment equal to 1 mm and a minimum source-receiver offset of 10 mm. The numerical wavelet sent to the piezoelectric transducer source is a Ricker signal with a central frequency of 100 kHz. Figure \ref{panel_central_traces_cc} shows the resulting central trace of each realization and \textbf{cc} gives the correlation coefficient of each trace with a mean signal calculated using central trace of each of the ten experiments. For each realization, \textbf{cc} is always greater than 0.98 which demonstrate the very high reproducibility of data generated by the MUSC system.
 
-\noindent A mean shot gather, calculated from the ten experiments, is used as reference seismogram. Figure \ref{panel_central_traces_cc} shows the central trace of each realization and \textbf{cc} gives the correlation coefficient of each trace with the reference one. The \textbf{cc} are always greater than 0.98 which demonstrate the very high reproducibility of data generated by the MUSC system.
-
-\noindent In a second step, a unique source wavelet is estimated using a linear source wavelet estimation method based on a stabilized deconvolution \citep{Pratt_FWI_1999}. The source wavelet estimation takes into account the ten experiments together and allows to obtain a mean effective source suitable for each experiment. The resulting source wavelet is applied to the synthetic signals (figure \ref{panel_srcest_2d_mean_comp}). The corrected seismograms are in good agreement with the experimental seismograms (correlation coefficients $\mathrm{>}$ 0.96) confirms the great efficiency of the wavelet source assessment process.  
+\noindent In a second step, a unique source wavelet is estimated using a linear source wavelet estimation method based on a stabilized deconvolution \citep{Pratt_FWI_1999}. The source wavelet estimation takes into account the vertical components of the ten experiments together and allows to obtain a mean effective source wavelet. The resulting source wavelet is applied to the synthetic signals (figure \ref{panel_srcest_2d_mean_comp}). The corrected seismograms are in good agreement with the experimental seismograms (correlation coefficients $\mathrm{>}$ 0.96) confirms the great efficiency of the wavelet source assessment process.  
 
 \noindent These last results, based on an average estimated source wavelet show that the effective impulse source emitted by the transducer in the MUSC system measurement bench is stable enough to ensure a robust reproducibility of the source. Therefore, concerning the key issue of the source knowledge, experimental data acquired in the MUSC system can be efficiently processed by imaging methods like Full Waveform Inversion (FWI) with only one estimation step for all the multi-source and multi-receivers data.
 
-\noindent However, this last result does not mean that the source will be the same for an experiment for an other experiment on an other model. Thus, we consider now a more complex model, called \textit{BiAlt}. This model , shown in figure (???) is a two-layer model with a central alteration. We generate synthetic seismogram with the 2D SEM algorithm and using the mean effective source wavelet estimated on homogeneous block as a source function. Figure \ref{blind-test} shows that the synthetic seismogram using the effective source wavelet is in good agreement with the experimental one...
+\noindent However, this last result does not mean that the source will be the same for an experiment for an other experiment on an other model. Thus, we consider now a more complex model, called \textit{BiAlt} (figure \ref{panel_bialt_model}. We generate synthetic seismogram with the 2D SEM algorithm and using the mean effective source wavelet estimated on homogeneous block as a source function. Figure \ref{blind-test} shows that the synthetic seismogram using the effective source wavelet is in good agreement with the experimental one...
 
 \noindent This last result shows that the MUSC source is stable from an experiment to an other and can be consequently injected as an input in modeling and imaging methods without any pre-processing or \textit{on the fly} source inversion.
 
@@ -192,7 +190,7 @@
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.5]{fig/panel_musc_bench.eps}
-	\caption{Photograph of the MUSC ultrasonic laboratory (from \citet{Bretaudeau_FWI_2013} )with its four components: (1) a small-scale model of the underground, (2) an optical table with two automated arms moving above the model, (3) a laser interferometer recording ultrasonic wave propagation	at the model surface, and (4) a piezoelectric ultrasonic source generating ultrasonic waves in the model.}
+	\caption{Photograph of the MUSC ultrasonic laboratory (from \citet{Bretaudeau_FWI_2013} )with its four components: (1) a small-scale model of the underground, (2) an optical table with two automated arms moving above the model, (3) a laser interferometer recording ultrasonic wave propagation	at the model surface,(4) a piezoelectric ultrasonic source generating ultrasonic waves in the model.}
 	\label{panel_musc_bench}
 \end{figure}
 
@@ -202,6 +200,13 @@
 	\includegraphics[scale=0.5]{fig/panel_multisrcrec.eps}
 	\caption{Example of multi-source multi-receiver record on the MUSC system for a two-layer model (bialt).}
 	\label{panel_multisrcrec}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.5]{fig/bialt_model.eps}
+	\caption{Schematic representation of the so-called \textit{BiAlt} model.}
+	\label{panel_bialt_model}
 \end{figure}
 
 % #### Fig:: piezo-source-validation
@@ -223,23 +228,23 @@
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.5]{fig/amplitude_stack_principle.eps}
-	\caption{(a) Resulting seismogram at one receiver position for the experimental line-source. (b) Comparison between point-source response in red (central trace of (a)) and line-source response in green (stack of (a)). Some wavefront are pointed: (1) P-wave, (2) surface wave, (3) reflected \textit{PP} and (4) reflected \textit{PSv} -wave on the bottom of the model.}
+	\caption{(a,b) Numerical modeling. (a) Resulting seismogram at one receiver position for the experimental line-source. (b) Comparison between point-source response in red (central trace of (a)) and line-source response in green (stack of (a)). (c,d) Same as (a) and (b) but for experimental modeling.}
 	\label{amplitude_stack_principle}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.5]{fig/trans2d3d.eps}
-	\caption{(a) Comparison between synthetic seismograms for a point-source (red) and for a line source (green), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between synthetic seismograms for a line-source (green), and a point-source response corrected from geometrical spreading (blue) for same source-receiver offsets as (a).}%\textbf{cc} gives the correlation factor between line-source and point-source responses.}
+	\caption{(a,b) Numerical modeling. (a) Comparison between synthetic seismograms for a point-source (red) and for a line source (green), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between synthetic seismograms for a line-source (green), and a point-source response corrected from geometrical spreading (blue) for same source-receiver offsets as (a). (c,d) Same as (a) and (b) for experimental modeling. The light-purple dotted lines pick $PSv$-wavefront.}%\textbf{cc} gives the correlation factor between line-source and point-source responses.}
 	\label{panel_amplitude_sem}
 \end{figure}
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.5]{fig/trans2d3d-musc.eps}
-	\caption{(a) Comparison between experimental seismograms for a point-source (red) and for a line source (black), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between experimental seismograms for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a).} %\textbf{cc} gives the correlation factor between line-source and point-source responses.}
-	\label{panel_amplitude}
-\end{figure}
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=0.5]{fig/trans2d3d-musc.eps}
+%	\caption{(a) Comparison between experimental seismograms for a point-source (red) and for a line source (black), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between experimental seismograms for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a).} %\textbf{cc} gives the correlation factor between line-source and point-source responses.}
+%	\label{panel_amplitude}
+%\end{figure}
 
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
@@ -271,12 +276,7 @@
 \end{figure}
 
 % #### Fig:: panel_bialt_model
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.5]{fig/bialt_model.eps}
-	\caption{Schematic representation of the so-called \textit{BiAlt} model.}
-	\label{panel_bialt_model}
-\end{figure}
+
 
 \begin{figure}[!h]
 	\centering
@@ -307,8 +307,24 @@
 	\label{epoxy-resin}
 \end{table}
 
-\clearpage
-\newpage
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l|lcr|}
+		
+		\hline
+		Distance               & $d_{real}\ (m)$            & $\rightarrow$ & $k^{-1}d_{reduc}\ (mm)$ \\
+		Wavelength             & $\lambda_{real}\ (m)$      & $\rightarrow$ & $k^{-1}\lambda_{reduc}\ (mm)$ \\
+		Time                   & $t_{real}\ (s)$            & $\rightarrow$ & $k^{-1}t_{reduc}\ (ms)$ \\
+		Velocity               & $V_{real}\ (m.s^{-1})$     & $\rightarrow$ & $V_{reduc}\ (m.s^{-1})$ \\
+		Density                & $\rho_{real}\ (kg.m^{-3})$ & $\rightarrow$ & $\rho_{reduc}\ (kg.m^{-3})$ \\
+		Quality factor         & $Q_{real}$                 & $\rightarrow$ & $Q_{reduc}$ \\
+		Particule displacement & $a_{real}\ (m)$            & $\rightarrow$ & $k^{-1}a_{reduc}\ (mm)$ \\
+		Particule velocity     & $c_{real}\ (m.s^{-1})$     & $\rightarrow$ & $c_{reduc}\ (m.s^{-1})$ \\
+		\hline
+	\end{tabular}
+	\caption{Scale ratio between viscoelastic parameters at the real scale and at a scale reduced by a coefficient $k$ (after \citet{Bretaudeau_SSM_2011}).}
+	\label{scale-ratio}
+\end{table}
 
 \begin{table}[!ht]
 	\centering
