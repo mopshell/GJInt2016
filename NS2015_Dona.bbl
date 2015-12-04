@@ -21,11 +21,6 @@ Bohm, G., J.~M. Carcione, D. Gei, S. Picotti, and A. Michelini,  2015,
   monitoring in a saline aquifer: Journal of Petroleum Science and Engineering,
   {\bf 133}, 245--257.
 
-\bibitem[Bretaudeau, 2010]{Bretaudeau_PHD_2010}
-Bretaudeau, F.,  2010, Mod\'elisation physique \`a \'echelle r\'eduite pour
-  l'adaptation de l'inversion des formes d'ondes sismiques au g\'enie civil et
-  \`a la subsurface: PhD thesis, Universit\'e de Nantes.
-
 \bibitem[Bretaudeau et~al., 2013]{Bretaudeau_FWI_2013}
 Bretaudeau, F., R. Brossier, D. Leparoux, O. Abraham, and J. Virieux,  2013, 2d
   elastic full-waveform imaging of the near-surface: application to synthetic
@@ -196,6 +191,10 @@ Seron, F.~J., F.~J. Sanz, M. Kindelan, and J.~I. Badal,  1990, Finite-element
 Stekl, I., and R.~G. Pratt,  1998, Accurate visco-elastic modeling by
   frequency-domain finite differences, using rotated operators.: Geophysics,
   {\bf 63}, 1779--1794.
+
+\bibitem[Tran et~al., 2013]{Tran_SWT_2013}
+Tran, K.~T., M. McVay, M. Faraone, and D. Horhota,  2013, Sinkhole detection
+  using 2d full seismic waveform tomography: Geophysics, {\bf 78}, R175--R183.
 
 \bibitem[Tromp et~al., 2008]{Tromp_SEM_2008}
 Tromp, J., D. Komatitsch, and Q. Liu,  2008, Spectral-element and adjoint

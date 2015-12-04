@@ -3,46 +3,401 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: NS2015_Dona.aux
 The style file: seg.bst
 Database file #1: bibvibris.bib
+Database file #2: bibvibris_Dona.bib
+Repeated entry---line 36 of file bibvibris_Dona.bib
+ : @article{Berenger_PML_1994
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 79 of file bibvibris_Dona.bib
+ : @article{Berkhout_MSS_2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 91 of file bibvibris_Dona.bib
+ : @article{Bishop_LVM_1985
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 113 of file bibvibris_Dona.bib
+ : @article{Bohm_CWS_2015
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 146 of file bibvibris_Dona.bib
+ : @article{Bretaudeau_FWI_2013
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 166 of file bibvibris_Dona.bib
+ : @article{Bretaudeau_SSA_2008b
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 178 of file bibvibris_Dona.bib
+ : @article{Bretaudeau_SSM_2011
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 269 of file bibvibris_Dona.bib
+ : @article{Cristini_SEM_2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 310 of file bibvibris_Dona.bib
+ : @article{Favretto_NMT_2013
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 338 of file bibvibris_Dona.bib
+ : @article{Festa_PML_2005
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 353 of file bibvibris_Dona.bib
+ : @article{Forbriger_LSS_2014
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 376 of file bibvibris_Dona.bib
+ : @article{French_MRP_1974
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 432 of file bibvibris_Dona.bib
+ : @article{Geuzaine_MSH_2009
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 477 of file bibvibris_Dona.bib
+ : @article{Guofeng_GPU_2013
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 520 of file bibvibris_Dona.bib
+ : @article{Hilterman_TDM_1970
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 532 of file bibvibris_Dona.bib
+ : @article{Howes_SMS_1953
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 544 of file bibvibris_Dona.bib
+ : @article{Hulbert_FEM_1990
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 557 of file bibvibris_Dona.bib
+ : @article{Isaac_SMS_1999
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 592 of file bibvibris_Dona.bib
+ : @article{Karniadakis_FEM_1989
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 617 of file bibvibris_Dona.bib
+ : @article{Komatitsch_ISM_1999
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 631 of file bibvibris_Dona.bib
+ : @book{Komatitsch_SEM_2005
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 640 of file bibvibris_Dona.bib
+ : @article{Komatitsch_SEM_1998
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 652 of file bibvibris_Dona.bib
+ : @article{Korczak_SEM_1986
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 694 of file bibvibris_Dona.bib
+ : @article{Levander_PSV_1988
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 745 of file bibvibris_Dona.bib
+ : @article{Lysmer_FEM_1972
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 803 of file bibvibris_Dona.bib
+ : @book{Moczo_FDM_2004
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 838 of file bibvibris_Dona.bib
+ : @article{Morozov_ARF_2004
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1004 of file bibvibris_Dona.bib
+ : @article{Patera_SEM_1984
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1027 of file bibvibris_Dona.bib
+ : @article{Perez_AWI_2014
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1039 of file bibvibris_Dona.bib
+ : @article{Pratt_FWI_1999
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1054 of file bibvibris_Dona.bib
+ : @article{Pratt_EWM_1990
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1079 of file bibvibris_Dona.bib
+ : @article{Rieber_EWP_1936
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1091 of file bibvibris_Dona.bib
+ : @article{Robertsson_FDM_1994
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1123 of file bibvibris_Dona.bib
+ : @article{Saenger_FDM_2004
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1136 of file bibvibris_Dona.bib
+ : @article{Saenger_FDM_2000
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1164 of file bibvibris_Dona.bib
+ : @article{Sarkar_TPM_2003
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1179 of file bibvibris_Dona.bib
+ : @article{Schafer_LSS_2014
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1202 of file bibvibris_Dona.bib
+ : @article{Seron_FEM_1990
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1249 of file bibvibris_Dona.bib
+ : @article{Stekl_VEM_1998
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1297 of file bibvibris_Dona.bib
+ : @article{Tromp_SEM_2008
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1327 of file bibvibris_Dona.bib
+ : @article{Virieux_PSV_1986
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1340 of file bibvibris_Dona.bib
+ : @article{Virieux_FWI_2009
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1419 of file bibvibris_Dona.bib
+ : @article{Wirgin_TIC_2004
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1434 of file bibvibris_Dona.bib
+ : @article{Wong_SPM_2009
+ :                       ,
+I'm skipping whatever remains of this entry
+Database file #3: bibvibris-Dona.bib
+Database file #4: references.bib
+Repeated entry---line 39 of file references.bib
+ : @article{berenger_pml_1994
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 127 of file references.bib
+ : @article{berkhout_mss_2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 140 of file references.bib
+ : @article{bishop_lvm_1985
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 166 of file references.bib
+ : @article{bohm_cws_2015
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 218 of file references.bib
+ : @article{bretaudeau_fwi_2013
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 241 of file references.bib
+ : @article{bretaudeau_ssa_2008b
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 255 of file references.bib
+ : @article{bretaudeau_ssm_2011
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 478 of file references.bib
+ : @article{cristini_sem_2012
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 574 of file references.bib
+ : @article{favretto_nmt_2013
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 607 of file references.bib
+ : @article{festa_pml_2005
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 670 of file references.bib
+ : @article{forbriger_lss_2014
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 696 of file references.bib
+ : @article{french_mrp_1974
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 769 of file references.bib
+ : @article{geuzaine_msh_2009
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 820 of file references.bib
+ : @article{guofeng_gpu_2013
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 897 of file references.bib
+ : @article{hilterman_tdm_1970
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 909 of file references.bib
+ : @article{howes_sms_1953
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 921 of file references.bib
+ : @article{hulbert_fem_1990
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 935 of file references.bib
+ : @article{isaac_sms_1999
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 974 of file references.bib
+ : @article{karniadakis_fem_1989
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1015 of file references.bib
+ : @article{komatitsch_ism_1999
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1029 of file references.bib
+ : @book{komatitsch_sem_2005
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1038 of file references.bib
+ : @article{komatitsch_sem_1998
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1085 of file references.bib
+ : @article{korczak_sem_1986
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1209 of file references.bib
+ : @article{levander_psv_1988
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1263 of file references.bib
+ : @article{lysmer_fem_1972
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1327 of file references.bib
+ : @book{moczo_fdm_2004
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1366 of file references.bib
+ : @article{morozov_arf_2004
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1548 of file references.bib
+ : @article{patera_sem_1984
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1574 of file references.bib
+ : @article{perez_awi_2014
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1587 of file references.bib
+ : @article{pratt_fwi_1999
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1603 of file references.bib
+ : @article{pratt_ewm_1990
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1640 of file references.bib
+ : @article{rieber_ewp_1936
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1653 of file references.bib
+ : @article{robertsson_fdm_1994
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1687 of file references.bib
+ : @article{saenger_fdm_2004
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1701 of file references.bib
+ : @article{saenger_fdm_2000
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1731 of file references.bib
+ : @article{sarkar_tpm_2003
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1747 of file references.bib
+ : @article{schafer_lss_2014
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1773 of file references.bib
+ : @article{seron_fem_1990
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1845 of file references.bib
+ : @article{stekl_vem_1998
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1910 of file references.bib
+ : @article{tromp_sem_2008
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1943 of file references.bib
+ : @article{virieux_psv_1986
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1957 of file references.bib
+ : @article{virieux_fwi_2009
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2056 of file references.bib
+ : @article{wirgin_tic_2004
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2071 of file references.bib
+ : @article{wong_spm_2009
+ :                       ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in Komatitsch_SEM_2005
 You've used 45 entries,
             2639 wiz_defined-function locations,
-            993 strings with 14395 characters,
-and the built_in function-call counts, 18282 in all, are:
-= -- 2003
-> -- 714
-< -- 24
-+ -- 257
-- -- 237
-* -- 1624
-:= -- 3160
+            997 strings with 14408 characters,
+and the built_in function-call counts, 18501 in all, are:
+= -- 2026
+> -- 730
+< -- 23
++ -- 263
+- -- 243
+* -- 1652
+:= -- 3189
 add.period$ -- 47
 call.type$ -- 45
-change.case$ -- 344
+change.case$ -- 347
 chr.to.int$ -- 45
 cite$ -- 46
-duplicate$ -- 618
-empty$ -- 1291
-format.name$ -- 304
-if$ -- 3693
+duplicate$ -- 621
+empty$ -- 1305
+format.name$ -- 310
+if$ -- 3738
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 46
+missing$ -- 47
 newline$ -- 141
 num.names$ -- 134
-pop$ -- 255
+pop$ -- 258
 preamble$ -- 1
-purify$ -- 344
+purify$ -- 347
 quote$ -- 0
 skip$ -- 461
 stack$ -- 0
-substring$ -- 1494
-swap$ -- 37
+substring$ -- 1525
+swap$ -- 38
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 266
 warning$ -- 1
-while$ -- 155
+while$ -- 157
 width$ -- 0
 write$ -- 494
-(There was 1 warning)
+(There were 88 error messages)
