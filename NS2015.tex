@@ -51,14 +51,16 @@
 
 \noindent Since the early developments of seismic imaging methods in the middle of 20th century, approaches and algorithms innovations are still proposed in current research projects. The improvements deal with both the qualitative imaging techniques like migration (e.g. \citet{Berkhout_MSS_2012,Guofeng_GPU_2013}), novel applications of quantitative imaging methods such as the first arrival tomography (e.g. \citet{Bohm_CWS_2015}), or even more recent approaches like the Full Waveform Inversion (e.g. \citet{Perez_AWI_2014}, see \citet{Virieux_FWI_2009} for a revue of this last decade). The refinements are proposed for different scales like near surface applications for civil engineering topics or more deeper investigation for example for oil prospection or crustal imaging at regional or global scales. They are mostly validated by using synthetic data, for example with well known shared benchmark (like the Marmousi case). However, the synthetic data are generally computed using the same wave propagation modeling engine used in the inverse problem process. In other terms, the synthetic data are computed with some assumptions which are the same in the inverse problem, for example the approximation of acoustic propagation, a 2D space medium, or a 2D line source. This approach, called \textit{inverse crime} \citep{Wirgin_TIC_2004} is particularly useful for validating an algorithm in its early development stage but does not take into account the artefacts that can be due to the assumptions of the direct problem. Some authors tackle this issue by providing 3D data which are inverted with a 2D approach or other restrictive assumptions (e.g ). But also in this case, the approach does not allow to assess the efficiency of the method for real seismic data. Moreover, because no one knows precisely the Earth interior, it is difficult to evaluate the capacity of a method to recover physical parameters and structures from real seismic data which can lead sometimes to geological misinterpretation due to numerical artifacts \citep{Morozov_ARF_2004}. Thus, it is necessary to add a step for which imaging methods will be tested for experimental seismic measurements obtained under controlled conditions.
 
-\noindent The best way to satisfy this need is to use Physical Small Scale Modeling Methods (noted \psm subsequently). \psm were used since several years to study the propagation of waves in various media with several stage of complexity, from acoustic wave propagation in homogeneous media to elastic wave propagation in \thrd heterogeneous anisotropic media \citep{Rieber_EWP_1936,Howes_SMS_1953,Hilterman_TDM_1970,French_MRP_1974,Bishop_LVM_1985,Pratt_FWI_1999,Favretto_NMT_2013,Sarkar_TPM_2003,Isaac_SMS_1999}, and allow to generate experimental seismic data under well-controlled conditions. In this way, recent studies have been conducted to simulate multi-sources and multi-receivers through piezo-electric transducers \citep{Wong_SPM_2009}. An alternative approach consists in using the laser interferometry as the receiver system, as done in the MUSC Laboratory \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013}, \textit{Mesure Ultrasonore Sans Contact} in French, is one of them. This technology, by avoiding the contact of the receivers on the model, allows to by-pass the coupling issue of transducers that is difficult to model. In this way,the MUSC laboratory is designed to simulate (1) wide-angle on-shore acquisitions modeling both body waves and surface waves, (2) automatic multisource-multireceiver measurements with a high-productivity, (3) high-precision source-receiver positioning and (4) high-precision recording of absolute surface displacement without coupling effects. 
+\noindent The best way to satisfy this need is to use Physical Small Scale Modeling Methods (noted \psm subsequently). \psm were used since several years to study the propagation of waves in various media with several stage of complexity, from acoustic wave propagation in homogeneous media to elastic wave propagation in \thrd heterogeneous anisotropic media \citep{Rieber_EWP_1936,Howes_SMS_1953,Hilterman_TDM_1970,French_MRP_1974,Bishop_LVM_1985,Pratt_FWI_1999,Favretto_NMT_2013,Sarkar_TPM_2003,Isaac_SMS_1999}, and allow to generate experimental seismic data under well-controlled conditions. In this way, recent studies have been conducted to simulate multi-sources and multi-receivers through piezo-electric transducers \citep{Wong_SPM_2009}. An alternative approach consists in using the laser interferometry as the receiver system, as done in the MUSC Laboratory \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013}, \textit{Mesure Ultrasonore Sans Contact} in French. This technology, by avoiding the contact of the receivers on the model, allows to by-pass the coupling issue of transducers that is difficult to model. In this way, the MUSC laboratory is designed to simulate (1) wide-angle on-shore acquisitions modeling both body waves and surface waves, (2) automatic multisource-multireceiver measurements with a high-productivity, (3) high-precision source-receiver positioning and (4) high-precision recording of absolute surface displacement without coupling effects. 
+
+\noindent These abilities have been validated through a comparison of experimental data to numerical simulation in a 2-dimensions space containing a cavity \citep{Bretaudeau_SSM_2011}. The results showed very fine similarities concerning the diffracted and converted arrivals when the source waveform is taken into account. For that, the numerical source was simulated in 2D and some corrections were required to compare the amplitude results, with some remaining weak discrepancies as mentioned in the discussion of \citep{Bretaudeau_SSM_2011}. Moreover, the source diagram was assessed with a parallel measurement bench, showing an omnidirectional propagation but the repeatability of the source impact was not studied.
 
 % #### State the objectives
 \noindent Our objective here is to increase the potential of the MUSC system as a reliable tool for generating experimental data which will be distributed in the scientific community. 
 \noindent Thus, we present two studies of experimental data in order to : 1) quantitatively refine the comparison between numerical and experimental data by taking into account the 3D/2D geometrical spreading effects through an alternative way and 2) identify the reproducibility of the source impact and, consequently, data repeatability. These approaches will complete the knowledge of the system and facilitate the achievement of massive multi-source and multi-receiver data simulating subsurface seismic experimental campaigns. Moreover, they provide quantitative informations about the data quality for geophysicists who need to use them measurement based on reduced scale model. 
 
 % #### Describe the method of investigation
-\noindent In order to achieve these objectives, we used a seismic wave modeling code based on the Spectral Element Method \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005} that allow to provide numerical signals as reference data for comparison. The Spectral Element Method (SEM) has several advantages compared to finite differences and finite elements, such as: (1) a weak formulation which can naturally take into account the free surface, (2) an explicit scheme in time domain facilitating parallelization and reducing the computational cost, (3) a spatial discretization (mesh) convenient for the representation of complex environments and (4) high precision results and low numerical dispersion.
+\noindent In order to achieve these objectives, we used a seismic wave modeling code based on the Spectral Element Method \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005} that allows to provide numerical signals as reference data for comparison. The Spectral Element Method (SEM) has several advantages compared to finite differences and finite elements, such as: (1) a weak formulation which can naturally take into account the free surface, (2) an explicit scheme in time domain facilitating parallelization and reducing the computational cost, (3) a spatial discretization (mesh) convenient for the representation of complex environments and (4) high precision results and low numerical dispersion.
 
 % #### Describe the principal results of the investigation
 
@@ -78,25 +80,25 @@
 %La méthode des éléments spectraux (ES ) (Faccioli et al., 1997; Komatisch et al., 1998; Capdeville et al., 2003) est une méthode de résolution des EDP répandue notamment dans le domaine de la tomographie globale et régionale grâce à ses caractéristiques permettant la mise en place d’un maillage grossier du milieu. Le méthode des ES est une variante des EF utilisant des ordres d’interpolation polynomiaux élevés amenant à un taux de convergence spectrale à mesure que l’ordre d’interpolation augmente. Cette approche permet d’obtenir une matrice de masse diagonale qui ne nécessitera par conséquent aucune inversion. Cependant, le maillage, qui est une clé du succès des ES, est également sa principale limitation. Composé de quadrangle en 2D et de parallélépipèdes en 3D, le maillage n’est pas aussi adaptés que les EF aux milieux présentant des topographies et interfaces complexes. Des développements récents basés sur les principes d’homogénéisation visent actuellement à s'affranchir de cette limite liée au maillage (Capdeville et al., 2010).
 
 
-\noindent Various numerical methods exist to resolve the equation of motion in arbitrary elastic media. The most widely used for seismic applications is the Finite-Differences (FD) method \citep{Virieux_PSV_1986,Levander_PSV_1988,Robertsson_FDM_1994,Pratt_EWM_1990,Stekl_VEM_1998,Saenger_FDM_2004} which estimates each derivative on a regular Cartesian grid using a Taylor development \citep{Moczo_FDM_2004} of order \textit{n}. FD is simple to implement and robust but quickly shows some limitations. First the Cartesian grid is defined by the minimum propagated wavelength ($\lambda_{min}$) in the full medium which conducts to a very small spatial step in case of low velocities zones it is usually the case for subsurface issues. Moreover, \citet{Saenger_FDM_2000} show that 60 points by wavelength ($\lambda$) are needed to model propagation of Rayleigh wave in order $n=2$ where only 15 points by $\lambda$ are required to model propagation of body waves which increases drastically the numerical cost in case of near-surface modeling experiment. Second, the Cartesian grid does not provide a suitable tool to reproduce properly complex topography and interfaces. 
+\noindent Various numerical methods exist to resolve the equation of motion in arbitrary elastic media. The most widely used for seismic applications is the Finite-Differences (FD) method \citep{Virieux_PSV_1986,Levander_PSV_1988,Robertsson_FDM_1994,Pratt_EWM_1990,Stekl_VEM_1998,Saenger_FDM_2004} which estimates each derivative on a regular Cartesian grid using a Taylor development \citep{Moczo_FDM_2004} of order \textit{n}. FD is simple to implement and robust but shows some limitations. First the Cartesian grid is defined by the minimum propagated wavelength ($\lambda_{min}$) in the full medium which conducts to a very small spatial step in case of low velocities zones as it is usually the case for subsurface issues. Moreover, \citet{Saenger_FDM_2000} show that 60 points by wavelength ($\lambda$) are needed to correctly model propagation of Rayleigh wave in order $n=2$ where only 15 points by $\lambda$ are required to correctly model propagation of body waves which increases drastically the numerical cost in case of near-surface modeling experiments. Second, the Cartesian grid does not provide a suitable tool to reproduce properly complex topography and interfaces. 
 
 \noindent To overcome this limit, one can use the Finite-Elements Method (FEM) which is another popular method used for wave propagation modeling \citep{Lysmer_FEM_1972,Seron_FEM_1990,Hulbert_FEM_1990}. FEM is based on a variational formulation of the equation of motion and gives a continuous approximate solution in space using polynomial basis functions defined on each node of each cell of the mesh. The natural boundary conditions of FEM is the free surface and the triangular (in 2D) or tetraedric (in 3D) unstructured meshes are well adapted to complex media and topography. However, low polynomial basis are inadequate with fine spatial discretization and the required discretization to obtain precise and non-dispersive solution is numerically costly. 
 
-\noindent Parallel, at the end of the 20th century, the Spectral Element Method (SEM), widely used in fluid dynamics \citep{Patera_SEM_1984,Korczak_SEM_1986,Karniadakis_FEM_1989}, has been adapted to seismic wave propagation \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}. The SEM is a variant of FEM based upon a high-order piecewise polynomial approximation of the weak formulation of the wave equation which leads to a spectral convergence ratio as the interpolation order increases. 
+\noindent Parallel, at the end of the 20th century, the Spectral Element Method (SEM), widely used in fluid dynamics \citep{Patera_SEM_1984,Korczak_SEM_1986,Karniadakis_FEM_1989}, has been adapted to seismic wave propagation \citep{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}. The SEM is a variant of FEM based on a high-order piecewise polynomial approximation of the weak formulation of the wave equation which leads to a spectral convergence ratio as the interpolation order increases. 
 
-\noindent In this method, the wave-field is represented in terms of high-degree Lagrange interpolants, and integrals are computed based upon Gauss-Lobatto-Legendre (gll) quadrature. This combination leading to a perfectly diagonal mass matrix leads in turn to a fully explicit time scheme which leads itself very well to numerical simulations on parallel computers.
+\noindent In this method, the wave-field is formulated in terms of high-degree Lagrange interpolants, and the integrals calculation are based on the quadrature of Gauss-Lobatto-Legendre (gll). This combination leads to a perfectly diagonal mass matrix which provides in turn a fully explicit time scheme suitable for numerical simulations on parallel computers.
 
-\noindent SEM inherits the flexibility and the natural free surface condition of the FEM \citep{Tromp_SEM_2008}. The typical element size that is required to generate an accurate mesh is of the order of $\lambda$, $\lambda$ being the smallest wavelength of waves traveling in the model.  Models are meshed with quadrangles (2D) and hexaedras (3D) using the open-source software package GMSH \citep{Geuzaine_MSH_2009}. It is particularly well suited to handle complex geometries and interface matching conditions \citep{Cristini_SEM_2012}. In order to simulate infinite or semi-infinite domain, SEM can use Perfect Match Layers boundary conditions \citep{Berenger_PML_1994,Festa_PML_2005} but are not used here.
+\noindent SEM inherits the flexibility and the natural free surface condition of the FEM \citep{Tromp_SEM_2008}. The typical element size that is required to generate an accurate mesh is of the order of $\lambda$, $\lambda$ being the smallest wavelength of waves propagated in the model. In our study, the models are meshed with quadrangles (2D) and hexaedras (3D) using the open-source software package GMSH \citep{Geuzaine_MSH_2009}. It is particularly well suited to handle complex geometries and interface matching conditions \citep{Cristini_SEM_2012}. In order to simulate infinite or semi-infinite domain, SEM can use Perfect Match Layers boundary conditions \citep{Berenger_PML_1994,Festa_PML_2005}. However they are not used here because we simulate scale models which are spatially limited for the use in the MUSC system. The latter is described below in terms of technical specifications.
 
 
 % #### MUSC bench
 \subsection{Physical modeling: MUSC system}
 
-\noindent The MUSC system \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013} is built to experimentally reproduce field seismic data with a great accuracy on reduces scale model. Figure \ref{panel_musc_bench} shows the bench and its components : it is composed of a honeycomb tab and two arms which control the source and the receiver position with a precision of 10 $\mathrm{\mu m}$.
+\noindent The MUSC system \citep{Bretaudeau_SSA_2008b,Bretaudeau_SSM_2011,Bretaudeau_FWI_2013} is built to experimentally reproduce field seismic data with a great accuracy on reduceds scale model. Figure \ref{panel_musc_bench} shows the measurement bench and its components : it is composed of a honeycomb tab and two arms which control the source and the receiver positions with a precision of 10 $\mathrm{\mu m}$.
 
-\noindent The receiving system of MUSC system is a laser interferometer based on a phase shift of the reflected laser signal due to the particular displacement at the surface of the model during the seismic waves propagation in the medium. A real-time calibration value enables a continuous conversion to a nanometric displacement. The focal diameter of the laser on the model surface is about several micrometers and allows a detection limit of $\mathrm{2.5\ nm}$ (few) in the frequency range from 20 kHz to 20 MHz. The laser interferometer constitutes a non coupled receiver which avoid the complicated modeling of the coupling effect on measurement.  
+\noindent The receiving system of MUSC system is a laser interferometer based on a phase shift of the reflected laser signal due to the particular displacement at the surface of the model during the seismic waves propagation in the medium. An integrated real-time calibration system enables a continuous conversion to a quantitative measure of the particular displacement. The diameter of the laser beam on the model surface equals 20 micrometers for the focal distance of 40 mm and allows a detection of a vertical displacement of the order of the nanometer in the frequency range from 10 kHz to 20 MHz. The laser interferometer constitutes a non-coupled receiver which avoids the complicated modeling of the coupling effects on measurement.
 
-\noindent But using a laser source needs more security protocols in the laboratory and up to now, the seismic source in the MUSC laboratory is simulated by a piezoelectric transducer linked to a launching and synchronization system. It allows to choose the source function, i.e., a waveform like a Gauss or Ricker function, the central frequency $f_{0}$ and the time delay $t_{0}$ . For that, the source is generated by a waveform generator and is then amplified before being transmitted to the small-scale-model.
+\noindent But using a laser source needs more security protocols in the laboratory and up to now, the seismic source in the MUSC laboratory is simulated by a piezoelectric transducer linked to a launching and synchronization system. It allows to choose the source function, i.e., a waveform like a Gauss or Ricker function, the central frequency $f_{0}$ and the time delay $t_{0}$. For that, the source is generated by a waveform generator and is then amplified before being transmitted to the small-scale-model.
 
 \noindent For the purpose of reduced scale modeling, the change of scale must keep the relationship between observables, i.e. amplitudes and time arrivals. Concerning the amplitude, the quality factor $Q$ will be chosen to be in the same range as the materials of near surface. For the time arrivals, the key parameter is the rate between the propagated seismic wavelength and the spatial dimensions of the experience that includes the model geometry, the spatial increment between the sources and the receivers positions, but also the dimensions of the source impact. In the framework of seismic physical modeling, this latter must be as close as possible to a point source in order to simulate the spatial energy repartition of a weight drop at the soil surface, i.e. with an isotropic directivity of the emitted P waves.
 
@@ -108,13 +110,24 @@
 
 
 % ## Models
-\subsection{Reduced-scale models}
+\subsection{Characteristics of the scale models tested}
 
-\noindent Reduced-scale models are generally made of melted epoxy-resins. These materials have several advantages: (1) they can be homogeneous and isotropic in the frequency bands of MUSC sources, (2) they have a large set of mechanical properties, close to those of natural soils, and can be modified by adding some charges, (3) they are insensitive to environmental conditions (ambient temperature, humidity) and (4) they allow to reproduce complex geometries. Table \ref{epoxy-resin} presents the mechanical properties of some epoxy-resins widely used to produce reduced-scale models for MUSC.
+%\noindent Reduced-scale models are generally made of melted epoxy-resins. These materials have several advantages: (1) they can be homogeneous and isotropic in the frequency bands of MUSC sources, (2) they have a large set of mechanical properties, close to those of natural soils, and can be modified by adding some charges, (3) they are insensitive to environmental conditions (ambient temperature, humidity) and (4) they allow to reproduce complex geometries. Table \ref{epoxy-resin} presents the mechanical properties of some epoxy-resins widely used to produce reduced-scale models for MUSC.
 
-\noindent A key issue in reduced-scale modeling is the preservation of the number of propagated wavelength ($N_{\lambda}$) through the acquisition area between the real model and the reduced-scale model. This leads to a scale ratio $k$, such as: $\lambda_{real}=k^{-1}\lambda_{reduc}$, where $\lambda_{real}$ and $\lambda_{reduc}$ denote the wavelength propagated in the real and reduced-scale models, respectively. Given the frequency bands of the MUSCs sources, the scale ratio $k$ for near-surface experiments is typically around 1000 which means that at reduced-scale meters become millimeters en seconds become milliseconds. Table \ref{scale-ratio}, from \citet{Bretaudeau_SSM_2011}, presents scale ratios for several parameters considering that wave-velocity in natural soil is equal to wave-velocity in reduced-scale model. Considering reduced-scale models have finite dimensions, they are generally oversized to easily separate reflected waves on boundaries from the rest of the recorded signal. 
+%\noindent A key issue in reduced-scale modeling is the preservation of the number of propagated wavelength ($N_{\lambda}$) through the acquisition area between the real model and the reduced-scale model. This leads to a scale ratio $k$, such as: $\lambda_{real}=k^{-1}\lambda_{reduc}$, where $\lambda_{real}$ and $\lambda_{reduc}$ denote the wavelength propagated in the real and reduced-scale models, respectively. Given the frequency bands of the MUSCs sources, the scale ratio $k$ for near-surface experiments is typically around 1000 which means that at reduced-scale meters become millimeters en seconds become milliseconds. Table \ref{scale-ratio}, from \citet{Bretaudeau_SSM_2011}, presents scale ratios for several parameters considering that wave-velocity in natural soil is equal to wave-velocity in reduced-scale model. Considering reduced-scale models have finite dimensions, they are generally oversized to easily separate reflected waves on boundaries from the rest of the recorded signal. 
 
-\noindent In this study, we consider two different reduced-scale models. The first one is an homogeneous model made of \textit{F50 pure} epoxy-resin with dimensions $500 \times 504 \times 115\ mm$. This model, like other homogeneous models, is useful to calibrate the components of MUSC and validate methods in a first approach. The second model, presented in figure \ref{panel_bialt_model} is a two-layered model, named \textit{BiAlt}. This model is made of F50 pure for the top layer and LAB1000 for the bottom layer and shows a central depression of few millimeters.
+%\noindent In this study, we consider two different reduced-scale models. The first one is an homogeneous model made of \textit{F50 pure} epoxy-resin with dimensions $500 \times 504 \times 115\ mm$. This model, like other homogeneous models, is useful to calibrate the components of MUSC and validate methods in a first approach. The second model, presented in figure \ref{panel_bialt_model} is a two-layered model, named \textit{BiAlt}. This model is made of F50 pure for the top layer and LAB1000 for the bottom layer and shows a central depression of few millimeters.
+
+\noindent In this study, we consider two different reduced scale models. The first one is homogeneous whereas the second one contains a deeper layer with a geometrical variation of the interface along the profile. The top layer, as well as the entire first model, is made of epoxy-resin called F50. The deeper layer is built with a more dense resin called LAB1000. The latter model is called Bialt. The specific properties of these two kind of resins are summarized in the table 3. As required, note that the Q-factor values are of the same order of the Q-factor value in the shallowest parts of the natural media.
+
+\noindent As described in the previous part and proposed in table 2, it is possible to take into account a scale ratio equal to 2 for the velocities, and use a 100 KHz Ricker source in order to simulate a 50 Hz Ricker source in reality. This seems realistic for simulating an hammer impact on the soil. In this case, the distance scale ratio is 1000 such that a 1 mm distance in the laboratory experiment corresponds to a 1 m distance in reality. Following these rules, we propose different shot described in the following part. 
+
+\noindent The recorded signals will be finely analyzed for a maximum offset equal to 60 mm in the case of the homogeneous model and 100 mm for the bialt model. Thus, the resin models have to be big enough in order to carry out this receiver-source distances without providing boundary echoes which could interfere with the direct arrivals. For that, the homogeneous model is 500 mm long and 504 mm large and 115 mm high. The Bialt model is 300 mm large and 200 mm high. The interface geometry is presented in figure 3. It simulates an interface between a 3 m thick layer of clay overcoming a limestone layer.
+
+\noindent The numerical meshing required for numerical simulations involve dimensions of cells about … The resulting meshing structure for the bialt model is presented figure.
+There is no PML in order to really simulate the reflexions due to the model boundaries.
+
+these two resin blocks as well as their corresponding numerical models will be used for generating seismic data with punctual sources but also line sources in order to study the effective wavelet really emitted in the MUSC bench and its reproducibility as described in the two next parts.
 
 % A scale ratio k is defined so as to reduce the spatial dimensions of the investigated soils and sub- soils, through dividing the dimensions by k and through decreasing propagation wavelength in the corresponding small-scale model as follows: λreduc 1⁄4 k−1λreal. The material properties and/or frequencies therefore need to be modified accordingly. Models have been built using thermoplastic or epoxy resin-based materials, with the P-wave velocities in these materials V reduc remaining close to the P-wave velocities in natural soils V real (i.e., between 1000 m/s to 6000 m/s): V real 1⁄4 αV reduc , 0.4 < α < 4, where V real and V reduc are the P-wave velocities in the natural soils and models, respectively. Let’s assume that α 1⁄4 1, then in the MUSC setup, k can be selected from the interval [1000–50,000] depending on the nature of the seismic study undertaken. To get models with a size suitable for laboratory investigations and use ultrasonic sources in the range of a few hundred kHz, the scale factor is typically around 1000 for near-surface investigations to depths of approximately 10 m and can equal 50,000 for the deepest seismic investigations, e.g., dedicated to oil prospection. Table 1 provides scale ratios for the various parameters involved in this experimental campaign.
 
@@ -125,7 +138,7 @@
 %Enfin, les derniers critères de sélection sont la diversité et la transformabilité des matériaux. En effet, si nous souhaitons réaliser des modèles complexes de la subsurface, nous devons être en mesure de réaliser des variations faibles ou fortes de propriétés mécaniques, des géométries complexes, et d’assembler les différents matériaux en réalisant des interfaces idéales (sans bulles).
 
 %Les thermodurcissables (résines époxydes, polyesters, phénoliques, bakélite, mélamine, etc). Ils durcissent sous l’action de la chaleur ou par ajout d’un additif. La transformation est cette fois complètement irréversible. Outre la diversité des bases polymériques existantes, la modification du temps et des températures de polymérisation et des proportions d’additifs peuvent permettre de modifier significativement les propriétés chimiques, thermiques, électriques ou mécaniques. Ces matériaux sont généralement coulés à froid dans des moules, pour être ensuite seulement polymérisés de manière irréversible en jouant sur la température. Cela permet de réaliser des géométries complexes. Il est également très courant d’utiliser ces polymères comme matrices pour la réalisation de matériaux composites. Ainsi, il est très simple de modifier les propriétés physiques macroscopiques d’une résine par l’ajout de poudres ou de fibres d’un autre matériau. On peut ainsi obtenir une large gamme de propriétés mécaniques, réaliser des géométries complexes et facilement assembler différents matériaux.
- 
+
 %De gros volumes homogènes de différents matériaux se sont avérés très utiles pour calibrer et valider les différents éléments du banc de mesure, pour étudier des cas simples, ainsi que pour la caractérisation des matériaux. Au cours de cette thèse, plusieurs modèles homogènes ont été utilisés : un bloc d’aluminium cubique de 300 mm de côté, des blocs parallélépipédiques de polypropylènes, de PMMA, et de différentes résines époxy et polyuréthane. Des plaques de 10 à 30 mm d’épaisseur ont également été utilisées pour la caractérisation viscoélastique de chaque matériau constituant les modèles réduits. Les propriétés viscoélastiques de chacun des matériaux utilisés sont données en annexe C.
 
 % Model scale...
@@ -292,6 +305,43 @@
 	\centering
 	\begin{tabular}{cccccc}
 		\hline
+		material & Field experiment scale & MUSC experiment scale & scales ratio  \\
+		\hline
+		P waves velocity & $\mathrm{V_{p 0}}$ & $\mathrm{V_{p 0}}$  & 1  \\
+		S waves velocity & $\mathrm{V_{s 0}}$ &  $\mathrm{V_{s 0}}$ & 1   \\
+		Time & $\mathrm{T_{0}}$    & 0.001 $\mathrm{T_{0}}$ & 0.001  \\
+		frequency   & $\mathrm{F_{0}}$  & 1000 $\mathrm{F_{0}}$ & 1000  \\
+		Distance   & $\mathrm{D_{0}}$  & 0.001 $\mathrm{D_{0}}$ & 0.001   \\
+		Wavelengh   & $\mathrm{D_{0}}$ & 0.001 $\mathrm{D_{0}}$ & 0.001  \\
+		\hline
+	\end{tabular}
+	\caption{ example of possible scales ratio between field experiments and MUSC experiments when considering a ratio equal to 1 for the density and Quality factor.}
+	\label{epoxy-resin}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cccccc}
+		\hline
+		material & Field experiment scale & MUSC experiment scale & scales ratio  \\
+		\hline
+		P waves velocity & $\mathrm{V_{p 0}}$ & $\mathrm{2V_{p 0}}$  & 2  \\
+		S waves velocity & $\mathrm{V_{s 0}}$ &  $\mathrm{2V_{s 0}}$ & 2   \\
+		Time & $\mathrm{T_{0}}$    & 0.001 $\mathrm{T_{0}}$ & 0.001  \\
+		frequency   & $\mathrm{F_{0}}$  & 2000 $\mathrm{F_{0}}$ & 2000  \\
+		Distance   & $\mathrm{D_{0}}$  & 0.001 $\mathrm{D_{0}}$ & 0.001   \\
+		Wavelengh   & $\mathrm{D_{0}}$ & 0.001 $\mathrm{D_{0}}$ & 0.001  \\
+		\hline
+	\end{tabular}
+	\caption{ example of possible scales ratio between field experiments and MUSC experiments when considering a ratio equal to 1 for the density and Quality factor.}
+	\label{epoxy-resin}
+\end{table}
+
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cccccc}
+		\hline
 		material & $\mathrm{V_{P}\ (m/s)}$ & $\mathrm{V_{S}\ (m/s)}$ & $\mathrm{V_{R}\ (m/s)}$ & $\mathrm{\rho\ (kg/m^{3})}$ & $\mathrm{Q}$ \\
 		\hline
 		Aluminium & 5630 & 3225 & --   & 2700 & --  \\
@@ -305,24 +355,25 @@
 	\label{epoxy-resin}
 \end{table}
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|lcr|}
-		
-		\hline
-		Distance               & $d_{real}\ (m)$            & $\rightarrow$ & $k^{-1}d_{reduc}\ (mm)$ \\
-		Wavelength             & $\lambda_{real}\ (m)$      & $\rightarrow$ & $k^{-1}\lambda_{reduc}\ (mm)$ \\
-		Time                   & $t_{real}\ (s)$            & $\rightarrow$ & $k^{-1}t_{reduc}\ (ms)$ \\
-		Velocity               & $V_{real}\ (m.s^{-1})$     & $\rightarrow$ & $V_{reduc}\ (m.s^{-1})$ \\
-		Density                & $\rho_{real}\ (kg.m^{-3})$ & $\rightarrow$ & $\rho_{reduc}\ (kg.m^{-3})$ \\
-		Quality factor         & $Q_{real}$                 & $\rightarrow$ & $Q_{reduc}$ \\
-		Particule displacement & $a_{real}\ (m)$            & $\rightarrow$ & $k^{-1}a_{reduc}\ (mm)$ \\
-		Particule velocity     & $c_{real}\ (m.s^{-1})$     & $\rightarrow$ & $c_{reduc}\ (m.s^{-1})$ \\
-		\hline
-	\end{tabular}
-	\caption{Scale ratio between viscoelastic parameters at the real scale and at a scale reduced by a coefficient $k$ (after \citet{Bretaudeau_SSM_2011}).}
-	\label{scale-ratio}
-\end{table}
+% \begin{table}[!ht]
+%	\centering
+%	\begin{tabular}{|l|lcr|}
+%		
+%		\hline
+%		Distance               & $d_{real}\ (m)$            & $\rightarrow$ & $k^{-1}d_{reduc}\ (mm)$ \\
+%		Wavelength             & $\lambda_{real}\ (m)$      & $\rightarrow$ & %$k^{-1}\lambda_{reduc}\ (mm)$ \\
+%		Time                   & $t_{real}\ (s)$            & $\rightarrow$ & $k^{-1}t_{reduc}\ (ms)$ \\
+%		Velocity               & $V_{real}\ (m.s^{-1})$     & $\rightarrow$ & $V_{reduc}\ (m.s^{-1})$ \\
+%		Density                & $\rho_{real}\ (kg.m^{-3})$ & $\rightarrow$ & $\rho_{reduc}\ (kg.m^{-3})$ \\
+%		Quality factor         & $Q_{real}$                 & $\rightarrow$ & $Q_{reduc}$ \\
+%		Particule displacement & $a_{real}\ (m)$            & $\rightarrow$ & $k^{-1}a_{reduc}\ (mm)$ \\
+%		Particule velocity     & $c_{real}\ (m.s^{-1})$     & $\rightarrow$ & $c_{reduc}\ (m.s^{-1})$ \\
+%		\hline
+%	\end{tabular}
+
+%	\caption{Scale ratio between viscoelastic parameters at the real scale and at a scale reduced by a coefficient $k$ (after \citet{Bretaudeau_SSM_2011}).}
+%	\label{scale-ratio}
+%\end{table}
 
 \begin{table}[!ht]
 	\centering
