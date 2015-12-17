@@ -7,9 +7,9 @@
 \newcommand{\rr}[1]{\mbox{\rm #1}}
 
 \newcommand{\psm}{\textit{PSM} }
-\newcommand{\twod}{two-dimensional }
-\newcommand{\thrd}{three-dimensional }
-\newcommand{\bialt}{\textit{BiAlt}}
+\newcommand{\twod}{2-D }
+\newcommand{\thrd}{3-D }
+\newcommand{\bialt}{\textit{BiAlt} }
 
 \usepackage{lineno}
 
@@ -20,11 +20,11 @@
 
 \begin{document}
 
-\title{tmp title: MUSC source}
+\title{Refined experimental studies for improving the reduced-scale physical modeling of seismic subsurface measurement}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}} 
 
-\ms{GEO-Example} % manuscript number
+\ms{version 1.0} % manuscript number
 
 \address{
 \footnotemark[1]LUNAM-IFSTTAR, \\
@@ -34,11 +34,12 @@
 
 \footer{Example}
 \lefthead{Dellinger \& Fomel}
-\righthead{\emph{Geophysics} example}
+\righthead{\emph{Geophysics}}
 
 \maketitle
 
 \begin{abstract}
+\noindent The potential of experimental seismic modeling at reduced scale is explored since several years because it provides an intermediate step between numerical tests and geophysical campaigns on field sites. The MUSC system is designed as a reliable tool, able to produce multi-sources and multi-receivers experimental seismic data suitable for high-resolution imaging techniques like Full Waveform Inversion. However, experimental seismic modeling uses a point-source and generates 3-D seismic data whereas most of wave propagation and imaging algorithms make use of \twod forward modeling for numerical cost reasons. Further, geometrical spreading corrections applied on \thrd data are limited when geological structures become complex. This leads to inaccurate relative amplitudes between wavefronts which can have an important impact on the quality of the recovered model of parameters. High-resolution imaging methods like FWI are also sensitive to the source waveform and the initial synthetic source must be, as the initial model, close enough to the true one. During the inversion process, the source wavelet can be estimated, per shot or for the whole dataset, but is strongly dependent of the initial model for inversion, \textit{i.e.}, the estimated source will absorb inaccuracy of the initial model and the of update models. It results in ill-reconstruction of geological structures and parameter values. In this paper we seek to improve the experimental seismic modeling to generate reproducible, realistic and suitable data which can be used as reference for \twod high-resolution imaging method validations. In this scope, with the support of \twod and \thrd numerical modeling algorithm, we have first refined the comparison between numerical and experimental data by generating accurate experimental line-sources (\twod) which allow to avoid geometrical spreading correction of \thrd data. Second, we have assessed the stability and the reproducibility of the source emitted in a model by the piezoelectric transducer during a multi-sources multi-receivers acquisition campaign.
 \end{abstract}
 
 \modulolinenumbers[5]
@@ -121,7 +122,7 @@ There is no PML in order to really simulate the reflexions due to the model boun
 % #### From point-source to line-source acquisition
 \subsection{From point-source to line-source response}
 
-\noindent In the framework of wave propagation modeling and imaging methods, even if \thrd acoustic algorithm exists \citep{benhadjali_FWI_2008;plessix_FWI_2010} and \thrd elastic algorithm are always in development \citep{castellanos_AMD_2011;Borisov_FWI_2015}, most of available algorithms are limited to the \twod elastic and \thrd acoustic approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditioned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency of imaging methods to recover parameter models. Thus, it is critical for \twod inversion of field data to accurately correct the difference between \twod and \thrd geometrical spreading.
+\noindent In the framework of wave propagation modeling and imaging methods, even if \thrd acoustic algorithm exists \citep{benhadjali_FWI_2008,plessix_FWI_2010} and \thrd elastic algorithm are always in development \citep{castellanos_AMD_2011,Borisov_FWI_2015}, most of available algorithms are limited to the \twod elastic and \thrd acoustic approximation especially for computational cost causes. More, a widely used way to validate imaging methods consists in inverse crime while the validity of applications on real dataset is conditioned by strong \textit{a priori} and a weak knowledge of the target. All of these leads to a limited validation of the efficiency of imaging methods to recover parameter models. Thus, it is critical for \twod inversion of field data to accurately correct the difference between \twod and \thrd geometrical spreading.
 
 \noindent Point-source data can be corrected from geometrical spreading using a simple two-steps signal processing: (1) convolving each trace by $\sqrt{t^{-1}}$, where $t$ is the time, to correct the phase shift of $\pi/4$ and (2) applying a taper $\sqrt{t}$ to all traces to correct relative amplitudes. Some variation exist, for examples, using a linear source wavelet estimation method to correct the phase \citep{Bretaudeau_FWI_2013} or applying an offset conditioning to obtain a better correction of amplitudes \citep{Tran_SWT_2013}. To correct some biases of these methods, \citet{Forbriger_LSS_2014} and \citet{Schafer_LSS_2014} have introduced, and successfully applied to synthetic data, the \textit{hybrid method}. In the \textit{hybrid method} the geometrical spreading correction is conditioned by: (1) the offset, (2) the knowledge of the wave propagation velocities in the medium and (3) a user defined ratio used to smoothly correct amplitudes from near offset, which used the direct wave correction factor (eq. \ref{eq:direct-wave}), to far offsets, which used the single velocity correction factor(eq. \ref{eq:single-velocity}): 
 
@@ -185,12 +186,9 @@ There is no PML in order to really simulate the reflexions due to the model boun
 
 %\noindent These two studies allow to refine the capacity of the physical modeling designed for seismic experiments simulation by 1) completing the validation of the measurement through comparison of numerical and experimental data generated by a realistic 2D source line and 2) assessing the reproductivity of the effective source emitted in a model. These improvements allow to provide and distribute experimental reduced scale data to the scientific community as benchmark datasets.
 
-\subsection*{Acknowledgments}
+\section*{Acknowledgments}
 
 \noindent CEA for the SEM3D Spectral Element Method modeling code. Access to the high-performance computing facilities of CCIPL (Nantes, France) provided the required computer resources and we gratefully acknowledge this facility and the support of the staff. Finally, this study was carried out within the framework of the VIBRIS project (OSUNA-IFSTTAR-CNRS) sponsored by R\'egion Pays-de-la-Loire (France).   
-
-\clearpage
-\newpage
 
 % ## PLOTS
 \section{Plots}
@@ -202,7 +200,7 @@ There is no PML in order to really simulate the reflexions due to the model boun
 % #### Fig:: panel_musc_bench
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/panel_musc_bench.eps}
+	\includegraphics[width=0.5\textwidth]{fig/panel_musc_bench.eps}
 	\caption{Photograph of the MUSC ultrasonic laboratory (from \citet{Bretaudeau_FWI_2013} )with its four components: (1) a small-scale model of the underground, (2) an optical table with two automated arms moving above the model, (3) a laser interferometer recording ultrasonic wave propagation	at the model surface,(4) a piezoelectric ultrasonic source generating ultrasonic waves in the model.}
 	\label{panel_musc_bench}
 \end{figure}
@@ -210,28 +208,28 @@ There is no PML in order to really simulate the reflexions due to the model boun
 % #### Fig:: panl_multisrcrec
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/panel_multisrcrec.eps}
+	\includegraphics[width=0.5\textwidth]{fig/panel_multisrcrec.eps}
 	\caption{Example of multi-source multi-receiver record on the MUSC system for a two-layer model (\bialt).}
 	\label{panel_multisrcrec}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/bialt_model.eps}
+	\includegraphics[width=0.5\textwidth]{fig/bialt_model.eps}
 	\caption{Schematic representation of the so-called \bialt model.}
 	\label{panel_bialt_model}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/bialt-mesh.eps}
+	\includegraphics[width=0.5\textwidth]{fig/bialt-mesh.eps}
 	\caption{Zoom in the mesh of the \bialt model used for numerical modeling.}
 	\label{panel_bialt_mesh}
 \end{figure}
 % #### Fig:: piezo-source-validation
 %\begin{figure}[!ht]
 %	\centering
-%	\includegraphics[scale=0.5]{fig/piezo-source-validation.eps}
+%	\includegraphics[width=0.5\textwidth]{fig/piezo-source-validation.eps}
 %	\caption{Validation of the piezoelectric source coupled with an adapter \citep{Bretaudeau_SSM_2011}. (a) Directivity diagrams (dB) for the high-frequency source Panametrics\textregistered with conical polyurethane adapter: three frequencies — normal particle displacement. (b) Temporal signals and (c) amplitude spectrums for the high-frequency source Panametrics\textregistered with a conical polyurethane adapter in transmission through a PVC cylinder for	various angles of incidence: O, 15, 30, and 60 degrees — normal particle displacement.}
 %	\label{piezo-source-validation}
 %\end{figure}
@@ -239,28 +237,28 @@ There is no PML in order to really simulate the reflexions due to the model boun
 % #### Fig:: panel_bialt_2d3d
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/amplitude_acqui_principle.eps}
+	\includegraphics[width=0.5\textwidth]{fig/amplitude_acqui_principle.eps}
 	\caption{Schematic representation of the acquisition geometry used to generate experimental line-source, \textit{i.e.} an equivalent of cylindrical source use in two-dimensional modeling. Black traingle and red circle represent receivers and sources, respectively.}
 	\label{amplitude_acqui_principle}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/amplitude_stack_principle.eps}
+	\includegraphics[width=0.5\textwidth]{fig/amplitude_stack_principle.eps}
 	\caption{(a,b) Numerical modeling. (a) Resulting seismogram at one receiver position for the experimental line-source. (b) Comparison between point-source response in red (central trace of (a)) , weighted stack response of(a) in green and line-source response from \twod modeling in blue. (c,d) Same as (a) and (b) but for experimental modeling.}
 	\label{amplitude_stack_principle}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/trans2d3d.eps}
+	\includegraphics[width=0.5\textwidth]{fig/trans2d3d.eps}
 	\caption{(a,b) Numerical modeling. (a) Comparison between synthetic seismograms for a point-source (red) and for a line source (green), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between synthetic seismograms for a line-source (green), and a point-source response corrected from geometrical spreading (blue) for same source-receiver offsets as (a) using the hybrid method with ratios $r=0.35$, $r=0.40$, $r=0.45$ and $r=0.50$ for offsets $45$, $50$, $55$ and $60\ mm$, respectively . (c,d) Same as (a) and (b) for experimental modeling. The light-purple dotted lines pick $PSv$-wavefront.}%\textbf{cc} gives the correlation factor between line-source and point-source responses.}
 	\label{panel_amplitude_sem}
 \end{figure}
 
 %\begin{figure}[!h]
 %	\centering
-%	\includegraphics[scale=0.5]{fig/trans2d3d-musc.eps}
+%	\includegraphics[width=0.5\textwidth]{fig/trans2d3d-musc.eps}
 %	\caption{(a) Comparison between experimental seismograms for a point-source (red) and for a line source (black), for 45, 50, 55 and 60 mm source-receiver offsets respectively. (b) Comparison between experimental seismograms for a line-source (black), and a point-source response corrected from geometrical spreading (green) for same source-receiver offsets as (a).} %\textbf{cc} gives the correlation factor between line-source and point-source responses.}
 %	\label{panel_amplitude}
 %\end{figure}
@@ -268,28 +266,28 @@ There is no PML in order to really simulate the reflexions due to the model boun
 % #### Fig:: panel_srcest_2d_mean
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/reproducibility_acqui_principle.eps}
+	\includegraphics[width=0.5\textwidth]{fig/reproducibility_acqui_principle.eps}
 	\caption{Schematic representation of the acquisition geometry used to assess the data reproducibility using the MUSC system. Black traingle and red circle represent receivers and sources, respectively.}
 	\label{reproducibility_acqui_principle}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/musc_F50_CT.eps}
-	\caption{Central trace for each of the ten analogic experiment. \textbf{cc} gives the correlation factor of each central trace with respect to a mean central trace (green).}
+	\includegraphics[width=0.5\textwidth]{fig/musc_F50_CT.eps}
+	\caption{Central trace for each of the ten analogic experiment compared to a mean central trace (green).}
 	\label{panel_central_traces_cc}
 \end{figure}
 
 %\begin{figure}[!h]
 %	\centering
-%	\includegraphics[scale=0.5]{fig/srccomp.eps}
+%	\includegraphics[width=0.5\textwidth]{fig/srccomp.eps}
 %	\caption{Comparison between the theoritical Ricker source send to the transducer and the effective source wavelet injected in the model.}
 %	\label{srccomp}
 %\end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/spec_F50_CT_COMP.eps}
+	\includegraphics[width=0.5\textwidth]{fig/spec_F50_CT_COMP.eps}
 	\caption{(a) Comparison between theoretical Ricker source ($f_{0}=100\ kHz$, $t_{0}=0.03\ ms$) send to the piezo-electric transducer (dashed red line) and the effective source for the homogeneous \textit{F50 pure} model (blue line). (b) Comparison between experimental central traces and numerical ones using the effective source instead theoretical one.}
 	\label{panel_srcest_2d_mean_comp}
 \end{figure}
@@ -299,7 +297,7 @@ There is no PML in order to really simulate the reflexions due to the model boun
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.5]{fig/panel_bialt_lswe.eps}
+	\includegraphics[width=0.5\textwidth]{fig/panel_bialt_lswe.eps}
 	\caption{(a) Comparison between theoretical Ricker source ($f_{0}=75\ kHz$, $t_{0}=0.03\ ms$) send to the piezo-electric transducer (dashed red line) and the effective source for the \bialt model (blue line). (b) Comparison between experimental central traces (black), numerical traces using theretical source (red) and numerical traces using the effective source (blue).}
 	\label{blind-test}
 \end{figure}
@@ -406,11 +404,6 @@ There is no PML in order to really simulate the reflexions due to the model boun
 %	\caption{.}
 %	\label{cc-rms}
 %\end{table}
-
-\clearpage
-\newpage 
-
-\section{ACKNOWLEDGMENTS}
 
 \clearpage
 \newpage
