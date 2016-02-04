@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -f fig/*converted-to.pdf
 rm -f *.aux
 rm -f *.bbl
 rm -f *.blg
