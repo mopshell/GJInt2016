@@ -13,4 +13,4 @@ latex  $SRC
 
 dvipdf $SRC
 
-okular $SRC.pdf &
+evince $SRC.pdf &
