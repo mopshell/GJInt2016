@@ -317,6 +317,16 @@
   Abstract                 = {This work aims at developing a numerical tool to model 3D seismic waves propagation in complex geological media where site effects prevail. The spectral element method (SEM) is particularly well adapted to the site effects modeling problematic : accurate surface waves evaluation, ability to handle complex geometries (free surface topography, interfaces) and the possibility of adapting the wavelengths resolution in heterogeneous media conditions with unstructured meshes. Numerical extensions of the SEM linked with the basin response were developed : filtering Perfectly Matched Layers and efficient introduction of an incident wave field. This 3D code was implemented with an object orientation to facilitate its parallelization, ensure a greater modularity and handle unstructured meshes. Currently, the principal limitation of the SEM comes, however, from the lack of flexibility of hexahedral meshes, despite the use of unstructured meshes whose generation remains a complex task. This work emphasizes the difficulties linked with the handling of such structures and describes the complete process for the modeling of the seismic response in complex geological media, from the physical and numerical model elaboration through to the results analysis. We present here 3D simulations of the seismic response in the Caracas area (Venezuela), including the 3D geometry of the basin and the Ávila barrier which borders the city. Data were supplied by the FUNVISIS agency (ECOS-Nord project). The importance of the effects linked with these two types of structures is assessed with different scenarios of plane wave excitation. These 3D geometrical effects reveal complex amplification phenomena associated with the reflection and the focalisation of waves propagating in all directions, and with the generation of surface waves at the edge and in narrowing areas of the basin. A comparison with 2D simulations shows the interest of 3D modeling : clear differences in terms of residency time and energy and amplification level were exhibited.}
 }
 
+@Book{dhatt1984finite,
+  Title                    = {The Finite Element Method, Displayed.},
+  Author                   = {Dhatt, G. and Touzot, G.},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {1984},
+
+  Owner                    = {pageotd},
+  Timestamp                = {2016.02.16}
+}
+
 @Article{Ebrom_HTA_1990,
   Title                    = {Hyperwaves traveltime analysis of first arrivels in an azimuthally anisotropic medium: A physical modeling study},
   Author                   = {Ebrom, D. A. and Tatham, R. H. and Sekharan, K. K. and McDonald, J. A. and Gardner, G. H. F},
@@ -538,6 +548,18 @@
   Timestamp                = {2015.01.13}
 }
 
+@Article{hesthaven2000stable,
+  Title                    = {Stable spectral methods on tetrahedral elements},
+  Author                   = {Hesthaven, Jan S and Teng, CH},
+  Journal                  = {SIAM Journal on Scientific Computing},
+  Year                     = {2000},
+  Number                   = {6},
+  Pages                    = {2352--2380},
+  Volume                   = {21},
+
+  Publisher                = {SIAM}
+}
+
 @Article{Hillers_TCD_2012,
   Title                    = {Anatomy of the high-frequency ambient seismic wave field at the TCDP borehole},
   Author                   = {Hillers, G. and Campillo, M. and Lin, Y.-Y. and Ma, K.-F. and Roux, P.},
@@ -646,6 +668,18 @@
   Timestamp                = {2014.07.21}
 }
 
+@Article{komatitsch2001wave,
+  Title                    = {Wave propagation in 2-D elastic media using a spectral element method with triangles and quadrangles},
+  Author                   = {Komatitsch, Dimitri and Martin, Roland and TROMP, JEROEN and TAYLOR, MARK A and WINGATE, BETH A},
+  Journal                  = {Journal of Computational Acoustics},
+  Year                     = {2001},
+  Number                   = {02},
+  Pages                    = {703--718},
+  Volume                   = {9},
+
+  Publisher                = {World Scientific}
+}
+
 @Article{Komatitsch_ISM_1999,
   Title                    = {Introduction to the spectral-element method for three-dimensional
 seismic wave propagation},
@@ -679,6 +713,30 @@ seismic wave propagation},
 
   Abstract                 = {A spectral element method for the approximate solution of linear elastodynamic equations, set in a weak form, is shown to provide an e cient tool for simulating elastic wave propagation in realistic geological structures in two- and three-dimensional geometries. The computational domain is discretized into quadrangles, or hexahedra, deÿned with respect to a reference unit domain by an invertible local mapping. Inside each reference element, the numerical integration is based on the tensor-product of a Gauss –Lobatto –Legendre 1-D quadrature and the solution is expanded onto a discrete polynomial basis using Lagrange interpolants. As a result, the mass matrix is always diagonal, which drastically reduces the computational cost and allows an e cient parallel implementation. Absorbing boundary conditions are introduced in variational form to simulate unbounded physical domains. The time discretization is based on an energy-momentum conserving scheme that can be put into a classical explicit-implicit predictor=multicorrector format. Long term energy conservation and stability properties are illustrated as well as the e ciency of the absorbing conditions. The accuracy of the method is shown by comparing the spectral element results to numerical solutions of some classical two-dimensional problems obtained by other methods. The potentiality of the method is then illustrated by studying a simple three-dimensional model. Very accurate modelling of Rayleigh wave propagation and surface di raction is obtained at a low computational cost. The method is shown to provide an e cient tool to study the di raction of elastic waves and the large ampliÿcation of ground motion caused by three-dimensional surface topographies.},
   Keywords                 = {elastodynamics; explicit spectral element method; seismology}
+}
+
+@Article{komatitsch1998spectral,
+  Title                    = {The spectral element method: an efficient tool to simulate the seismic response of 2D and 3D geological structures},
+  Author                   = {Komatitsch, Dimitri and Vilotte, Jean-Pierre},
+  Journal                  = {Bulletin of the seismological society of America},
+  Year                     = {1998},
+  Number                   = {2},
+  Pages                    = {368--392},
+  Volume                   = {88},
+
+  Publisher                = {Seismological Society of America}
+}
+
+@Article{komatitsch1999spectral,
+  Title                    = {The spectral element method for elastic wave equations-application to 2-D and 3-D seismic problems},
+  Author                   = {Komatitsch, Dimitri and Vilotte, Jean-Pierre and Vai, Rossana and Castillo-Covarrubias, Jose M and Sanchez-Sesma, Francisco J},
+  Journal                  = {International Journal for numerical methods in engineering},
+  Year                     = {1999},
+  Number                   = {9},
+  Pages                    = {1139--1164},
+  Volume                   = {45},
+
+  Publisher                = {Citeseer}
 }
 
 @Article{Korczak_SEM_1986,
@@ -830,6 +888,16 @@ seismic wave propagation},
 
   Owner                    = {pageotd},
   Timestamp                = {2014.07.28}
+}
+
+@Article{moczo2011finite,
+  Title                    = {3-D finite-difference, fine-element, discontinuous Galerkin and spectral-element schemes for their accuracy with respect to P-wave to S-wave speed ratio},
+  Author                   = {Moczo, P and Kristek, J and Galis, M. and Chaljub, E. and Etienne, V.},
+  Journal                  = {Geophysical Journal International},
+  Year                     = {2011},
+
+  Owner                    = {pageotd},
+  Timestamp                = {2016.02.09}
 }
 
 @Book{Moczo_FDM_2004,
@@ -1272,6 +1340,18 @@ seismic wave propagation},
 
   Owner                    = {pageot},
   Timestamp                = {2013.10.02}
+}
+
+@Article{sherwin1995triangular,
+  Title                    = {A triangular spectral element method; applications to the incompressible Navier-Stokes equations},
+  Author                   = {Sherwin, SJ and Karniadakis, G Em},
+  Journal                  = {Computer methods in applied mechanics and engineering},
+  Year                     = {1995},
+  Number                   = {1},
+  Pages                    = {189--229},
+  Volume                   = {123},
+
+  Publisher                = {Elsevier}
 }
 
 @Article{Socco_SWT_2004,
