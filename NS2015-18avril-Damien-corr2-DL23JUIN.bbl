@@ -1,0 +1,223 @@
+\begin{thebibliography}{}
+\itemsep0pt
+
+\bibitem[Aki and Richards, 2002]{aki2002quantitative}
+Aki, K., and P.~G. Richards,  2002, Quantitative seismology, {\bf 1}.
+
+\bibitem[Ben-Hadj-Ali et~al., 2008]{benhadjali_FWI_2008}
+Ben-Hadj-Ali, H., S. Operto, and J. Virieux,  2008, Velocity model building by
+  3d frequency-domain, full-waveform inversion of wide-aperture seismic data:
+  Geophysics, {\bf 73}, VE101--VE117.
+
+\bibitem[Berkhout et~al., 2012]{Berkhout_MSS_2012}
+Berkhout, A., D. Verschuur, and G. Blacquiere,  2012, Illumination properties
+  and imaging promises of blended, multiple-scattering seismic data: a
+  tutorial: Geophysical Prospecting, {\bf 60}, 713--732.
+
+\bibitem[Bishop et~al., 1985]{Bishop_LVM_1985}
+Bishop, T., K. Bube, R. Cutler, R. Langan, P. Love, J. Resnick, R. Shuey, and
+  D. Spinder,  1985, Tomographic determination of velocity and depth in
+  laterally varying media: Geophysics, {\bf 50}, 903--923.
+
+\bibitem[Bodet et~al., 2005]{_Bodet_2005}
+Bodet, L., K. van Wijk, A. Bitri, O. Abraham, P. Cote, G. Grandjean, and D.
+  Leparoux,  2005, Surface-wave inversion limitations from laser-doppler
+  physical modeling: J. Environ. Eng. Geophys., {\bf 10}, 151--162.
+
+\bibitem[Bohm et~al., 2015]{Bohm_CWS_2015}
+Bohm, G., J.~M. Carcione, D. Gei, S. Picotti, and A. Michelini,  2015,
+  Cross-well seismic and electromagnetic tomography for co 2 detection and
+  monitoring in a saline aquifer: Journal of Petroleum Science and Engineering,
+  {\bf 133}, 245--257.
+
+\bibitem[Borisov and Singh, 2015]{Borisov_FWI_2015}
+Borisov, D., and S.~C. Singh,  2015, Three-dimensional elastic full waveform
+  inversion in a marine environment using multicomponent ocean-bottom cables: a
+  synthetic study: Geophysical Journal International, {\bf 201}, 1215--1234.
+
+\bibitem[Bretaudeau et~al., 2013]{Bretaudeau_FWI_2013}
+Bretaudeau, F., R. Brossier, D. Leparoux, O. Abraham, and J. Virieux,  2013, 2d
+  elastic full-waveform imaging of the near-surface: application to synthetic
+  and physical modelling data sets: Near Surface Geophysics.
+
+\bibitem[Bretaudeau et~al., 2008]{Bretaudeau_SSA_2008b}
+Bretaudeau, F., D. Leparoux, and O. Abraham,  2008, Small scale adaptation of
+  the seismic full waveform inversion method - application to civil engineering
+  applications.: The Journal of the Acoustical Society of America, {\bf 123}.
+
+\bibitem[Bretaudeau et~al., 2011]{Bretaudeau_SSM_2011}
+Bretaudeau, F., D. Leparoux, O. Durand, and O. Abraham,  2011, Small-scale
+  modeling of onshore seismic experiment: A tool to validate numerical modeling
+  and seismic imaging methods: Geophysics, {\bf 76(5)}, T101--T112.
+
+\bibitem[Castellanos et~al., 2011]{castellanos_AMD_2011}
+Castellanos, C., V. Etienne, G. Hu, S. Operto, R. Brossier, J. Virieux, et~al.,
+   2011, Algorithmic and methodological developments towards full waveform
+  inversion in 3d elastic media: Presented at the 2011 SEG Annual Meeting,
+  Society of Exploration Geophysicists.
+
+\bibitem[Cristini and Komatitsch, 2012]{Cristini_SEM_2012}
+Cristini, P., and D. Komatitsch,  2012, Some illustrative examples of the use
+  of the spectral-element method in ocean acoustics.: Journal of the Acoustical
+  Society of America.
+
+\bibitem[De~Cacqueray et~al., 2011]{_decaqueray_2011}
+De~Cacqueray, B., P. Roux, M. Campillo, S. Catheline, and P. Boue,  2011,
+  Elastic-wave identification and extraction through array processing: An
+  experimental investigation at the laboratory scale: Journal of Applied
+  Geophysics, {\bf 74}, 81--88.
+
+\bibitem[Dhatt and Touzot, 1984]{dhatt1984finite}
+Dhatt, G., and G. Touzot,  1984, The finite element method, displayed.: John
+  Wiley \& Sons.
+
+\bibitem[Favretto-Cristini et~al., 2013]{Favretto_NMT_2013}
+Favretto-Cristini, N., A. Tantsereva, P. Cristini, B. Ursin, D. Komatitsch, and
+  A. Aizenberg,  2013, Numerical modeling of zero-offset laboratory data in a
+  strong topographic environment: results for a spectral-element method and a
+  discretized kirchhoff integral method: Earthquake Science.
+
+\bibitem[Festa and Vilotte, 2005]{Festa_PML_2005}
+Festa, G., and J. Vilotte,  2005, The {N}ewmark as velocity-stress
+  time-staggering: an efficient {PML} implementation for spectral element
+  ssimulation of elastodynamics: Geophysical Journal International, {\bf 161},
+  798--812.
+
+\bibitem[Forbriger et~al., 2014]{Forbriger_LSS_2014}
+Forbriger, T., L. Gross, and M. Schafer,  2014, Line-source simulation for
+  shallow-seismic data. part 1: theoretical background: Geophysical Journal
+  International, {\bf 198}, 1387--1404.
+
+\bibitem[French, 1974]{French_MRP_1974}
+French, W.~S.,  1974, Two-dimensional and three-dimensional migration of
+  model-experiment reflection profiles: Geophysics, {\bf 39(3)}, 265--277.
+
+\bibitem[Geuzaine and Remacle, 2009]{Geuzaine_MSH_2009}
+Geuzaine, C., and J. Remacle,  2009, Gmsh: a three-dimensional finite element
+  mesh generator with built-in pre- and post-processing facilities.:
+  International Journal for Numerical Methods in Engineering, {\bf 79},
+  1309--1331.
+
+\bibitem[Guofeng et~al., 2013]{Guofeng_GPU_2013}
+Guofeng, L., L. Yaning, R. Li, and M. Xiaohong,  2013, 3d seismic reverse time
+  migration on gpgpu: Computers \& Geosciences, {\bf 59}, 10--23.
+
+\bibitem[Hilterman, 1970]{Hilterman_TDM_1970}
+Hilterman, F.,  1970, Three-dimensional seismic modeling: Geophysics, {\bf 35},
+  1020--1037.
+
+\bibitem[Howes et~al., 1953]{Howes_SMS_1953}
+Howes, E., L. Tejada-Flores, and L. Randolph,  1953, Seismic model study:
+  Journal of the Acoustical Society of America, {\bf 25}, 915--921.
+
+\bibitem[Hulbert and Hughes, 1990]{Hulbert_FEM_1990}
+Hulbert, G.~M., and T.~J. Hughes,  1990, Space-time finite element methods for
+  second-order hyperbolic equations: Computer Methods in Applied Mechanics and
+  Engineering, {\bf 84}, 327--348.
+
+\bibitem[Komatitsch et~al., 2001]{komatitsch2001wave}
+Komatitsch, D., R. Martin, J. TROMP, M.~A. TAYLOR, and B.~A. WINGATE,  2001,
+  Wave propagation in 2-d elastic media using a spectral element method with
+  triangles and quadrangles: Journal of Computational Acoustics, {\bf 9},
+  703--718.
+
+\bibitem[Komatitsch and Tromp, 1999]{Komatitsch_ISM_1999}
+Komatitsch, D., and J. Tromp,  1999, Introduction to the spectral-element
+  method for three-dimensional seismic wave propagation: Geophysical Journal
+  International, {\bf 139}, 806--822.
+
+\bibitem[Komatitsch et~al., 2005]{Komatitsch_SEM_2005}
+Komatitsch, D., S. Tsuboi, and J. Tromp,  2005, The spectral-element method in
+  seismology.
+
+\bibitem[Komatitsch and Vilotte, 1998]{komatitsch1998spectral}
+Komatitsch, D., and J.-P. Vilotte,  1998, The spectral element method: an
+  efficient tool to simulate the seismic response of 2d and 3d geological
+  structures: Bulletin of the seismological society of America, {\bf 88},
+  368--392.
+
+\bibitem[Komatitsch et~al., 1998]{Komatitsch_SEM_1998}
+Komatitsch, D., J.~P. Vilotte, R. Vai, J.~M. Castillo-Covarrubias, and F.~J.
+  S\'anchez-Sesma,  1998, The {S}pectral {E}lement {M}ethod for {E}lastic
+  {W}ave {E}quation: {A}pplication to 2-{D} and 3-{D} {S}eismic {P}roblems:
+  International Journal for Numerical Methods in Engineering, {\bf 45},
+  1139--1164.
+
+\bibitem[Komatitsch et~al., 1999]{komatitsch1999spectral}
+--------, 1999, The spectral element method for elastic wave
+  equations-application to 2-d and 3-d seismic problems: International Journal
+  for numerical methods in engineering, {\bf 45}, 1139--1164.
+
+\bibitem[Lysmer and Drake, 1972]{Lysmer_FEM_1972}
+Lysmer, J., and L.~A. Drake,  1972, A finite element method for seismology:
+  Methods in computational physics, {\bf 11}, 181--216.
+
+\bibitem[Martin et~al., 2006]{martin2006marmousi2}
+Martin, G.~S., R. Wiley, and K.~J. Marfurt,  2006, Marmousi2: An elastic
+  upgrade for marmousi: The Leading Edge, {\bf 25}, 156--166.
+
+\bibitem[Moczo et~al., 2011]{moczo2011finite}
+Moczo, P., J. Kristek, M. Galis, E. Chaljub, and V. Etienne,  2011, 3-d
+  finite-difference, fine-element, discontinuous galerkin and spectral-element
+  schemes for their accuracy with respect to p-wave to s-wave speed ratio:
+  Geophysical Journal International.
+
+\bibitem[Morozov, 2004]{Morozov_ARF_2004}
+Morozov, I.,  2004, Crustal scattering and some artefacts in receiver function
+  images: Bulletin of the Seismological Society of America, {\bf 94},
+  1492--1499.
+
+\bibitem[Perez~Solano et~al., 2014]{Perez_AWI_2014}
+Perez~Solano, C., D. Donno, and H. Chauris,  2014, Alternative waveform
+  inversion for surface wave analysis in 2-d media: Geophysical Journal
+  International, {\bf 198}, 1359--1372.
+
+\bibitem[Plessix et~al., 2010]{plessix_FWI_2010}
+Plessix, R.-E., G. Baeten, J.~W. de~Maag, M. Klaassen, Z. Rujie, T. Zhifei,
+  et~al.,  2010, Application of acoustic full waveform inversion to a
+  low-frequency large-offset land data set: Presented at the 2010 SEG Annual
+  Meeting, Society of Exploration Geophysicists.
+
+\bibitem[Pratt, 1999]{Pratt_FWI_1999}
+Pratt, R.~G.,  1999, Seismic waveform inversion in the frequency domain, {P}art
+  1: {T}heory and verification in a physical scale model: Geophysics, {\bf 64},
+  888--901.
+
+\bibitem[Rieber, 1936]{Rieber_EWP_1936}
+Rieber, F.,  1936, Visual presentation of elastic wave patterns under various
+  structural conditions: Geophysics, {\bf 1}, 196--218.
+
+\bibitem[Schafer et~al., 2014]{Schafer_LSS_2014}
+Schafer, M., L. Gross, T. Forbriger, and T. Bohlen,  2014, Line-source
+  simulation for shallow-seismic data. part2: full-waveform inversion -- a
+  synthetic 2-d case study: Geophysical Journal International, {\bf 198},
+  1405--1418.
+
+\bibitem[Seron et~al., 1990]{Seron_FEM_1990}
+Seron, F.~J., F.~J. Sanz, M. Kindelan, and J.~I. Badal,  1990, Finite-element
+  method for elastic wave propagation: Communications in applied numerical
+  methods, {\bf 6}, 359--368.
+
+\bibitem[Tromp et~al., 2008]{Tromp_SEM_2008}
+Tromp, J., D. Komatitsch, and Q. Liu,  2008, Spectral-element and adjoint
+  methods in seismology.: Commun Comput Phys.
+
+\bibitem[Van~Wijk, 2005]{_VanWijk_2006}
+Van~Wijk, K.,  2005, On estimating the impulse response between receivers in a
+  controlled ultrasonic experiment. geophysics: Geophysics, {\bf 71},
+  SI79--SI84.
+
+\bibitem[Virieux and Operto, 2009]{Virieux_FWI_2009}
+Virieux, J., and S. Operto,  2009, An overview of full-waveform inversion in
+  exploration geophysics: Geophysics, {\bf 74}, WCC1–WCC26.
+
+\bibitem[Wirgin, 2004]{Wirgin_TIC_2004}
+Wirgin, A.,  2004, The inverse crime: ArXiv Mathematical Physics e-prints.
+\newblock (Provided by the SAO/NASA Astrophysics Data System).
+
+\bibitem[Wong et~al., 2009]{Wong_SPM_2009}
+Wong, J., K.~W. Hall, E.~V. Gallant, R. Maier, M. Bertram, and D.~C. Lawton,
+  2009, Seismic physical modeling at university of calgary: CSEG recorder, {\bf
+  34}.
+
+\end{thebibliography}
