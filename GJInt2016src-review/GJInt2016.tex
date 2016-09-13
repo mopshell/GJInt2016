@@ -80,24 +80,7 @@ These approaches will complete knowledge of the system and facilitate the achiev
 % ## METHODS
 \section{Methods}
 
-% #### Spectral Element Method
-\subsection{Numerical modeling: Spectral Element Method}
-
-For this study we need a numerical modeling method whose spatial discretization is suitable for representing complex environments and which provides both high precision results and low numerical dispersion. Thus we use the Spectral Element Method (SEM) for two-dimensional and three-dimensional elastic wave propagation modeling (\cite{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}). 
-
-SEM is a variant of the Finite Element Method (FEM) (\cite{Lysmer_FEM_1972,Seron_FEM_1990,Hulbert_FEM_1990,Tromp_SEM_2008}) based on a high-order piecewise polynomial approximation of the weak formulation of the wave equation which leads to a spectral convergence ratio as the interpolation order increases. Considering near-surface experiments, one advantage of SEM is that the weak formulation naturally satisfies the free-surface condition used to simulate surface wave propagation with considerable accuracy (\cite{komatitsch1998spectral,komatitsch1999spectral,Komatitsch_SEM_2005}). Contrary to FEM, which calls on a wide range of available element geometry (\cite{dhatt1984finite}), SEM is limited to quadrilateral elements in 2D and hexahedral elements in 3D. Note that although SEM with tetrahedral elements exists (\cite{komatitsch2001wave}) it leads to theoretical complications. However, quadrangles and hexahedra are well suited for handling complex geometries and interface matching conditions (\cite{Cristini_SEM_2012}). 
-
-In SEM, the wave-field is expressed in terms of high-degree Lagrange interpolants and the calculations of integrals are based on the quadrature of Gauss-Lobatto-Legendre (GLL). Each element is discretized with Lagrange polynomials of degree $n_{l}$ and contains $n_{l}+1$ GLL points that form its local mesh. This combination of high-degree Lagrange interpolants with the GLL quadratic integration leads to a perfectly diagonal mass matrix which in turn provides a fully explicit time scheme suitable for numerical simulations on parallel computers (\cite{komatitsch1998spectral,komatitsch1999spectral}).
-
-The spatial resolution of SEM is controlled by the typical size of an element ($\Delta h$) and the polynomial degree in use on an element ($n_{l}$). Typically, a polynomial degree $n_{l}=4$ is optimal for seismic wave propagation modeling (\cite{moczo2011finite}) although $n_{l}=8$ remains numerically affordable in 2D. To obtain accurate results, the required $\Delta h$ is of the order of $\lambda_{min} /2 < \Delta h < \lambda_{min}$ for $n_{l}=4$ and $\lambda_{min} < \Delta h < 2\lambda_{min}$ for $n_{l}=8$, $\lambda_{min}$ being the smallest wavelength of the waves propagated in the model. The time marching scheme is governed by the CFL stability condition:
-
-\equation
-\Delta t < \mathcal{C}\frac{\Delta h}{c_{max}}\,
-\endequation
-
-where $\mathcal{C}$ is the Courant constant and $c_{max}$ is the maximum wave velocity, typically the P-wave velocity. The Courant constant $\mathcal{C}$ is determined empirically, depending on the application, and is fixed at a maximum of 0.30 for this study.
-
-In our study, the models are meshed with quadrangles (2D) and hexahedra (3D) using the GMSH open-source software package (\cite{Geuzaine_MSH_2009}). 
+ 
 
 
 % #### MUSC bench
@@ -131,6 +114,25 @@ The numerical meshing required for the numerical simulations involves cell dimen
 
 These two resin blocks and their corresponding numerical models will be used for generating seismic data with punctual sources and line sources for the homogeneous model, in order to study the effective source excitation emitted on the MUSC bench and its reproducibility.
 
+% #### Spectral Element Method
+\subsection{Numerical modeling: Spectral Element Method}
+
+For this study we need a numerical modeling method whose spatial discretization is suitable for representing complex environments and which provides both high precision results and low numerical dispersion. Thus we use the Spectral Element Method (SEM) for two-dimensional and three-dimensional elastic wave propagation modeling (\cite{Komatitsch_SEM_1998,Komatitsch_ISM_1999,Komatitsch_SEM_2005,Festa_PML_2005}). 
+
+SEM is a variant of the Finite Element Method (FEM) (\cite{Lysmer_FEM_1972,Seron_FEM_1990,Hulbert_FEM_1990,Tromp_SEM_2008}) based on a high-order piecewise polynomial approximation of the weak formulation of the wave equation which leads to a spectral convergence ratio as the interpolation order increases. Considering near-surface experiments, one advantage of SEM is that the weak formulation naturally satisfies the free-surface condition used to simulate surface wave propagation with considerable accuracy (\cite{komatitsch1998spectral,komatitsch1999spectral,Komatitsch_SEM_2005}). Contrary to FEM, which calls on a wide range of available element geometry (\cite{dhatt1984finite}), SEM is limited to quadrilateral elements in 2D and hexahedral elements in 3D. Note that although SEM with tetrahedral elements exists (\cite{komatitsch2001wave}) it leads to theoretical complications. However, quadrangles and hexahedra are well suited for handling complex geometries and interface matching conditions (\cite{Cristini_SEM_2012}). 
+
+In SEM, the wave-field is expressed in terms of high-degree Lagrange interpolants and the calculations of integrals are based on the quadrature of Gauss-Lobatto-Legendre (GLL). Each element is discretized with Lagrange polynomials of degree $n_{l}$ and contains $n_{l}+1$ GLL points that form its local mesh. This combination of high-degree Lagrange interpolants with the GLL quadratic integration leads to a perfectly diagonal mass matrix which in turn provides a fully explicit time scheme suitable for numerical simulations on parallel computers (\cite{komatitsch1998spectral,komatitsch1999spectral}).
+
+The spatial resolution of SEM is controlled by the typical size of an element ($\Delta h$) and the polynomial degree in use on an element ($n_{l}$). Typically, a polynomial degree $n_{l}=4$ is optimal for seismic wave propagation modeling (\cite{moczo2011finite}) although $n_{l}=8$ remains numerically affordable in 2D. To obtain accurate results, the required $\Delta h$ is of the order of $\lambda_{min} /2 < \Delta h < \lambda_{min}$ for $n_{l}=4$ and $\lambda_{min} < \Delta h < 2\lambda_{min}$ for $n_{l}=8$, $\lambda_{min}$ being the smallest wavelength of the waves propagated in the model. The time marching scheme is governed by the CFL stability condition:
+
+\equation
+\Delta t < \mathcal{C}\frac{\Delta h}{c_{max}}\,
+\endequation
+
+where $\mathcal{C}$ is the Courant constant and $c_{max}$ is the maximum wave velocity, typically the P-wave velocity. The Courant constant $\mathcal{C}$ is determined empirically, depending on the application, and is fixed at a maximum of 0.30 for this study.
+
+In our study, the models are meshed with quadrangles (2D) and hexahedra (3D) using the GMSH open-source software package (\cite{Geuzaine_MSH_2009}).
+
 \subsection{3D/2D differences}
 
 Most seismic imaging methods implement a 2D forward problem, essentially for numerical cost reasons. This results in the implicit use of a 2D line-source, invariant along the direction perpendicular to the recording direction, while field data are generally acquired using point-source responses (in the case of hammer falls). Consequently, differences in amplitude and phase exist between point-source and line-source responses which must be considered for the inversion of field data with a 2D imaging method. The \textit{hybrid} method recently developed by \cite{Forbriger_LSS_2014} for 3D/2D corrections and tested hereafter for the comparison to our experimental 2D-results is summarized below. It is based on Green's functions developed in the case of 2D and 3D propagation as follows.
@@ -161,7 +163,7 @@ u_{P}(\mitbf{x},t;\mitbf{x_{s}})=\int_{-\infty}^{+\infty}\ G(\mitbf{x_{s}},t-\ta
 \endequation
 
 \equation
-u_{L}(\mitbf{x},t;\mitbf{x_{s}^{2d}})=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} G(\mitbf{x_{s}^{2d}},t-\tau;\mitbf{x})F(\tau)Cdy'd\tau\ , \label{eq:line-displacement}
+u_{L}(\mitbf{x},t;\mitbf{x_{s}^{2D}})=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} G(\mitbf{x_{s}^{2D}},t-\tau;\mitbf{x})F(\tau)Cdy'd\tau\ , \label{eq:line-displacement}
 \endequation
 
 The equivalent displacement $u_{L}$ for a line-source can be obtained by the displacement field $u_{P}$ generated by a point source by integration along $y$:
@@ -172,10 +174,10 @@ u_{L}(x,y,z,t;x_{s},z_{s})= \int_{-\infty}^{+\infty}u_{P}(x,y,z,t-\tau;x_{s},y',
 \endequation
 
 Eq. \ref{eq:line-point-relation} shows that in terms of amplitude, the displacement generated by a line-source is greater than the displacement generated by a point-source.
-Taking $g_{k}^{3D}(r)$ and $g_{k}^{2d}(r)$, the Fourier transform of the 3D and 2D Green's function in the acoustic approximation, respectively, with $k$ being the wavenumber and $r=|\mitbf{x}-\mitbf{x_{s}}|$ the source-receiver offset. In the far-field approximation, \cite{Forbriger_LSS_2014} demonstrate:
+Taking $g_{k}^{3D}(r)$ and $g_{k}^{2D}(r)$, the Fourier transform of the 3D and 2D Green's function in the acoustic approximation, respectively, with $k$ being the wavenumber and $r=|\mitbf{x}-\mitbf{x_{s}}|$ the source-receiver offset. In the far-field approximation, \cite{Forbriger_LSS_2014} demonstrate:
 
 \equation
-\lim\limits_{r \rightarrow \infty} \frac{g_{k}^{2d}(r)}{g_{k}^{3D}(r)}\approx \sqrt{\frac{2\pi r}{k}}.e^{i\frac{\pi}{4}}\ .
+\lim\limits_{r \rightarrow \infty} \frac{g_{k}^{2D}(r)}{g_{k}^{3D}(r)}\approx \sqrt{\frac{2\pi r}{k}}.e^{i\frac{\pi}{4}}\ .
 \label{eq:far-field-frac}
 \endequation
 
@@ -204,6 +206,8 @@ The resulting correction is called the \textit{direct-wave} transformation. Fina
 The \textit{hybrid} method was successfully validated by \cite{Schafer_LSS_2014} in modeling and reconstruction tests with a 2D FWI method and 3D numerical data generated in a 2D structure. Given its performance, the \textit{hybrid} method is used in the next sections for comparisons with experimental data. 
 
 \section{Results}
+
+\noindent \textit{\underline{review:} challenges forward modeling, inverse problem and reproducibility}\\
 
 % #### From point-source to line-source acquisition
 \subsection{From point-source to line-source response}
@@ -376,7 +380,7 @@ LAB1000 & 2850 & 1400 & 1310 & 1500 & 75 \\
 \clearpage
 \newpage
 
-% #### Fig:: panel_bialt_2d3d
+% #### Fig:: panel_bialt_2D3D
 \begin{figure}
 \centering
 \includegraphics[width=0.50\columnwidth]{Fig/Fig05.eps}
@@ -407,7 +411,7 @@ LAB1000 & 2850 & 1400 & 1310 & 1500 & 75 \\
 \clearpage
 \newpage
 
-% #### Fig:: panel_srcest_2d_mean
+% #### Fig:: panel_srcest_2D_mean
 \begin{figure}
 \centering
 \includegraphics[width=0.50\columnwidth]{Fig/Fig08.eps}
