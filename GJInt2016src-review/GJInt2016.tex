@@ -31,7 +31,7 @@
 \newcommand{\correction}[1]{\textbf{\textcolor{red}{ #1}}}
 \usepackage{lineno}
 \usepackage{graphicx}
-
+\usepackage{color}
 
 \begin{document}
 
@@ -60,14 +60,13 @@ These abilities have been validated experimentally on a small-scale model contai
 
 Our objective here is to complete the validation of the capability of ultrasonic devices to precisely and quantitatively simulate surface seismic data carried out with multisource and multireceiver settings. This quantitative refined approach will increase the potential of the MUSC laboratory as a reliable tool for generating experimental data which will be distributed to the scientific community and used as references for validating seismic imaging methods. It is based on the following findings.
 
-At present 3D elastic wave propagation modeling methods are computationally expensive and imaging methods are used mainly for 2D structures. Therefore forward problems implicitly use line-sources in 2D-space while field and experimental data are acquired using punctual sources that produce 3D wavefields. Consequently, the differences between 2D and 3D propagated wavefields must be explicitly taken into account to successfully validate imaging methods using field or experimental data. 
+\textcolor{red}{At present 3D elastic wave propagation modeling methods are computationally expensive (\cite{etienne2010computational,borisov2013efficient,brossier2013performances,butzer20133d,borisov2015three}) and imaging methods are used mainly for 2D structures (\cite{brossier2009two,romdhane2011shallow,bretaudeau20132d,groos2014role}). Therefore forward problems implicitly use line-sources in 2D-space while field and experimental data are acquired using punctual sources that produce 3D wavefields. Consequently, the differences between 2D and 3D propagated wavefields must be explicitly taken into account to successfully validate imaging methods using field or experimental data.}
 
-To this end, a widely used method consists in spreading transformations of 3D-wavefields for 2D-media as a pre-processing step. Several 3D-to-2D transformation techniques have been proposed, each under the assumption that the medium is either 1D, or 2D but invariant along the axis perpendicular to the direction of the receiver-profile.
+\textcolor{red}{To this end, a widely used method consists in spreading transformations of 3D-wavefields for 2D-media as a pre-processing step (\cite{crase1990robust,shipp2002two,ravaut2004multiscale,wang2009reflection,Bretaudeau_FWI_2013}). Several 3D-to-2D transformation techniques have been proposed, each under the assumption that the medium is either 1D, or 2D but invariant along the axis perpendicular to the direction of the receiver-profile.}
 
-Recently, \cite{Forbriger_LSS_2014} proposed the \textit{hybrid} method which makes it possible to correct geometrical spreading with good accuracy for both near- and far-field data, as recalled further on.
+\textcolor{red}{Recently, \cite{Forbriger_LSS_2014} and \cite{schafer_lss_2014} proposed the \textit{hybrid} method which makes it possible to correct geometrical spreading with good accuracy for both near- and far-field data, as recalled further on.}
 
-Thus, in order to progress in the assessment of MUSC’s capacity in terms of amplitude modeling, here we propose a study carried out to refine the comparison between numerical and experimental data by taking into account 3D/2D geometrical spreading effects. It is performed by taking an alternative path that consists in carrying out measurements from a source-line and making comparisons between numerical and experimental data following correction using the hybrid method.
-
+\textcolor{red}{Thus, in order to progress in the assessment of MUSC’s capacity in terms of amplitude modeling, here we propose a study carried out to refine the comparison between numerical and experimental data by taking into account 3D/2D geometrical spreading effects. It is performed by taking an alternative path that consists in carrying out measurements from a source-line and making comparisons between numerical and experimental data following correction using the hybrid method.}
 
 Another critical point for high-resolution imaging methods is knowledge of the source time function, generally treated as an unknown parameter in the case of field data. Good approximation of the source excitation allows avoiding source wavelet estimation during the inversion process and facilitating the validation of the imaging method. This source time function is estimated easily from experimental data, further supporting the use of PSM for validating seismic imaging methods.
 
