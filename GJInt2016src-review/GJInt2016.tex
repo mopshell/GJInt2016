@@ -26,6 +26,8 @@
 \newcommand{\psm}{\textit{PSM} }
 \newcommand{\bialt}{\textit{BiAlt} }
 
+\usepackage{soul}
+
 \usepackage[dvipsnames]{xcolor}
 %\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.2}
 \newenvironment{greennote}{\par\color{OliveGreen}}{\par}
@@ -306,7 +308,9 @@ We would like to thank the CEA for the SEM3D Spectral Element Method modeling co
 \section*{Annexe: 3D/2D differences}
 %\subsection{3D/2D differences}
 \begin{greennote}
-Most seismic imaging methods implement a 2D forward problem, essentially for numerical cost reasons. This results in the implicit use of a 2D line-source, invariant along the direction perpendicular to the recording direction, while field data are generally acquired using point-source responses (in the case of hammer falls). Consequently, differences in amplitude and phase exist between point-source and line-source responses which must be considered for the inversion of field data with a 2D imaging method. The \textit{hybrid} method recently developed by \cite{Forbriger_LSS_2014} for 3D/2D corrections and tested hereafter for the comparison to our experimental 2D-results is summarized below. It is based on Green's functions developed in the case of 2D and 3D propagation as follows.
+%Most seismic imaging methods implement a 2D forward problem, essentially for numerical cost reasons. This results in the implicit use of a 2D line-source, invariant along the direction perpendicular to the recording direction, while field data are generally acquired using point-source responses (in the case of hammer falls). Consequently, differences in amplitude and phase exist between point-source and line-source responses which must be considered for the inversion of field data with a 2D imaging method. The \textit{hybrid} method recently developed by \cite{Forbriger_LSS_2014} for 3D/2D corrections and tested hereafter for the comparison to our experimental 2D-results is summarized below. It is based on Green's functions developed in the case of 2D and 3D propagation as follows.
+
+\textbf{In this appendix we shall describe 3D-2D spreading corrections proposed by \cite{Forbriger_LSS_2014}: \textit{single velocity}, \textit{direct wave} and \textit{hybrid} methods.}
 
 The displacement field $u$ can be evaluated at position $(\mitbf{x}=(x,y,z))$ and time $(t)$ by (\cite{aki2002quantitative}):
 
@@ -358,24 +362,26 @@ Replacing the wavenumber $k=\omega/v_{ph}$, where $\omega$ is the angular freque
 \sqrt{2\pi r v_{ph}}.\sqrt{\frac{\pi}{\omega}}e^{i\frac{\pi}{4}}=F_{amp}.\widetilde{F}_{\sqrt{t^{-1}}}\ ,
 \endequation
 
-where $F_{amp}$ is the amplitude factor and $\widetilde{F}_{\sqrt{t^{-1}}}$ applies the phase shift. It results in:
+\textbf{where $F_{amp}=\sqrt{2\pi r v_{ph}}$} is the amplitude factor and $\widetilde{F}_{\sqrt{t^{-1}}}$ applies the phase shift. It results in:
 
 \equation
 u_{L}(r,\omega)=u_{P}(r,\omega).F_{amp}.\widetilde{F}_{\sqrt{t^{-1}}}\ .
 \label{eq:single-velocity}
 \endequation
 
-This correction is called the \textit{single-velocity} transformation which is recommended for small offsets. For a larger offset, by stating that the offset is almost equal to the propagation distance, \cite{Schafer_LSS_2014} propose to replace the previous amplitude factor with:
+This correction is called the \textit{single-velocity} transformation which is recommended, \textbf{after numerical tests (\cite{Forbriger_LSS_2014, schafer_lss_2014}}), for small offsets. For a larger offset, by stating that the offset is almost equal to the propagation distance, \cite{schafer_lss_2014} propose to replace the previous amplitude factor with:
 
 \equation
 \label{eq:direct-wave}
 F_{amp}=r\sqrt{\frac{2 \pi}{t}}\ .
 \endequation
 
-The resulting correction is called the \textit{direct-wave} transformation. Finally, the \textit{hybrid} method proposed by \cite{Forbriger_LSS_2014} and \cite{Schafer_LSS_2014} consists in using the two previous transformations with a smoothly offset conditioned transition from the near-field to the far-field.
+The resulting correction is called the \textit{direct-wave} transformation. Finally, the \textit{hybrid} method proposed by \cite{Forbriger_LSS_2014} and \cite{schafer_lss_2014} consists in using the two previous transformations with a smoothly offset conditioned transition from the near-field to the far-field.
 
-The \textit{hybrid} method was successfully validated by \cite{Schafer_LSS_2014} in modeling and reconstruction tests with a 2D FWI method and 3D numerical data generated in a 2D structure. Given its performance, the \textit{hybrid} method is used in the next sections for comparisons with experimental data. 
+The \textit{hybrid} method was successfully validated by \cite{schafer_lss_2014} in \textbf{numerical} modeling and reconstruction tests with a 2D FWI method and 3D numerical data generated in a 2D structure. 
+%Given its performance, the \textit{hybrid} method is used in the next sections for comparisons with experimental data. 
 \end{greennote}
+
 \clearpage
 \newpage
 
