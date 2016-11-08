@@ -25,6 +25,7 @@
 
 \newcommand{\psm}{\textit{PSM} }
 \newcommand{\bialt}{\textit{BiAlt} }
+\newcommand{\cmnt}[1]{}
 
 \usepackage{soul}
 
@@ -142,14 +143,14 @@ where $\mathcal{C}$ is the Courant constant and $c_{max}$ is the maximum wave ve
 
 In our study, the models are meshed with quadrangles (2D) and hexahedra (3D) using the GMSH open-source software package (\cite{Geuzaine_MSH_2009}).
 
-\subsection{3D/2D differences}
+%\subsection{3D/2D differences}
 
-\begin{greennote}
-Most seismic imaging methods implement a 2D forward problem, essentially for numerical cost reasons. This results in the implicit use of a line-source in 3D space, invariant along the direction perpendicular to the recording direction, while field data are generally acquired using point-source responses (in the case of hammer falls). This leads to differences in amplitude and phase (between point-source and line-source responses) which must be considered for the inversion of field or experimental data with a 2D imaging method.
+%\begin{greennote}
+%Most seismic imaging methods implement a 2D forward problem, essentially for numerical cost reasons. This results in the implicit use of a line-source in 3D space, invariant along the direction perpendicular to the recording direction, while field data are generally acquired using point-source responses (in the case of hammer falls). This leads to differences in amplitude and phase (between point-source and line-source responses) which must be considered for the inversion of field or experimental data with a 2D imaging method.
 
-Many strategies exist to correct geometrical spreading effect differences between 3D and 2D data, the two widely used are (1) data convolution with $\sqrt{t^{-1}}$ together with the application of a $\sqrt{t}$ taper function (CITATIONS) and (2) data tapering ($\sqrt{t}$) and inference of a source function by linear inversion to estimate the correct the phase (CITATION PRATT, BRETAUDEAU). However, these strategies are used to transform data which contains essentially body waves (except BRETAUDEAU) and the first one is known to produce artefacts which can be significant (AUER ET AL).   
+%Many strategies exist to correct geometrical spreading effect differences between 3D and 2D data, the two widely used are (1) data convolution with $\sqrt{t^{-1}}$ together with the application of a $\sqrt{t}$ taper function (CITATIONS) and (2) data tapering ($\sqrt{t}$) and inference of a source function by linear inversion to estimate the correct the phase (CITATION PRATT, BRETAUDEAU). However, these strategies are used to transform data which contains essentially body waves (except BRETAUDEAU) and the first one is known to produce artefacts which can be significant (AUER ET AL).   
 
-To overpass these limitation and transform near-surface data dominated by surface wave, \cite{Forbriger_LSS_2014} have recently developed the \textit{hybrid} method and validate it through numerical tests (\cite{schafer_lss_2014}).
+%To overpass these limitation and transform near-surface data dominated by surface wave, \cite{Forbriger_LSS_2014} have recently developed the \textit{hybrid} method and validate it through numerical tests (\cite{schafer_lss_2014}).
 
 %The \textit{hybrid} method recently developed by \cite{Forbriger_LSS_2014} for 3D/2D corrections and tested hereafter for the comparison to our experimental 2D-results is summarized below. It is based on Green's functions developed in the case of 2D and 3D propagation as follows.
 
@@ -221,7 +222,7 @@ To overpass these limitation and transform near-surface data dominated by surfac
 
 %The \textit{hybrid} method was successfully validated by \cite{Schafer_LSS_2014} in modeling and reconstruction tests with a 2D FWI method and 3D numerical data generated in a 2D structure. Given its performance, the \textit{hybrid} method is used in the next sections for comparisons with experimental data. 
 
-\end{greennote}
+%\end{greennote}
 
 
 %\section{Results}
@@ -235,8 +236,11 @@ To overpass these limitation and transform near-surface data dominated by surfac
 
 The approach described here consists in generating data with a 2D line-source as well as a 3D point-source and analyzing the similarity with numerical results under the same conditions. This is done to respond to two needs: 1) the quantitative refined validation of the reduced scale data, 2) the capacity of the reduced scale bench to generate 2D data sets that are intermediate between numerical simulation and field data suitable for the 2D imagery tests. Indeed, in the framework of wave propagation modeling and imaging methods, although 3D acoustic algorithms exists (\cite{benhadjali_FWI_2008,plessix_FWI_2010}) and 3D elastic algorithms are still being developed (\cite{castellanos_AMD_2011,Borisov_FWI_2015}), most available algorithms are limited to 2D elastic and 3D acoustic approximation, mostly due to reasons of computational cost. Furthermore, a widely used procedure of validating imaging methods is inverse crime, while the validity of applications on real datasets is conditioned by good \textit{a priori} and poor knowledge of the target. All of these lead to a limited validation of the efficiency of imaging methods to recover parameter models. Thus accurately correcting the difference between 2D and 3D geometrical spreading is critical for the 2D inversion of field data.
 
-The \textit{hybrid} method presented in the previous section is an efficient spreading transform which makes it possible to reconstruct velocity models with the 2D-FWI method using 3D-data. However, this method is derived from a far-field acoustic approximation of Green's functions and is known to fail for back-scattered surface waves (\cite{schafer_lss_2014,groos2014role}). Moreover, the correct smooth transition between \textit{single-velocity} and \textit{direct-wave} transformations is not easy to determine without 2D reference data. This is the case for both field and experimental data and the spreading transformation results become strongly dependent on the user's attempts, expertise and know-how.
+\textbf{Many strategies exist to correct geometrical spreading effect differences between 3D and 2D data, the two widely used are (1) data convolution with $\sqrt{t^{-1}}$ together with the application of a $\sqrt{t}$ taper function (\cite{crase1990robust,shipp2002two,ravaut2004multiscale}) and (2) data tapering ($\sqrt{t}$) and inference of a source function by linear inversion to estimate the correct the phase (\cite{Pratt_FWI_1999,bretaudeau20132d}). However, these strategies are used to transform data which contains essentially body waves (except \cite{bretaudeau20132d}) and the first one is known to produce artefacts which can be significant (\cite{auer2013critical}). To overpass these limitation and transform near-surface data dominated by surface wave, \cite{Forbriger_LSS_2014} have recently developed the \textit{hybrid} method and validate it through numerical tests (\cite{schafer_lss_2014}).}
+
+The \textit{hybrid} method presented in the \cmnt{previous section} \textbf{annex} is an efficient spreading transform which makes it possible to reconstruct velocity models with the 2D-FWI method using 3D-data. However, this method is derived from a far-field acoustic approximation of Green's functions and is known to fail for back-scattered surface waves (\cite{schafer_lss_2014,groos2014role}). Moreover, the correct smooth transition between \textit{single-velocity} and \textit{direct-wave} transformations is not easy to determine without 2D reference data. This is the case for both field and experimental data and the spreading transformation results become strongly dependent on the user's attempts, expertise and know-how.
 Thus the missing step between purely numerical validation and real data applications can be addressed by an alternative approach that consists in recording experimental seismograms generated by line-sources under controlled conditions. Here, we take advantage of the experimental framework to explore this alternative approach specific to the MUSC laboratory, \textit{i.e.} by carrying out 2D measurements from source-lines in 3D space. Fig. \ref{Fig:Fig05} shows a schematic representation of the principle of this kind of experiment. The line-source is composed of a finely-sampled line of point-sources and a line of receivers for each offset considered. 
+
 For practical reasons in the MUSC laboratory, the experiment is carried out through the principle of reciprocity in the case of recording a vertical source and a vertical component, with one source position and a set of receiver positions spread out along the invariant direction. For each source position (i.e. for each offset), all traces of each set of receivers are then stacked together to obtain the \textbf{3D constructed} line-source response. In order to apply this protocol, we choose a suitable sampling interval $\Delta s$ between each point-source constituting the pseudo line-source to ensure the applicability of \textit{Huygens principle}. Given the material properties of $F50\ pure$ epoxy-resin, we choose an interval $\Delta s=\lambda_{min}/10 \tilde{=}0.5\ mm$ over a line of $300\ mm$ long which leads to 601 point-source positions.
 
 Four receiver positions are available: 45, 50, 55 and 60 mm offset. The source time function (for the numerical simulation as well as for the experimental test) is a Ricker wavelet, the second derivative of a Gaussian function:
